@@ -10,4 +10,8 @@
         <attr name="defaultDes" format="reference" />
         <attr name="selectDes" format="reference" />
     </declare-styleable>
+    <declare-styleable name="ResizeLayout">
+        <attr name="resizewidth" format="integer" />
+        <attr name="resizeheight" format="integer" />
+    </declare-styleable>
 </resources>

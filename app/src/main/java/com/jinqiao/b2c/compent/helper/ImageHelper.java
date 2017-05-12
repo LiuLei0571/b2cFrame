@@ -35,7 +35,7 @@ public class ImageHelper {
     }
 
     public static void display(ImageView imageView, String url, boolean round, boolean circle) {
-        sLoader.display(imageView, url, null, null, round, false);
+        sLoader.display(imageView, url, null, null, round, circle);
     }
 
     public static void display(ImageView imageView, String url, boolean circle) {

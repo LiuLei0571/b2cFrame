@@ -3,6 +3,9 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import com.jinqiao.b2c.compent.cdi.annotation.ActivityScope;
 import com.jinqiao.b2c.compent.web.view.activity.WebViewActivity;
+import com.jinqiao.b2c.project.buyer.goods.GoodsDetailActivity;
+import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
+import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
@@ -32,4 +35,10 @@ public interface ActivityComponent {
     void plus(SellerHomeActivity sellerHomeActivity);
 
     void plus(BuyerHomeActivity buyerHomeActivity);
+
+    void plus(GoodsDetailActivity goodsDetailActivity);
+
+    void plus(ShopHomesActivity shopHomesActivity);
+
+    void plus(GoodsListActivity goodsListActivity);
 }

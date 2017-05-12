@@ -6,7 +6,7 @@ import com.jinqiao.b2c.compent.base.IAct;
 
 
 /**
- * Created by yh on 2016/10/26.
+ * Created by milk on 2016/10/26.
  */
 
 public interface ITemplate<M extends ITemplateModel, VH extends TemplateBaseHolder> {

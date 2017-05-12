@@ -31,7 +31,7 @@ public class BuyerHomeActivity extends TempleActivity {
     @Bind(R.id.tab_mine)
     Tab mTabMine;
 
-    private Long mExitTime;
+    private long mExitTime;
     @Override
     protected int getRootViewId() {
         return R.layout.activity_buyer_main;

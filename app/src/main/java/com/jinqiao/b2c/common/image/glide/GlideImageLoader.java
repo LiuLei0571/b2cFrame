@@ -103,7 +103,7 @@ public class GlideImageLoader implements ImageDisplayLoader {
     @Override
     public Bitmap syncLoad(String url) {
         try {
-            return Glide.with(mContext).load(url).asBitmap().dontAnimate().placeholder(R.drawable.ic_default).thumbnail(0.4f).into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
+            return Glide.with(mContext).load(url).asBitmap().dontAnimate().placeholder(R.drawable.ic_no_image).thumbnail(0.4f).into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
 
         } catch (Exception e) {
 

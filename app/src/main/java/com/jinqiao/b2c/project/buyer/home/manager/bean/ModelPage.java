@@ -1,10 +1,10 @@
 package com.jinqiao.b2c.project.buyer.home.manager.bean;
 
 
+import com.jinqiao.b2c.project.buyer.home.temple.ITemplateModel;
 import com.jinqiao.b2c.project.buyer.home.temple.Templates;
 
 import java.util.List;
-
 
 
 /**
@@ -24,6 +24,7 @@ public class ModelPage implements ITemplateModel {
     private String titleText;
     // 当标题类型为TITLE_IMAGE时的标题图片的链接地址
     private String titleImage;
+    // 是否显示横幅广告条(用于替代特殊标题栏)
     private String bannerVisible;
 
     private String bannerImage;

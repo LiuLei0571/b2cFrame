@@ -2,4 +2,6 @@
 <resources>
     <dimen name="margin_normal">15dp</dimen>
     <dimen name="height_135">45dp</dimen>
+    <dimen name="padding_lnormal">15dp</dimen>
+    <dimen name="margin_middle">10dp</dimen>
 </resources>

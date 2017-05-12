@@ -1,7 +1,7 @@
 package com.jinqiao.b2c.project.buyer.home.temple;
 
 /**
- * Created by yh on 2016/10/28.
+ * Created by milk on 2016/10/28.
  */
 
 public class SimpleTemplateModel<T> implements ITemplateModel {

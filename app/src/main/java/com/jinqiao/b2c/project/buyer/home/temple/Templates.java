@@ -2,17 +2,29 @@ package com.jinqiao.b2c.project.buyer.home.temple;
 
 
 import com.jinqiao.b2c.compent.base.IAct;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.BannerTemplate;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.CategoryInfoTemplate;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.FourFourTemplate;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.FourTemplate;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.LocalDriverTemplate;
 import com.jinqiao.b2c.project.buyer.home.temple.impl.LocalEmptyTemplate;
+import com.jinqiao.b2c.project.buyer.home.temple.impl.TwoTwoTemplate;
 
 import java.lang.reflect.Constructor;
 
-
 /**
- * Created by yh on 2016/10/26.
+ * Created by milk on 2016/10/26.
  */
 
 public enum Templates {
-    LOCAL_EMPTY(LocalEmptyTemplate.class,false);
+
+    P_BN(FourTemplate.class),// 四快或者更多N
+    P_BANNER(BannerTemplate.class),//轮播图
+    P_BLOCK(CategoryInfoTemplate.class), // 分类区域
+    P_T2B2(TwoTwoTemplate.class), //大牌推荐
+    P_T4B4(FourFourTemplate.class),
+    LOCAL_EMPTY(LocalEmptyTemplate.class, false),//空模板
+    LOCAL_DRIVER(LocalDriverTemplate.class);// 分割线
 
     Templates(Class<? extends ITemplate> templateCls) {
         this.templateCls = templateCls;
@@ -61,8 +73,7 @@ public enum Templates {
         }
         if (template == null) {
             template = LOCAL_EMPTY;
-        }else{
-//            Logs.defaults.d("template name is %s", remoteViewType);
+        } else {
         }
         return template;
     }

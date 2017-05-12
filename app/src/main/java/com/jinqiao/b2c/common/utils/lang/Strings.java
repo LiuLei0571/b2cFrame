@@ -15,6 +15,8 @@ public class Strings {
     public static final String AND="&";
     public static final String EQUAL="=";
     public static final String NULL_STR = "null";
+    public static final String TRUE = "y";
+    public static final String FALSE = "n";
 
 
 

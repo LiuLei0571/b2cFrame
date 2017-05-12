@@ -10,7 +10,7 @@ import com.jinqiao.b2c.project.buyer.home.temple.TemplateBaseHolder;
 
 
 /**
- * Created by yh on 2016/10/27.
+ * Created by milk on 2016/10/27.
  */
 
 public class LocalEmptyTemplate extends BaseTemplate<ITemplateModel, TemplateBaseHolder> {

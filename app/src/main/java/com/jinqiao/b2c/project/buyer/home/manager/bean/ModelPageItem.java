@@ -1,6 +1,7 @@
 package com.jinqiao.b2c.project.buyer.home.manager.bean;
 
 
+import com.jinqiao.b2c.project.buyer.home.temple.ITemplateModel;
 import com.jinqiao.b2c.project.buyer.home.temple.Templates;
 
 /**
