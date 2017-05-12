@@ -10,6 +10,7 @@ import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.helper.ToastHelper;
 import com.jinqiao.b2c.compent.ui.widget.Tab;
+import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommond;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomePresenter;
 
 import javax.inject.Inject;
@@ -31,12 +32,19 @@ public class BuyerHomeActivity extends TempleActivity {
     @Bind(R.id.tab_mine)
     Tab mTabMine;
 
+    HomeCommond homeCommand;
     private long mExitTime;
+
     @Override
     protected int getRootViewId() {
         return R.layout.activity_buyer_main;
     }
 
+    @Override
+    protected void initParams(Bundle extras) {
+//        homeCommand = extras.getParcelable(Extras.HOME.KEY);
+
+    }
 
     @Override
     protected void doInject(ActivityComponent activityComponent) {
@@ -55,6 +63,17 @@ public class BuyerHomeActivity extends TempleActivity {
         }
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        showTab();
+    }
+
+    private void showTab() {
+        if (homeCommand != null) {
+            presenter.onTabClick(homeCommand.getIndex());
+        }
+    }
 
     @OnClick({R.id.tab_home, R.id.tab_classify, R.id.tab_car, R.id.tab_collection, R.id.tab_mine})
     public void onViewClicked(View view) {
@@ -84,6 +103,7 @@ public class BuyerHomeActivity extends TempleActivity {
         mTabCollection.setTabItem(index == 3);
         mTabMine.setTabItem(index == 4);
     }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {

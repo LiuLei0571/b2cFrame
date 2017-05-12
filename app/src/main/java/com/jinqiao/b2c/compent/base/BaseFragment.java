@@ -16,6 +16,9 @@ import com.jinqiao.b2c.compent.event.EmptyEvent;
 import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
+import com.jinqiao.b2c.compent.helper.TranslateHelper;
+import com.jinqiao.b2c.project.common.manager.bean.MobileStaticTextCode;
+import com.jinqiao.b2c.project.common.manager.bean.OptionList;
 
 import butterknife.ButterKnife;
 
@@ -30,6 +33,9 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     private PresenterConnector mPresenterConnector;
     private FragmentComponent mFragmentComponent;
     private View mView;
+    protected MobileStaticTextCode mTranslatesString;
+    protected OptionList mTranslatesList;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -120,7 +126,8 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
 
     @Override
     public void beforeViewBind(View rootView) {
-
+        mTranslatesString =  TranslateHelper.getMobileText();
+        mTranslatesList =  TranslateHelper.getMobileList();
     }
 
     @Override

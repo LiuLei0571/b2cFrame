@@ -33,6 +33,7 @@
         <activity android:name=".project.buyer.goods.GoodsDetailActivity" />
         <activity android:name=".project.buyer.goods.ShopHomesActivity" />
         <activity android:name=".project.buyer.goods.GoodsListActivity" />
+        <activity android:name=".project.logistics.LivesCommuntiyHomeActivity" />
     </application>
 
 </manifest>

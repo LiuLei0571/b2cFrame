@@ -38,6 +38,7 @@ public interface Extras {
        interface ACTION{
           String PAGE="home_page";
        }
+       String KEY="home_key";
     }
     interface HOMECOMMOND{
         HomeCommond INDEX=HomeCommond.buyerhome();
