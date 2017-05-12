@@ -1,11 +1,13 @@
 package com.jinqiao.b2c.project.common.manager.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.text.TextUtils;
 
 import com.jinqiao.b2c.compent.helper.Util;
 
 
-public class MobileStaticTextCode {
+public class MobileStaticTextCode implements Parcelable {
     public String getCommon_baozhengjinbiandong() {
         return common_baozhengjinbiandong;
     }
@@ -32,7 +34,6 @@ public class MobileStaticTextCode {
 
     private String common_daishenhe;
     private String commo_shenheyes;
-
     private String common_dongjie;
 
     public String getCommon_jiedong() {
@@ -2047,6 +2048,7 @@ public class MobileStaticTextCode {
     public String getCommon_workplat() {
         return Util.cutNull(common_workplat);
     }
+
     //#################0217
     private String common_workplat;
     private String common_unsetshopinfo;
@@ -4253,14 +4255,14 @@ public class MobileStaticTextCode {
 
     private String common_createshop;
     private String common_shopauditnotice;
-    private String common_settleinfo ;
+    private String common_settleinfo;
 
     public void setCommon_basicinfo(String common_basicinfo) {
         this.common_basicinfo = common_basicinfo;
     }
 
-    private String common_basicinfo ;
-    private String common_managefanwei ;
+    private String common_basicinfo;
+    private String common_managefanwei;
 
 
     public String getCommon_chanpinnumber() {
@@ -4305,12 +4307,15 @@ public class MobileStaticTextCode {
     public String getCommon_modify() {
         return Util.cutNull(common_modify);
     }
+
     public String getCommon_locationinfo() {
         return Util.cutNull(common_locationinfo);
     }
+
     public String getCommon_sex() {
         return Util.cutNull(common_sex);
     }
+
     public String getCommon_birthdaydate() {
         return Util.cutNull(common_birthdaydate);
     }
@@ -4322,6 +4327,7 @@ public class MobileStaticTextCode {
     public String getCommon_settlecenter() {
         return Util.cutNull(common_settlecenter);
     }
+
     private String common_nopay;
     private String common_cash;
     private String common_yetcorperate;
@@ -4339,6 +4345,7 @@ public class MobileStaticTextCode {
     public String getCommon_cash() {
         return Util.cutNull(common_cash);
     }
+
     public String getCommon_yetcorperate() {
         return Util.cutNull(common_yetcorperate);
     }
@@ -4362,6 +4369,7 @@ public class MobileStaticTextCode {
     public String getCommon_depotdetail() {
         return Util.cutNull(common_depotdetail);
     }
+
     private String common_newinsertdepot;
     private String common_linkmanming;
     private String common_linkmanxing;
@@ -4371,7 +4379,7 @@ public class MobileStaticTextCode {
     private String common_quedingdeletedepot;
 
     public String getCommon_newinsertdepot() {
-        return  Util.cutNull(common_newinsertdepot);
+        return Util.cutNull(common_newinsertdepot);
     }
 
     public String getCommon_linkmanming() {
@@ -4395,13 +4403,14 @@ public class MobileStaticTextCode {
     }
 
     public String getCommon_quedingdeletedepot() {
-        return  Util.cutNull(common_quedingdeletedepot);
+        return Util.cutNull(common_quedingdeletedepot);
     }
+
     private String common_setcenter;
     private String common_language;
     private String common_exit;
     private String common_onselling;
-    private String common_publishgoods ;
+    private String common_publishgoods;
     private String common_sellerregister;
 
     public String getCommon_setcenter() {
@@ -4432,15 +4441,18 @@ public class MobileStaticTextCode {
         this.common_sellerregister = common_sellerregister;
     }
 
-    private String  common_selectjuese;
+    private String common_selectjuese;
     private String common_completeinfo;
-    private String  common_zanweishezhi;
+    private String common_zanweishezhi;
+
     public String getCommon_zanweishezhi() {
         return common_zanweishezhi;
     }
+
     public void setCommon_zanweishezhi(String common_zanweishezhi) {
         this.common_zanweishezhi = common_zanweishezhi;
     }
+
     private String common_inputallinfo;
     private String common_styleerror;
     private String common_province;
@@ -4469,8 +4481,8 @@ public class MobileStaticTextCode {
     private String common_infosubmityet;
     private String common_minusafterjump;
     private String common_man;
-    private String common_woman ;
-    private String common_keepsecret ;
+    private String common_woman;
+    private String common_keepsecret;
 
     public String getCommon_city() {
         return Util.cutNull(common_city);
@@ -4485,15 +4497,15 @@ public class MobileStaticTextCode {
     }
 
     public String getCommon_man() {
-        return  Util.cutNull(common_man);
+        return Util.cutNull(common_man);
     }
 
     public String getCommon_woman() {
-        return  Util.cutNull(common_woman);
+        return Util.cutNull(common_woman);
     }
 
     public String getCommon_keepsecret() {
-        return  Util.cutNull(common_keepsecret);
+        return Util.cutNull(common_keepsecret);
     }
 
     private String common_buyerlogin;
@@ -4532,7 +4544,6 @@ public class MobileStaticTextCode {
     }
 
 
-
     public String getCommon_yongxin() {
         return common_yongxin;
     }
@@ -4541,7 +4552,7 @@ public class MobileStaticTextCode {
         this.common_yongxin = common_yongxin;
     }
 
-    private String  common_yongxin;
+    private String common_yongxin;
 
     public String getCommon_caozuochenggong() {
         return common_caozuochenggong;
@@ -4551,7 +4562,7 @@ public class MobileStaticTextCode {
         this.common_caozuochenggong = common_caozuochenggong;
     }
 
-    private String  common_caozuochenggong;
+    private String common_caozuochenggong;
 
     public String getConnon_caozuoshibai() {
         return connon_caozuoshibai;
@@ -4561,7 +4572,7 @@ public class MobileStaticTextCode {
         this.connon_caozuoshibai = connon_caozuoshibai;
     }
 
-    private String  connon_caozuoshibai;
+    private String connon_caozuoshibai;
 
     public String getComm_jushouyuanyin() {
         return comm_jushouyuanyin;
@@ -4571,7 +4582,7 @@ public class MobileStaticTextCode {
         this.comm_jushouyuanyin = comm_jushouyuanyin;
     }
 
-    private String  comm_jushouyuanyin;
+    private String comm_jushouyuanyin;
 
     public String getCommon_daiquhuo() {
         return common_daiquhuo;
@@ -4581,7 +4592,7 @@ public class MobileStaticTextCode {
         this.common_daiquhuo = common_daiquhuo;
     }
 
-    private String  common_daiquhuo;
+    private String common_daiquhuo;
 
     public void setCommon_workplat(String common_workplat) {
         this.common_workplat = common_workplat;
@@ -4822,7 +4833,7 @@ public class MobileStaticTextCode {
     }
 
     public String getCommon_personaldetail() {
-        return  Util.cutNull(common_personaldetail);
+        return Util.cutNull(common_personaldetail);
     }
 
     public void setCommon_personaldetail(String common_personaldetail) {
@@ -4852,6 +4863,7 @@ public class MobileStaticTextCode {
     public void setCommon_pleaseselect(String common_pleaseselect) {
         this.common_pleaseselect = common_pleaseselect;
     }
+
     private String common_rejectreceive;
 
     public String getCommon_rejectreceive() {
@@ -4861,13 +4873,16 @@ public class MobileStaticTextCode {
     public void setCommon_rejectreceive(String common_rejectreceive) {
         this.common_rejectreceive = common_rejectreceive;
     }
+
     private String common_applybackgood;
     private String common_applyreject;
     private String common_yetcancel;
     private String common_onexpress;
+
     public String getCommon_applybackgood() {
         return Util.cutNull(common_applybackgood);
     }
+
     public void setCommon_applybackgood(String common_applybackgood) {
         this.common_applybackgood = common_applybackgood;
     }
@@ -4885,7 +4900,7 @@ public class MobileStaticTextCode {
     }
 
     public String getCommon_onexpress() {
-        return  Util.cutNull(common_onexpress);
+        return Util.cutNull(common_onexpress);
     }
 
     public void setCommon_onexpress(String common_onexpress) {
@@ -4955,7 +4970,7 @@ public class MobileStaticTextCode {
     }
 
     public String getCommon_samplename() {
-        return  Util.cutNull(common_samplename);
+        return Util.cutNull(common_samplename);
     }
 
     public void setCommon_samplename(String common_samplename) {
@@ -4969,7 +4984,8 @@ public class MobileStaticTextCode {
     public void setCommon_reason(String common_reason) {
         this.common_reason = common_reason;
     }
-    private String common_totalprice ;
+
+    private String common_totalprice;
 
     public String getCommon_totalprice() {
         return Util.cutNull(common_totalprice);
@@ -5035,12 +5051,15 @@ public class MobileStaticTextCode {
     public String getCommon_mingcheng() {
         return Util.cutNull(common_mingcheng);
     }
+
     public void setCommon_mingcheng(String common_mingcheng) {
         this.common_mingcheng = common_mingcheng;
     }
+
     public String getCommon_leixing() {
         return Util.cutNull(common_leixing);
     }
+
     public void setCommon_leixing(String common_leixing) {
         this.common_leixing = common_leixing;
     }
@@ -5070,11 +5089,11 @@ public class MobileStaticTextCode {
     }
 
     private String common_yizhifu;
-    private String  common_hanyunfei;
-    private String  common_addresssuggest;
-    private String  common_cashman;
-    private String  common_notuse;
-    private String  common_pleaseselectdeliver;
+    private String common_hanyunfei;
+    private String common_addresssuggest;
+    private String common_cashman;
+    private String common_notuse;
+    private String common_pleaseselectdeliver;
 
     public String getCommon_hanyunfei() {
         return Util.cutNull(common_hanyunfei);
@@ -5206,6 +5225,7 @@ public class MobileStaticTextCode {
     public void setCoupon_yetuse(String coupon_yetuse) {
         this.coupon_yetuse = coupon_yetuse;
     }
+
     private String common_alwaysusefull;
 
     public String getCommon_alwaysusefull() {
@@ -5215,6 +5235,7 @@ public class MobileStaticTextCode {
     public void setCommon_alwaysusefull(String common_alwaysusefull) {
         this.common_alwaysusefull = common_alwaysusefull;
     }
+
     private String common_depot;
 
     public String getCommon_depot() {
@@ -5232,6 +5253,7 @@ public class MobileStaticTextCode {
     public void setCommon_sgenqingyes(String common_sgenqingyes) {
         this.common_sgenqingyes = common_sgenqingyes;
     }
+
     private String common_manage;
 
     public String getCommon_manage() {
@@ -5272,7 +5294,7 @@ public class MobileStaticTextCode {
         this.common_sampletotalprice = common_sampletotalprice;
     }
 
-//    private String ;
+    //    private String ;
     private String common_returnshuoming;
 
     public String getCommon_returnshuoming() {
@@ -5313,7 +5335,7 @@ public class MobileStaticTextCode {
         this.common_uploadpic = common_uploadpic;
     }
 
-    private String common_selectrreason ;
+    private String common_selectrreason;
 
     public String getCommon_selectrreason() {
         return Util.cutNull(common_selectrreason);
@@ -5537,6 +5559,7 @@ public class MobileStaticTextCode {
     public void setCommon_leimuselect(String common_leimuselect) {
         this.common_leimuselect = common_leimuselect;
     }
+
     private String common_xiangqing;
 
     public String getCommon_xiangqing() {
@@ -5646,4 +5669,1255 @@ public class MobileStaticTextCode {
     }
 
     private String common_biaoqing;
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.common_daishenhe);
+        dest.writeString(this.commo_shenheyes);
+        dest.writeString(this.common_dongjie);
+        dest.writeString(this.common_jiedong);
+        dest.writeString(this.common_shenheno);
+        dest.writeString(this.common_baozhengjinbiandong);
+        dest.writeString(this.common_additionall);
+        dest.writeString(this.common_kouchu);
+        dest.writeString(this.common_baozhengjindongjie);
+        dest.writeString(this.common_jiesuanjilu);
+        dest.writeString(this.common_setting);
+        dest.writeString(this.common_zuidibaozhengjin);
+        dest.writeString(this.common_home);
+        dest.writeString(this.common_predeposits);
+        dest.writeString(this.common_integral);
+        dest.writeString(this.common_personalcenter);
+        dest.writeString(this.common_addnewlocation);
+        dest.writeString(this.common_submit);
+        dest.writeString(this.common_delete);
+        dest.writeString(this.common_setdefaultlocation);
+        dest.writeString(this.common_detaillocation);
+        dest.writeString(this.common_receiveman);
+        dest.writeString(this.common_myreceivegoodslocation);
+        dest.writeString(this.common_search);
+        dest.writeString(this.common_shop);
+        dest.writeString(this.common_sample);
+        dest.writeString(this.common_samplesearch);
+        dest.writeString(this.common_showmore);
+        dest.writeString(this.common_sellingtime);
+        dest.writeString(this.common_price);
+        dest.writeString(this.common_sellamount);
+        dest.writeString(this.common_samplelist);
+        dest.writeString(this.common_putshoppingcart);
+        dest.writeString(this.common_buynow);
+        dest.writeString(this.common_imagetextdetail);
+        dest.writeString(this.common_samplecomment);
+        dest.writeString(this.common_sampledetail);
+        dest.writeString(this.common_comment);
+        dest.writeString(this.common_searchsampleshop);
+        dest.writeString(this.common_sampleclassify);
+        dest.writeString(this.common_choosepaytype);
+        dest.writeString(this.common_realpay);
+        dest.writeString(this.common_couponsinfo);
+        dest.writeString(this.common_sampleprice);
+        dest.writeString(this.common_freight);
+        dest.writeString(this.common_leavemessagetoseller);
+        dest.writeString(this.common_inputbillcontent);
+        dest.writeString(this.common_inputbillhead);
+        dest.writeString(this.common_billinfo);
+        dest.writeString(this.common_freedilivery);
+        dest.writeString(this.common_deliverytype);
+        dest.writeString(this.common_nonecoupons);
+        dest.writeString(this.common_coupons);
+        dest.writeString(this.common_makesureorder);
+        dest.writeString(this.common_favoriteshop);
+        dest.writeString(this.common_favoritesample);
+        dest.writeString(this.common_myfavorites);
+        dest.writeString(this.common_agreeregisterprotocol);
+        dest.writeString(this.common_messagecode);
+        dest.writeString(this.common_tellphone);
+        dest.writeString(this.common_makesure);
+        dest.writeString(this.common_mine);
+        dest.writeString(this.common_favorites);
+        dest.writeString(this.common_fixednumber);
+        dest.writeString(this.notice_pleasechoosedeletegood);
+        dest.writeString(this.notice_pleasechoosesettlegood);
+        dest.writeString(this.validate_locationdetailnotnull);
+        dest.writeString(this.validate_linktellnotnull);
+        dest.writeString(this.validate_receivemannotnull);
+        dest.writeString(this.common_mainsell);
+        dest.writeString(this.common_locationname);
+        dest.writeString(this.common_pleaseinputsampleshop);
+        dest.writeString(this.notice_nomoreresult);
+        dest.writeString(this.common_recentransaction);
+        dest.writeString(this.unit_transaction);
+        dest.writeString(this.common_deliveryspeed);
+        dest.writeString(this.common_serviceatitude);
+        dest.writeString(this.common_consitancerate);
+        dest.writeString(this.common_goodcommentrate);
+        dest.writeString(this.notice_favoritesuccess);
+        dest.writeString(this.common_favoriteyet);
+        dest.writeString(this.common_pleasepaypassword);
+        dest.writeString(this.common_payname);
+        dest.writeString(this.notice_chooseordertype);
+        dest.writeString(this.notice_getorderinfofailure);
+        dest.writeString(this.common_ordermoney);
+        dest.writeString(this.common_ordernumber);
+        dest.writeString(this.notice_stockless);
+        dest.writeString(this.notice_giveupfavoritesuccess);
+        dest.writeString(this.notice_cancel);
+        dest.writeString(this.notice_suregiveupfavorite);
+        dest.writeString(this.notice_noticename);
+        dest.writeString(this.common_modifyreceivelocation);
+        dest.writeString(this.common_receivelocation);
+        dest.writeString(this.common_payorder);
+        dest.writeString(this.notice_modifypasswordfailure);
+        dest.writeString(this.notice_modifypasswordsuccess);
+        dest.writeString(this.notice_usernameexist);
+        dest.writeString(this.notice_registersuccess);
+        dest.writeString(this.validate_agreeregisterprotocol);
+        dest.writeString(this.notice_sendmessagecodesuccess);
+        dest.writeString(this.validate_inputtellphone);
+        dest.writeString(this.common_shopprofile);
+        dest.writeString(this.common_favorite);
+        dest.writeString(this.common_shophome);
+        dest.writeString(this.common_settle);
+        dest.writeString(this.common_sum);
+        dest.writeString(this.common_aplaydistributor);
+        dest.writeString(this.common_managereceivelocation);
+        dest.writeString(this.common_accountsecurity);
+        dest.writeString(this.common_mymessage);
+        dest.writeString(this.common_myorder);
+        dest.writeString(this.common_withdraw);
+        dest.writeString(this.common_shoppingcart);
+        dest.writeString(this.common_classify);
+        dest.writeString(this.notice_inputusername);
+        dest.writeString(this.notice_requesterror);
+        dest.writeString(this.validate_passwordnotnull);
+        dest.writeString(this.validate_usernamenotnull);
+        dest.writeString(this.unit_place);
+        dest.writeString(this.validate_passwordminlength);
+        dest.writeString(this.validate_passworddifference);
+        dest.writeString(this.validate_inputpassword);
+        dest.writeString(this.validate_inputsurepassword);
+        dest.writeString(this.common_surepassword);
+        dest.writeString(this.validate_inputmessagecode);
+        dest.writeString(this.unit_second);
+        dest.writeString(this.common_nextstep);
+        dest.writeString(this.common_authcode);
+        dest.writeString(this.common_getauthcode);
+        dest.writeString(this.common_fastregister);
+        dest.writeString(this.common_forgetpassword);
+        dest.writeString(this.common_rememberpassword);
+        dest.writeString(this.common_password);
+        dest.writeString(this.common_username);
+        dest.writeString(this.common_register);
+        dest.writeString(this.common_modifypassword);
+        dest.writeString(this.common_login);
+        dest.writeString(this.notice_cancelfavorite);
+        dest.writeString(this.common_selectall);
+        dest.writeString(this.common_unincludedelivery);
+        dest.writeString(this.common_usersafe);
+        dest.writeString(this.common_marketprice);
+        dest.writeString(this.common_addtocart);
+        dest.writeString(this.common_buyamount);
+        dest.writeString(this.common_shopaddress);
+        dest.writeString(this.common_all);
+        dest.writeString(this.common_waitsend);
+        dest.writeString(this.common_waitrecv);
+        dest.writeString(this.common_waitpay);
+        dest.writeString(this.common_done);
+        dest.writeString(this.common_refund);
+        dest.writeString(this.common_closeorder);
+        dest.writeString(this.common_pay);
+        dest.writeString(this.common_received);
+        dest.writeString(this.common_noticesend);
+        dest.writeString(this.common_makecomments);
+        dest.writeString(this.common_cancelorder);
+        dest.writeString(this.common_refunding);
+        dest.writeString(this.common_refunded);
+        dest.writeString(this.common_inputoldpassword);
+        dest.writeString(this.common_bindcard);
+        dest.writeString(this.common_add);
+        dest.writeString(this.common_holdername);
+        dest.writeString(this.common_setdefault);
+        dest.writeString(this.common_cardnum);
+        dest.writeString(this.common_bank);
+        dest.writeString(this.common_bindemail);
+        dest.writeString(this.common_bindphone);
+        dest.writeString(this.common_manageaccount);
+        dest.writeString(this.common_leavemessage);
+        dest.writeString(this.common_tologin);
+        dest.writeString(this.common_applyservice);
+        dest.writeString(this.common_refundreason);
+        dest.writeString(this.common_isreceive);
+        dest.writeString(this.common_refundcost);
+        dest.writeString(this.common_refundmessage);
+        dest.writeString(this.common_orderdetail);
+        dest.writeString(this.common_createtime);
+        dest.writeString(this.common_paytime);
+        dest.writeString(this.common_inputyourcomment);
+        dest.writeString(this.common_goodcomment);
+        dest.writeString(this.common_normalcomment);
+        dest.writeString(this.common_badcomment);
+        dest.writeString(this.common_refundcode);
+        dest.writeString(this.common_loading);
+        dest.writeString(this.common_waiting);
+        dest.writeString(this.common_inputnotnull);
+        dest.writeString(this.common_addressisnull);
+        dest.writeString(this.common_pleaseselecttype);
+        dest.writeString(this.common_amountofsample);
+        dest.writeString(this.common_deliveryfee);
+        dest.writeString(this.common_quit);
+        dest.writeString(this.common_loadmore);
+        dest.writeString(this.notice_networkanormal);
+        dest.writeString(this.common_paysuccess);
+        dest.writeString(this.common_gongsixinxi);
+        dest.writeString(this.common_yunfeimuban);
+        dest.writeString(this.common_zizhanghaoguanli);
+        dest.writeString(this.common_addcashdeposit);
+        dest.writeString(this.common_zichanzhongxin);
+        dest.writeString(this.common_otherlogin);
+        dest.writeString(this.title_otherlogin);
+        dest.writeString(this.point_identity);
+        dest.writeString(this.bg_sellertitle);
+        dest.writeString(this.bg_expresstitle);
+        dest.writeString(this.common_hintpassword);
+        dest.writeString(this.common_shopLogin);
+        dest.writeString(this.seller_hometodaytitle);
+        dest.writeString(this.seller_homenewtitle);
+        dest.writeString(this.seller_homerefuse);
+        dest.writeString(this.seller_homewaitingtitle);
+        dest.writeString(this.seller_homesendtitle);
+        dest.writeString(this.commo_momeny);
+        dest.writeString(this.common_neterror);
+        dest.writeString(this.common_againlogput);
+        dest.writeString(this.goods_selling);
+        dest.writeString(this.goods_depot);
+        dest.writeString(this.min_logistics);
+        dest.writeString(this.min_securitymanager);
+        dest.writeString(this.min_assets);
+        dest.writeString(this.min_shopinfo);
+        dest.writeString(this.seller_managermanager);
+        dest.writeString(this.seller_goodsmanager);
+        dest.writeString(this.seller_homemanager);
+        dest.writeString(this.common_num);
+        dest.writeString(this.common_changeinfo);
+        dest.writeString(this.common_logout);
+        dest.writeString(this.seller_shopinfo);
+        dest.writeString(this.seller_shoplogo);
+        dest.writeString(this.seller_shopname);
+        dest.writeString(this.seller_shopaddress);
+        dest.writeString(this.seller_shoptel);
+        dest.writeString(this.assets_notbind);
+        dest.writeString(this.assets_bindcar);
+        dest.writeString(this.assets_withdraw);
+        dest.writeString(this.assets_trading);
+        dest.writeString(this.assets_apply);
+        dest.writeString(this.assets_can);
+        dest.writeString(this.common_changephone);
+        dest.writeString(this.common_oldpsd);
+        dest.writeString(this.seller_expresslist);
+        dest.writeString(this.check_express);
+        dest.writeString(this.submit_express);
+        dest.writeString(this.seller_setexpress);
+        dest.writeString(this.seller_defaultexpress);
+        dest.writeString(this.express_detail);
+        dest.writeString(this.cancel_express);
+        dest.writeString(this.common_sure);
+        dest.writeString(this.shop_uptime);
+        dest.writeString(this.shop_downtime);
+        dest.writeString(this.shop_down);
+        dest.writeString(this.shop_up);
+        dest.writeString(this.good_fee);
+        dest.writeString(this.goods_changefee);
+        dest.writeString(this.goods_changeprice);
+        dest.writeString(this.goods_message);
+        dest.writeString(this.goods_banner);
+        dest.writeString(this.goods_inputprice);
+        dest.writeString(this.goods_inputfee);
+        dest.writeString(this.today_title);
+        dest.writeString(this.goods_merchandise);
+        dest.writeString(this.today_goodsnum);
+        dest.writeString(this.today_buyernum);
+        dest.writeString(this.today_paynum);
+        dest.writeString(this.common_buyer);
+        dest.writeString(this.seller_refusing);
+        dest.writeString(this.seller_waiteorder);
+        dest.writeString(this.common_refuse);
+        dest.writeString(this.common_examineexpress);
+        dest.writeString(this.common_selectexpress);
+        dest.writeString(this.common_buyermessage);
+        dest.writeString(this.seller_ordertime);
+        dest.writeString(this.common_goodstype);
+        dest.writeString(this.seller_getgoods);
+        dest.writeString(this.buyer_refuse);
+        dest.writeString(this.common_toastsetexpress);
+        dest.writeString(this.express_detail1);
+        dest.writeString(this.toast_noexpress);
+        dest.writeString(this.delivery_no);
+        dest.writeString(this.order_message);
+        dest.writeString(this.common_receipt);
+        dest.writeString(this.common_recive);
+        dest.writeString(this.order_no);
+        dest.writeString(this.express_no);
+        dest.writeString(this.courier_inputaddress);
+        dest.writeString(this.logistics_logintitle);
+        dest.writeString(this.logistic_apply);
+        dest.writeString(this.logistic_titlemessage);
+        dest.writeString(this.logistics_minecompany);
+        dest.writeString(this.logistics_mineperson);
+        dest.writeString(this.logistic_sonaccountinfo);
+        dest.writeString(this.common_edit);
+        dest.writeString(this.common_newpassword);
+        dest.writeString(this.logistic_applypromisecash);
+        dest.writeString(this.common_blindmobile);
+        dest.writeString(this.common_newinsert);
+        dest.writeString(this.logistic_sonaccountlist);
+        dest.writeString(this.logistic_companyload);
+        dest.writeString(this.logistic_createaccount);
+        dest.writeString(this.logistic_accountmanage);
+        dest.writeString(this.logistic_personapply);
+        dest.writeString(this.common_todayClear);
+        dest.writeString(this.logistic_settledetail);
+        dest.writeString(this.logistic_relativeorderdetail);
+        dest.writeString(this.logistic_remitmoneyinfo);
+        dest.writeString(this.logistic_cardnumber);
+        dest.writeString(this.logistic_orderdetail);
+        dest.writeString(this.logistic_accounthead);
+        dest.writeString(this.logistic_depositbank);
+        dest.writeString(this.common_save);
+        dest.writeString(this.notice_pleaseinputcorrectemail);
+        dest.writeString(this.common_pleaseinputcorrectmobile);
+        dest.writeString(this.common_loginname);
+        dest.writeString(this.common_name);
+        dest.writeString(this.common_email);
+        dest.writeString(this.common_yetuse);
+        dest.writeString(this.common_yetstopuse);
+        dest.writeString(this.common_beginuse);
+        dest.writeString(this.common_stopuse);
+        dest.writeString(this.common_resetpassword);
+        dest.writeString(this.common_mobile);
+        dest.writeString(this.common_pleasesetaccountloginname);
+        dest.writeString(this.common_pleasesetaccountpassword);
+        dest.writeString(this.common_pleaseinputusername);
+        dest.writeString(this.common_pleaseinputlocation);
+        dest.writeString(this.common_surenewinsert);
+        dest.writeString(this.common_pleaseinputemail);
+        dest.writeString(this.common_updatebind);
+        dest.writeString(this.common_currentbindmobile);
+        dest.writeString(this.common_deliveryname);
+        dest.writeString(this.common_companyname);
+        dest.writeString(this.common_corporatename);
+        dest.writeString(this.common_linkway);
+        dest.writeString(this.common_profile);
+        dest.writeString(this.common_uploadbussinesslicence);
+        dest.writeString(this.common_submitapply);
+        dest.writeString(this.common_age);
+        dest.writeString(this.common_idcard);
+        dest.writeString(this.common_identity);
+        dest.writeString(this.logistic_createtitle);
+        dest.writeString(this.common_logisticaccount);
+        dest.writeString(this.apply_set);
+        dest.writeString(this.apply_remark);
+        dest.writeString(this.apply_phone);
+        dest.writeString(this.apply_money);
+        dest.writeString(this.common_inputmoney);
+        dest.writeString(this.common_inputremark);
+        dest.writeString(this.common_smstitle);
+        dest.writeString(this.common_pleaseinputaddress);
+        dest.writeString(this.logistics_changephone);
+        dest.writeString(this.remark_message);
+        dest.writeString(this.today_momeny);
+        dest.writeString(this.logistic_submitapply);
+        dest.writeString(this.common_pleaseinputsearch);
+        dest.writeString(this.common_sellermessage);
+        dest.writeString(this.common_selectdetail);
+        dest.writeString(this.logistic_todaymessage);
+        dest.writeString(this.seller_homereceived);
+        dest.writeString(this.seller_homefinish);
+        dest.writeString(this.common_rejectreceivegoods);
+        dest.writeString(this.common_pleaseinputuserinfo);
+        dest.writeString(this.common_skiponesecond);
+        dest.writeString(this.common_clickaddaddress);
+        dest.writeString(this.common_nownogooddetail);
+        dest.writeString(this.common_settlehistory);
+        dest.writeString(this.common_returngoods);
+        dest.writeString(this.common_bigbrandrecommend);
+        dest.writeString(this.common_farmousshop);
+        dest.writeString(this.common_pleaseinputloginname);
+        dest.writeString(this.common_pleaseinputname);
+        dest.writeString(this.common_yetreject);
+        dest.writeString(this.common_contactseller);
+        dest.writeString(this.common_saomareceivegoods);
+        dest.writeString(this.common_remindseller);
+        dest.writeString(this.common_nodata);
+        dest.writeString(this.common_insend);
+        dest.writeString(this.common_todayshouldsettle);
+        dest.writeString(this.common_managesonaccount);
+        dest.writeString(this.common_addinfo);
+        dest.writeString(this.common_accountinfo);
+        dest.writeString(this.common_shoplist);
+        dest.writeString(this.common_pleaseinputorderno);
+        dest.writeString(this.common_rejectgoods);
+        dest.writeString(this.common_managecashaddr);
+        dest.writeString(this.common_pleaseinputfirstname);
+        dest.writeString(this.common_pleaseinputlastname);
+        dest.writeString(this.common_pleaseinputlinktel);
+        dest.writeString(this.common_pleaseinputdetaillocation);
+        dest.writeString(this.common_pleaseinputemailcode);
+        dest.writeString(this.common_workplat);
+        dest.writeString(this.common_unsetshopinfo);
+        dest.writeString(this.common_goopenshop);
+        dest.writeString(this.common_zhengzaishenhe);
+        dest.writeString(this.common_portionzhifu);
+        dest.writeString(this.common_yijiesuan);
+        dest.writeString(this.common_shenqingmoney);
+        dest.writeString(this.common_shijisettlementmoney);
+        dest.writeString(this.common_picinumber);
+        dest.writeString(this.common_settlementmoney);
+        dest.writeString(this.common_daijiesuanMoney);
+        dest.writeString(this.common_guanliandingdan);
+        dest.writeString(this.common_weijiesuan);
+        dest.writeString(this.common_tvdaijiesuan);
+        dest.writeString(this.common_zhucedizhi);
+        dest.writeString(this.common_gongsinumber);
+        dest.writeString(this.common_zhucetime);
+        dest.writeString(this.common_yingyezhizhao);
+        dest.writeString(this.common_yuqikouchu);
+        dest.writeString(this.common_yuqijiesuan);
+        dest.writeString(this.common_fahuo);
+        dest.writeString(this.common_zhongliang);
+        dest.writeString(this.common_feiyong);
+        dest.writeString(this.common_shouhuodi);
+        dest.writeString(this.common_tianshu);
+        dest.writeString(this.common_lianxirenxinxi);
+        dest.writeString(this.common_jiesuanzhanghao);
+        dest.writeString(this.common_xing);
+        dest.writeString(this.common_lianxidizhi);
+        dest.writeString(this.common_ming);
+        dest.writeString(this.common_dianhua);
+        dest.writeString(this.common_kaihuyinhang);
+        dest.writeString(this.common_yinhangname);
+        dest.writeString(this.common_zhihangyinhang);
+        dest.writeString(this.common_yinhangzhanghu);
+        dest.writeString(this.common_shenqing);
+        dest.writeString(this.common_mingxi);
+        dest.writeString(this.common_zongbaozhengjin);
+        dest.writeString(this.common_keyong);
+        dest.writeString(this.commo_dongjiebaozhengjin);
+        dest.writeString(this.common_baocunchenggong);
+        dest.writeString(this.common_usernamesetting);
+        dest.writeString(this.common_yunsongzhong);
+        dest.writeString(this.common_maijiafukuan);
+        dest.writeString(this.common_paidan);
+        dest.writeString(this.common_yumhuoyuan);
+        dest.writeString(this.connom_shoukuandizhi);
+        dest.writeString(this.common_dayubaozhengjin);
+        dest.writeString(this.common_mymaijia);
+        dest.writeString(this.common_tongyongsetting);
+        dest.writeString(this.common_buyerrefuse);
+        dest.writeString(this.common_receivemoney);
+        dest.writeString(this.common_getgoods);
+        dest.writeString(this.seller_releasetitle);
+        dest.writeString(this.seller_weight);
+        dest.writeString(this.seller_unit);
+        dest.writeString(this.seller_commodityCode);
+        dest.writeString(this.common_specifications);
+        dest.writeString(this.common_warehouseAdress);
+        dest.writeString(this.seller_currentSalesPrices);
+        dest.writeString(this.seller_brand);
+        dest.writeString(this.seller_goodsorigin);
+        dest.writeString(this.seller_productCategory);
+        dest.writeString(this.seller_goodsname);
+        dest.writeString(this.common_edited);
+        dest.writeString(this.common_toastrelease);
+        dest.writeString(this.common_takephoto);
+        dest.writeString(this.common_camera);
+        dest.writeString(this.common_selerctphoto);
+        dest.writeString(this.common_toastselerctphoto);
+        dest.writeString(this.common_servicedescripe);
+        dest.writeString(this.common_businessinfo);
+        dest.writeString(this.common_jiesuanzhongxin);
+        dest.writeString(this.common_depotlist);
+        dest.writeString(this.common_pleaseopenshopfirst);
+        dest.writeString(this.common_goodsource);
+        dest.writeString(this.common_managecategory);
+        dest.writeString(this.common_createshop);
+        dest.writeString(this.common_shopauditnotice);
+        dest.writeString(this.common_settleinfo);
+        dest.writeString(this.common_basicinfo);
+        dest.writeString(this.common_managefanwei);
+        dest.writeString(this.common_chanpinnumber);
+        dest.writeString(this.common_modify);
+        dest.writeString(this.common_locationinfo);
+        dest.writeString(this.common_sex);
+        dest.writeString(this.common_birthdaydate);
+        dest.writeString(this.common_yhzhfail);
+        dest.writeString(this.common_settlecenter);
+        dest.writeString(this.common_nopay);
+        dest.writeString(this.common_cash);
+        dest.writeString(this.common_yetcorperate);
+        dest.writeString(this.common_linkinfo);
+        dest.writeString(this.common_nodescribeinfo);
+        dest.writeString(this.common_setcorperatedeliver);
+        dest.writeString(this.common_linkman);
+        dest.writeString(this.common_depotdetail);
+        dest.writeString(this.common_newinsertdepot);
+        dest.writeString(this.common_linkmanming);
+        dest.writeString(this.common_linkmanxing);
+        dest.writeString(this.common_linktel);
+        dest.writeString(this.common_setdefaultdepot);
+        dest.writeString(this.common_mobilestyleerror);
+        dest.writeString(this.common_quedingdeletedepot);
+        dest.writeString(this.common_setcenter);
+        dest.writeString(this.common_language);
+        dest.writeString(this.common_exit);
+        dest.writeString(this.common_onselling);
+        dest.writeString(this.common_publishgoods);
+        dest.writeString(this.common_sellerregister);
+        dest.writeString(this.common_selectjuese);
+        dest.writeString(this.common_completeinfo);
+        dest.writeString(this.common_zanweishezhi);
+        dest.writeString(this.common_inputallinfo);
+        dest.writeString(this.common_styleerror);
+        dest.writeString(this.common_province);
+        dest.writeString(this.common_city);
+        dest.writeString(this.common_infosubmityet);
+        dest.writeString(this.common_minusafterjump);
+        dest.writeString(this.common_man);
+        dest.writeString(this.common_woman);
+        dest.writeString(this.common_keepsecret);
+        dest.writeString(this.common_buyerlogin);
+        dest.writeString(this.common_registersongjuan);
+        dest.writeString(this.common_registerisaggree);
+        dest.writeString(this.common_userprotocol);
+        dest.writeString(this.common_buyerregister);
+        dest.writeString(this.common_suredelete);
+        dest.writeString(this.common_yongxin);
+        dest.writeString(this.common_caozuochenggong);
+        dest.writeString(this.connon_caozuoshibai);
+        dest.writeString(this.comm_jushouyuanyin);
+        dest.writeString(this.common_daiquhuo);
+        dest.writeString(this.common_notset);
+        dest.writeString(this.common_personaldetail);
+        dest.writeString(this.common_headphoto);
+        dest.writeString(this.common_birthnotmorenow);
+        dest.writeString(this.common_pleaseselect);
+        dest.writeString(this.common_rejectreceive);
+        dest.writeString(this.common_applybackgood);
+        dest.writeString(this.common_applyreject);
+        dest.writeString(this.common_yetcancel);
+        dest.writeString(this.common_onexpress);
+        dest.writeString(this.common_inputrejectreason);
+        dest.writeString(this.common_surerejectorderm);
+        dest.writeString(this.common_inputreason);
+        dest.writeString(this.common_selectgoodshouldback);
+        dest.writeString(this.common_reasonnotnull);
+        dest.writeString(this.common_returnbianhao);
+        dest.writeString(this.common_samplename);
+        dest.writeString(this.common_reason);
+        dest.writeString(this.common_totalprice);
+        dest.writeString(this.common_returnorder);
+        dest.writeString(this.common_aggree);
+        dest.writeString(this.common_notaggree);
+        dest.writeString(this.common_shurukuaidinumber);
+        dest.writeString(this.common_mingcheng);
+        dest.writeString(this.common_leixing);
+        dest.writeString(this.common_inputfeedback);
+        dest.writeString(this.common_feedback);
+        dest.writeString(this.common_toastcar);
+        dest.writeString(this.common_yizhifu);
+        dest.writeString(this.common_hanyunfei);
+        dest.writeString(this.common_addresssuggest);
+        dest.writeString(this.common_cashman);
+        dest.writeString(this.common_notuse);
+        dest.writeString(this.common_pleaseselectdeliver);
+        dest.writeString(this.common_nousefulcoupons);
+        dest.writeString(this.common_buyerremark);
+        dest.writeString(this.common_addressnotdeliver);
+        dest.writeString(this.common_selectaddressinfo);
+        dest.writeString(this.common_cannull);
+        dest.writeString(this.common_mycoupon);
+        dest.writeString(this.coupon_notuse);
+        dest.writeString(this.coupon_yetuse);
+        dest.writeString(this.common_inputdescription);
+        dest.writeString(this.common_stock);
+        dest.writeString(this.common_alwaysusefull);
+        dest.writeString(this.common_depot);
+        dest.writeString(this.common_manage);
+        dest.writeString(this.common_evaluategradle);
+        dest.writeString(this.common_actualPrice);
+        dest.writeString(this.common_sampletotalprice);
+        dest.writeString(this.common_returnshuoming);
+        dest.writeString(this.common_returnreason);
+        dest.writeString(this.common_uppicevidence);
+        dest.writeString(this.common_uploadpic);
+        dest.writeString(this.common_selectrreason);
+        dest.writeString(this.common_sellercancel);
+        dest.writeString(this.common_sgenqingyes);
+        dest.writeString(this.common_youhui);
+        dest.writeString(this.common_sumstock);
+        dest.writeString(this.conmon_yuyanqiehuan);
+        dest.writeString(this.common_lianjiechaoshi);
+        dest.writeString(this.common_chongxinfasong);
+        dest.writeString(this.common_zaicifasong);
+        dest.writeString(this.common_idpositive);
+        dest.writeString(this.common_idreverse);
+        dest.writeString(this.common_look);
+        dest.writeString(this.common_passwordCuowu);
+        dest.writeString(this.common_chongqi);
+        dest.writeString(this.common_saomiao);
+        dest.writeString(this.common_livescommunity);
+        dest.writeString(this.common_livesLeimu);
+        dest.writeString(this.common_fankui);
+        dest.writeString(this.common_fabu);
+        dest.writeString(this.common_fabuMessage);
+        dest.writeString(this.common_lianxiname);
+        dest.writeString(this.common_lianxiphone);
+        dest.writeString(this.comon_xinxibuwanzheng);
+        dest.writeString(this.common_leimuselect);
+        dest.writeString(this.common_xiangqing);
+        dest.writeString(this.common_biaoti);
+        dest.writeString(this.common_xiangximiaoshu);
+        dest.writeString(this.common_duanxin);
+        dest.writeString(this.common_liaotian);
+        dest.writeString(this.common_xujiaxinxi);
+        dest.writeString(this.common_jubao);
+        dest.writeString(this.common_quanxian);
+        dest.writeString(this.common_liyou);
+        dest.writeString(this.common_myfabu);
+        dest.writeString(this.common_biaoqing);
+    }
+
+    public MobileStaticTextCode() {
+    }
+
+    protected MobileStaticTextCode(Parcel in) {
+        this.common_daishenhe = in.readString();
+        this.commo_shenheyes = in.readString();
+        this.common_dongjie = in.readString();
+        this.common_jiedong = in.readString();
+        this.common_shenheno = in.readString();
+        this.common_baozhengjinbiandong = in.readString();
+        this.common_additionall = in.readString();
+        this.common_kouchu = in.readString();
+        this.common_baozhengjindongjie = in.readString();
+        this.common_jiesuanjilu = in.readString();
+        this.common_setting = in.readString();
+        this.common_zuidibaozhengjin = in.readString();
+        this.common_home = in.readString();
+        this.common_predeposits = in.readString();
+        this.common_integral = in.readString();
+        this.common_personalcenter = in.readString();
+        this.common_addnewlocation = in.readString();
+        this.common_submit = in.readString();
+        this.common_delete = in.readString();
+        this.common_setdefaultlocation = in.readString();
+        this.common_detaillocation = in.readString();
+        this.common_receiveman = in.readString();
+        this.common_myreceivegoodslocation = in.readString();
+        this.common_search = in.readString();
+        this.common_shop = in.readString();
+        this.common_sample = in.readString();
+        this.common_samplesearch = in.readString();
+        this.common_showmore = in.readString();
+        this.common_sellingtime = in.readString();
+        this.common_price = in.readString();
+        this.common_sellamount = in.readString();
+        this.common_samplelist = in.readString();
+        this.common_putshoppingcart = in.readString();
+        this.common_buynow = in.readString();
+        this.common_imagetextdetail = in.readString();
+        this.common_samplecomment = in.readString();
+        this.common_sampledetail = in.readString();
+        this.common_comment = in.readString();
+        this.common_searchsampleshop = in.readString();
+        this.common_sampleclassify = in.readString();
+        this.common_choosepaytype = in.readString();
+        this.common_realpay = in.readString();
+        this.common_couponsinfo = in.readString();
+        this.common_sampleprice = in.readString();
+        this.common_freight = in.readString();
+        this.common_leavemessagetoseller = in.readString();
+        this.common_inputbillcontent = in.readString();
+        this.common_inputbillhead = in.readString();
+        this.common_billinfo = in.readString();
+        this.common_freedilivery = in.readString();
+        this.common_deliverytype = in.readString();
+        this.common_nonecoupons = in.readString();
+        this.common_coupons = in.readString();
+        this.common_makesureorder = in.readString();
+        this.common_favoriteshop = in.readString();
+        this.common_favoritesample = in.readString();
+        this.common_myfavorites = in.readString();
+        this.common_agreeregisterprotocol = in.readString();
+        this.common_messagecode = in.readString();
+        this.common_tellphone = in.readString();
+        this.common_makesure = in.readString();
+        this.common_mine = in.readString();
+        this.common_favorites = in.readString();
+        this.common_fixednumber = in.readString();
+        this.notice_pleasechoosedeletegood = in.readString();
+        this.notice_pleasechoosesettlegood = in.readString();
+        this.validate_locationdetailnotnull = in.readString();
+        this.validate_linktellnotnull = in.readString();
+        this.validate_receivemannotnull = in.readString();
+        this.common_mainsell = in.readString();
+        this.common_locationname = in.readString();
+        this.common_pleaseinputsampleshop = in.readString();
+        this.notice_nomoreresult = in.readString();
+        this.common_recentransaction = in.readString();
+        this.unit_transaction = in.readString();
+        this.common_deliveryspeed = in.readString();
+        this.common_serviceatitude = in.readString();
+        this.common_consitancerate = in.readString();
+        this.common_goodcommentrate = in.readString();
+        this.notice_favoritesuccess = in.readString();
+        this.common_favoriteyet = in.readString();
+        this.common_pleasepaypassword = in.readString();
+        this.common_payname = in.readString();
+        this.notice_chooseordertype = in.readString();
+        this.notice_getorderinfofailure = in.readString();
+        this.common_ordermoney = in.readString();
+        this.common_ordernumber = in.readString();
+        this.notice_stockless = in.readString();
+        this.notice_giveupfavoritesuccess = in.readString();
+        this.notice_cancel = in.readString();
+        this.notice_suregiveupfavorite = in.readString();
+        this.notice_noticename = in.readString();
+        this.common_modifyreceivelocation = in.readString();
+        this.common_receivelocation = in.readString();
+        this.common_payorder = in.readString();
+        this.notice_modifypasswordfailure = in.readString();
+        this.notice_modifypasswordsuccess = in.readString();
+        this.notice_usernameexist = in.readString();
+        this.notice_registersuccess = in.readString();
+        this.validate_agreeregisterprotocol = in.readString();
+        this.notice_sendmessagecodesuccess = in.readString();
+        this.validate_inputtellphone = in.readString();
+        this.common_shopprofile = in.readString();
+        this.common_favorite = in.readString();
+        this.common_shophome = in.readString();
+        this.common_settle = in.readString();
+        this.common_sum = in.readString();
+        this.common_aplaydistributor = in.readString();
+        this.common_managereceivelocation = in.readString();
+        this.common_accountsecurity = in.readString();
+        this.common_mymessage = in.readString();
+        this.common_myorder = in.readString();
+        this.common_withdraw = in.readString();
+        this.common_shoppingcart = in.readString();
+        this.common_classify = in.readString();
+        this.notice_inputusername = in.readString();
+        this.notice_requesterror = in.readString();
+        this.validate_passwordnotnull = in.readString();
+        this.validate_usernamenotnull = in.readString();
+        this.unit_place = in.readString();
+        this.validate_passwordminlength = in.readString();
+        this.validate_passworddifference = in.readString();
+        this.validate_inputpassword = in.readString();
+        this.validate_inputsurepassword = in.readString();
+        this.common_surepassword = in.readString();
+        this.validate_inputmessagecode = in.readString();
+        this.unit_second = in.readString();
+        this.common_nextstep = in.readString();
+        this.common_authcode = in.readString();
+        this.common_getauthcode = in.readString();
+        this.common_fastregister = in.readString();
+        this.common_forgetpassword = in.readString();
+        this.common_rememberpassword = in.readString();
+        this.common_password = in.readString();
+        this.common_username = in.readString();
+        this.common_register = in.readString();
+        this.common_modifypassword = in.readString();
+        this.common_login = in.readString();
+        this.notice_cancelfavorite = in.readString();
+        this.common_selectall = in.readString();
+        this.common_unincludedelivery = in.readString();
+        this.common_usersafe = in.readString();
+        this.common_marketprice = in.readString();
+        this.common_addtocart = in.readString();
+        this.common_buyamount = in.readString();
+        this.common_shopaddress = in.readString();
+        this.common_all = in.readString();
+        this.common_waitsend = in.readString();
+        this.common_waitrecv = in.readString();
+        this.common_waitpay = in.readString();
+        this.common_done = in.readString();
+        this.common_refund = in.readString();
+        this.common_closeorder = in.readString();
+        this.common_pay = in.readString();
+        this.common_received = in.readString();
+        this.common_noticesend = in.readString();
+        this.common_makecomments = in.readString();
+        this.common_cancelorder = in.readString();
+        this.common_refunding = in.readString();
+        this.common_refunded = in.readString();
+        this.common_inputoldpassword = in.readString();
+        this.common_bindcard = in.readString();
+        this.common_add = in.readString();
+        this.common_holdername = in.readString();
+        this.common_setdefault = in.readString();
+        this.common_cardnum = in.readString();
+        this.common_bank = in.readString();
+        this.common_bindemail = in.readString();
+        this.common_bindphone = in.readString();
+        this.common_manageaccount = in.readString();
+        this.common_leavemessage = in.readString();
+        this.common_tologin = in.readString();
+        this.common_applyservice = in.readString();
+        this.common_refundreason = in.readString();
+        this.common_isreceive = in.readString();
+        this.common_refundcost = in.readString();
+        this.common_refundmessage = in.readString();
+        this.common_orderdetail = in.readString();
+        this.common_createtime = in.readString();
+        this.common_paytime = in.readString();
+        this.common_inputyourcomment = in.readString();
+        this.common_goodcomment = in.readString();
+        this.common_normalcomment = in.readString();
+        this.common_badcomment = in.readString();
+        this.common_refundcode = in.readString();
+        this.common_loading = in.readString();
+        this.common_waiting = in.readString();
+        this.common_inputnotnull = in.readString();
+        this.common_addressisnull = in.readString();
+        this.common_pleaseselecttype = in.readString();
+        this.common_amountofsample = in.readString();
+        this.common_deliveryfee = in.readString();
+        this.common_quit = in.readString();
+        this.common_loadmore = in.readString();
+        this.notice_networkanormal = in.readString();
+        this.common_paysuccess = in.readString();
+        this.common_gongsixinxi = in.readString();
+        this.common_yunfeimuban = in.readString();
+        this.common_zizhanghaoguanli = in.readString();
+        this.common_addcashdeposit = in.readString();
+        this.common_zichanzhongxin = in.readString();
+        this.common_otherlogin = in.readString();
+        this.title_otherlogin = in.readString();
+        this.point_identity = in.readString();
+        this.bg_sellertitle = in.readString();
+        this.bg_expresstitle = in.readString();
+        this.common_hintpassword = in.readString();
+        this.common_shopLogin = in.readString();
+        this.seller_hometodaytitle = in.readString();
+        this.seller_homenewtitle = in.readString();
+        this.seller_homerefuse = in.readString();
+        this.seller_homewaitingtitle = in.readString();
+        this.seller_homesendtitle = in.readString();
+        this.commo_momeny = in.readString();
+        this.common_neterror = in.readString();
+        this.common_againlogput = in.readString();
+        this.goods_selling = in.readString();
+        this.goods_depot = in.readString();
+        this.min_logistics = in.readString();
+        this.min_securitymanager = in.readString();
+        this.min_assets = in.readString();
+        this.min_shopinfo = in.readString();
+        this.seller_managermanager = in.readString();
+        this.seller_goodsmanager = in.readString();
+        this.seller_homemanager = in.readString();
+        this.common_num = in.readString();
+        this.common_changeinfo = in.readString();
+        this.common_logout = in.readString();
+        this.seller_shopinfo = in.readString();
+        this.seller_shoplogo = in.readString();
+        this.seller_shopname = in.readString();
+        this.seller_shopaddress = in.readString();
+        this.seller_shoptel = in.readString();
+        this.assets_notbind = in.readString();
+        this.assets_bindcar = in.readString();
+        this.assets_withdraw = in.readString();
+        this.assets_trading = in.readString();
+        this.assets_apply = in.readString();
+        this.assets_can = in.readString();
+        this.common_changephone = in.readString();
+        this.common_oldpsd = in.readString();
+        this.seller_expresslist = in.readString();
+        this.check_express = in.readString();
+        this.submit_express = in.readString();
+        this.seller_setexpress = in.readString();
+        this.seller_defaultexpress = in.readString();
+        this.express_detail = in.readString();
+        this.cancel_express = in.readString();
+        this.common_sure = in.readString();
+        this.shop_uptime = in.readString();
+        this.shop_downtime = in.readString();
+        this.shop_down = in.readString();
+        this.shop_up = in.readString();
+        this.good_fee = in.readString();
+        this.goods_changefee = in.readString();
+        this.goods_changeprice = in.readString();
+        this.goods_message = in.readString();
+        this.goods_banner = in.readString();
+        this.goods_inputprice = in.readString();
+        this.goods_inputfee = in.readString();
+        this.today_title = in.readString();
+        this.goods_merchandise = in.readString();
+        this.today_goodsnum = in.readString();
+        this.today_buyernum = in.readString();
+        this.today_paynum = in.readString();
+        this.common_buyer = in.readString();
+        this.seller_refusing = in.readString();
+        this.seller_waiteorder = in.readString();
+        this.common_refuse = in.readString();
+        this.common_examineexpress = in.readString();
+        this.common_selectexpress = in.readString();
+        this.common_buyermessage = in.readString();
+        this.seller_ordertime = in.readString();
+        this.common_goodstype = in.readString();
+        this.seller_getgoods = in.readString();
+        this.buyer_refuse = in.readString();
+        this.common_toastsetexpress = in.readString();
+        this.express_detail1 = in.readString();
+        this.toast_noexpress = in.readString();
+        this.delivery_no = in.readString();
+        this.order_message = in.readString();
+        this.common_receipt = in.readString();
+        this.common_recive = in.readString();
+        this.order_no = in.readString();
+        this.express_no = in.readString();
+        this.courier_inputaddress = in.readString();
+        this.logistics_logintitle = in.readString();
+        this.logistic_apply = in.readString();
+        this.logistic_titlemessage = in.readString();
+        this.logistics_minecompany = in.readString();
+        this.logistics_mineperson = in.readString();
+        this.logistic_sonaccountinfo = in.readString();
+        this.common_edit = in.readString();
+        this.common_newpassword = in.readString();
+        this.logistic_applypromisecash = in.readString();
+        this.common_blindmobile = in.readString();
+        this.common_newinsert = in.readString();
+        this.logistic_sonaccountlist = in.readString();
+        this.logistic_companyload = in.readString();
+        this.logistic_createaccount = in.readString();
+        this.logistic_accountmanage = in.readString();
+        this.logistic_personapply = in.readString();
+        this.common_todayClear = in.readString();
+        this.logistic_settledetail = in.readString();
+        this.logistic_relativeorderdetail = in.readString();
+        this.logistic_remitmoneyinfo = in.readString();
+        this.logistic_cardnumber = in.readString();
+        this.logistic_orderdetail = in.readString();
+        this.logistic_accounthead = in.readString();
+        this.logistic_depositbank = in.readString();
+        this.common_save = in.readString();
+        this.notice_pleaseinputcorrectemail = in.readString();
+        this.common_pleaseinputcorrectmobile = in.readString();
+        this.common_loginname = in.readString();
+        this.common_name = in.readString();
+        this.common_email = in.readString();
+        this.common_yetuse = in.readString();
+        this.common_yetstopuse = in.readString();
+        this.common_beginuse = in.readString();
+        this.common_stopuse = in.readString();
+        this.common_resetpassword = in.readString();
+        this.common_mobile = in.readString();
+        this.common_pleasesetaccountloginname = in.readString();
+        this.common_pleasesetaccountpassword = in.readString();
+        this.common_pleaseinputusername = in.readString();
+        this.common_pleaseinputlocation = in.readString();
+        this.common_surenewinsert = in.readString();
+        this.common_pleaseinputemail = in.readString();
+        this.common_updatebind = in.readString();
+        this.common_currentbindmobile = in.readString();
+        this.common_deliveryname = in.readString();
+        this.common_companyname = in.readString();
+        this.common_corporatename = in.readString();
+        this.common_linkway = in.readString();
+        this.common_profile = in.readString();
+        this.common_uploadbussinesslicence = in.readString();
+        this.common_submitapply = in.readString();
+        this.common_age = in.readString();
+        this.common_idcard = in.readString();
+        this.common_identity = in.readString();
+        this.logistic_createtitle = in.readString();
+        this.common_logisticaccount = in.readString();
+        this.apply_set = in.readString();
+        this.apply_remark = in.readString();
+        this.apply_phone = in.readString();
+        this.apply_money = in.readString();
+        this.common_inputmoney = in.readString();
+        this.common_inputremark = in.readString();
+        this.common_smstitle = in.readString();
+        this.common_pleaseinputaddress = in.readString();
+        this.logistics_changephone = in.readString();
+        this.remark_message = in.readString();
+        this.today_momeny = in.readString();
+        this.logistic_submitapply = in.readString();
+        this.common_pleaseinputsearch = in.readString();
+        this.common_sellermessage = in.readString();
+        this.common_selectdetail = in.readString();
+        this.logistic_todaymessage = in.readString();
+        this.seller_homereceived = in.readString();
+        this.seller_homefinish = in.readString();
+        this.common_rejectreceivegoods = in.readString();
+        this.common_pleaseinputuserinfo = in.readString();
+        this.common_skiponesecond = in.readString();
+        this.common_clickaddaddress = in.readString();
+        this.common_nownogooddetail = in.readString();
+        this.common_settlehistory = in.readString();
+        this.common_returngoods = in.readString();
+        this.common_bigbrandrecommend = in.readString();
+        this.common_farmousshop = in.readString();
+        this.common_pleaseinputloginname = in.readString();
+        this.common_pleaseinputname = in.readString();
+        this.common_yetreject = in.readString();
+        this.common_contactseller = in.readString();
+        this.common_saomareceivegoods = in.readString();
+        this.common_remindseller = in.readString();
+        this.common_nodata = in.readString();
+        this.common_insend = in.readString();
+        this.common_todayshouldsettle = in.readString();
+        this.common_managesonaccount = in.readString();
+        this.common_addinfo = in.readString();
+        this.common_accountinfo = in.readString();
+        this.common_shoplist = in.readString();
+        this.common_pleaseinputorderno = in.readString();
+        this.common_rejectgoods = in.readString();
+        this.common_managecashaddr = in.readString();
+        this.common_pleaseinputfirstname = in.readString();
+        this.common_pleaseinputlastname = in.readString();
+        this.common_pleaseinputlinktel = in.readString();
+        this.common_pleaseinputdetaillocation = in.readString();
+        this.common_pleaseinputemailcode = in.readString();
+        this.common_workplat = in.readString();
+        this.common_unsetshopinfo = in.readString();
+        this.common_goopenshop = in.readString();
+        this.common_zhengzaishenhe = in.readString();
+        this.common_portionzhifu = in.readString();
+        this.common_yijiesuan = in.readString();
+        this.common_shenqingmoney = in.readString();
+        this.common_shijisettlementmoney = in.readString();
+        this.common_picinumber = in.readString();
+        this.common_settlementmoney = in.readString();
+        this.common_daijiesuanMoney = in.readString();
+        this.common_guanliandingdan = in.readString();
+        this.common_weijiesuan = in.readString();
+        this.common_tvdaijiesuan = in.readString();
+        this.common_zhucedizhi = in.readString();
+        this.common_gongsinumber = in.readString();
+        this.common_zhucetime = in.readString();
+        this.common_yingyezhizhao = in.readString();
+        this.common_yuqikouchu = in.readString();
+        this.common_yuqijiesuan = in.readString();
+        this.common_fahuo = in.readString();
+        this.common_zhongliang = in.readString();
+        this.common_feiyong = in.readString();
+        this.common_shouhuodi = in.readString();
+        this.common_tianshu = in.readString();
+        this.common_lianxirenxinxi = in.readString();
+        this.common_jiesuanzhanghao = in.readString();
+        this.common_xing = in.readString();
+        this.common_lianxidizhi = in.readString();
+        this.common_ming = in.readString();
+        this.common_dianhua = in.readString();
+        this.common_kaihuyinhang = in.readString();
+        this.common_yinhangname = in.readString();
+        this.common_zhihangyinhang = in.readString();
+        this.common_yinhangzhanghu = in.readString();
+        this.common_shenqing = in.readString();
+        this.common_mingxi = in.readString();
+        this.common_zongbaozhengjin = in.readString();
+        this.common_keyong = in.readString();
+        this.commo_dongjiebaozhengjin = in.readString();
+        this.common_baocunchenggong = in.readString();
+        this.common_usernamesetting = in.readString();
+        this.common_yunsongzhong = in.readString();
+        this.common_maijiafukuan = in.readString();
+        this.common_paidan = in.readString();
+        this.common_yumhuoyuan = in.readString();
+        this.connom_shoukuandizhi = in.readString();
+        this.common_dayubaozhengjin = in.readString();
+        this.common_mymaijia = in.readString();
+        this.common_tongyongsetting = in.readString();
+        this.common_buyerrefuse = in.readString();
+        this.common_receivemoney = in.readString();
+        this.common_getgoods = in.readString();
+        this.seller_releasetitle = in.readString();
+        this.seller_weight = in.readString();
+        this.seller_unit = in.readString();
+        this.seller_commodityCode = in.readString();
+        this.common_specifications = in.readString();
+        this.common_warehouseAdress = in.readString();
+        this.seller_currentSalesPrices = in.readString();
+        this.seller_brand = in.readString();
+        this.seller_goodsorigin = in.readString();
+        this.seller_productCategory = in.readString();
+        this.seller_goodsname = in.readString();
+        this.common_edited = in.readString();
+        this.common_toastrelease = in.readString();
+        this.common_takephoto = in.readString();
+        this.common_camera = in.readString();
+        this.common_selerctphoto = in.readString();
+        this.common_toastselerctphoto = in.readString();
+        this.common_servicedescripe = in.readString();
+        this.common_businessinfo = in.readString();
+        this.common_jiesuanzhongxin = in.readString();
+        this.common_depotlist = in.readString();
+        this.common_pleaseopenshopfirst = in.readString();
+        this.common_goodsource = in.readString();
+        this.common_managecategory = in.readString();
+        this.common_createshop = in.readString();
+        this.common_shopauditnotice = in.readString();
+        this.common_settleinfo = in.readString();
+        this.common_basicinfo = in.readString();
+        this.common_managefanwei = in.readString();
+        this.common_chanpinnumber = in.readString();
+        this.common_modify = in.readString();
+        this.common_locationinfo = in.readString();
+        this.common_sex = in.readString();
+        this.common_birthdaydate = in.readString();
+        this.common_yhzhfail = in.readString();
+        this.common_settlecenter = in.readString();
+        this.common_nopay = in.readString();
+        this.common_cash = in.readString();
+        this.common_yetcorperate = in.readString();
+        this.common_linkinfo = in.readString();
+        this.common_nodescribeinfo = in.readString();
+        this.common_setcorperatedeliver = in.readString();
+        this.common_linkman = in.readString();
+        this.common_depotdetail = in.readString();
+        this.common_newinsertdepot = in.readString();
+        this.common_linkmanming = in.readString();
+        this.common_linkmanxing = in.readString();
+        this.common_linktel = in.readString();
+        this.common_setdefaultdepot = in.readString();
+        this.common_mobilestyleerror = in.readString();
+        this.common_quedingdeletedepot = in.readString();
+        this.common_setcenter = in.readString();
+        this.common_language = in.readString();
+        this.common_exit = in.readString();
+        this.common_onselling = in.readString();
+        this.common_publishgoods = in.readString();
+        this.common_sellerregister = in.readString();
+        this.common_selectjuese = in.readString();
+        this.common_completeinfo = in.readString();
+        this.common_zanweishezhi = in.readString();
+        this.common_inputallinfo = in.readString();
+        this.common_styleerror = in.readString();
+        this.common_province = in.readString();
+        this.common_city = in.readString();
+        this.common_infosubmityet = in.readString();
+        this.common_minusafterjump = in.readString();
+        this.common_man = in.readString();
+        this.common_woman = in.readString();
+        this.common_keepsecret = in.readString();
+        this.common_buyerlogin = in.readString();
+        this.common_registersongjuan = in.readString();
+        this.common_registerisaggree = in.readString();
+        this.common_userprotocol = in.readString();
+        this.common_buyerregister = in.readString();
+        this.common_suredelete = in.readString();
+        this.common_yongxin = in.readString();
+        this.common_caozuochenggong = in.readString();
+        this.connon_caozuoshibai = in.readString();
+        this.comm_jushouyuanyin = in.readString();
+        this.common_daiquhuo = in.readString();
+        this.common_notset = in.readString();
+        this.common_personaldetail = in.readString();
+        this.common_headphoto = in.readString();
+        this.common_birthnotmorenow = in.readString();
+        this.common_pleaseselect = in.readString();
+        this.common_rejectreceive = in.readString();
+        this.common_applybackgood = in.readString();
+        this.common_applyreject = in.readString();
+        this.common_yetcancel = in.readString();
+        this.common_onexpress = in.readString();
+        this.common_inputrejectreason = in.readString();
+        this.common_surerejectorderm = in.readString();
+        this.common_inputreason = in.readString();
+        this.common_selectgoodshouldback = in.readString();
+        this.common_reasonnotnull = in.readString();
+        this.common_returnbianhao = in.readString();
+        this.common_samplename = in.readString();
+        this.common_reason = in.readString();
+        this.common_totalprice = in.readString();
+        this.common_returnorder = in.readString();
+        this.common_aggree = in.readString();
+        this.common_notaggree = in.readString();
+        this.common_shurukuaidinumber = in.readString();
+        this.common_mingcheng = in.readString();
+        this.common_leixing = in.readString();
+        this.common_inputfeedback = in.readString();
+        this.common_feedback = in.readString();
+        this.common_toastcar = in.readString();
+        this.common_yizhifu = in.readString();
+        this.common_hanyunfei = in.readString();
+        this.common_addresssuggest = in.readString();
+        this.common_cashman = in.readString();
+        this.common_notuse = in.readString();
+        this.common_pleaseselectdeliver = in.readString();
+        this.common_nousefulcoupons = in.readString();
+        this.common_buyerremark = in.readString();
+        this.common_addressnotdeliver = in.readString();
+        this.common_selectaddressinfo = in.readString();
+        this.common_cannull = in.readString();
+        this.common_mycoupon = in.readString();
+        this.coupon_notuse = in.readString();
+        this.coupon_yetuse = in.readString();
+        this.common_inputdescription = in.readString();
+        this.common_stock = in.readString();
+        this.common_alwaysusefull = in.readString();
+        this.common_depot = in.readString();
+        this.common_manage = in.readString();
+        this.common_evaluategradle = in.readString();
+        this.common_actualPrice = in.readString();
+        this.common_sampletotalprice = in.readString();
+        this.common_returnshuoming = in.readString();
+        this.common_returnreason = in.readString();
+        this.common_uppicevidence = in.readString();
+        this.common_uploadpic = in.readString();
+        this.common_selectrreason = in.readString();
+        this.common_sellercancel = in.readString();
+        this.common_sgenqingyes = in.readString();
+        this.common_youhui = in.readString();
+        this.common_sumstock = in.readString();
+        this.conmon_yuyanqiehuan = in.readString();
+        this.common_lianjiechaoshi = in.readString();
+        this.common_chongxinfasong = in.readString();
+        this.common_zaicifasong = in.readString();
+        this.common_idpositive = in.readString();
+        this.common_idreverse = in.readString();
+        this.common_look = in.readString();
+        this.common_passwordCuowu = in.readString();
+        this.common_chongqi = in.readString();
+        this.common_saomiao = in.readString();
+        this.common_livescommunity = in.readString();
+        this.common_livesLeimu = in.readString();
+        this.common_fankui = in.readString();
+        this.common_fabu = in.readString();
+        this.common_fabuMessage = in.readString();
+        this.common_lianxiname = in.readString();
+        this.common_lianxiphone = in.readString();
+        this.comon_xinxibuwanzheng = in.readString();
+        this.common_leimuselect = in.readString();
+        this.common_xiangqing = in.readString();
+        this.common_biaoti = in.readString();
+        this.common_xiangximiaoshu = in.readString();
+        this.common_duanxin = in.readString();
+        this.common_liaotian = in.readString();
+        this.common_xujiaxinxi = in.readString();
+        this.common_jubao = in.readString();
+        this.common_quanxian = in.readString();
+        this.common_liyou = in.readString();
+        this.common_myfabu = in.readString();
+        this.common_biaoqing = in.readString();
+    }
+
+    public static final Parcelable.Creator<MobileStaticTextCode> CREATOR = new Parcelable.Creator<MobileStaticTextCode>() {
+        @Override
+        public MobileStaticTextCode createFromParcel(Parcel source) {
+            return new MobileStaticTextCode(source);
+        }
+
+        @Override
+        public MobileStaticTextCode[] newArray(int size) {
+            return new MobileStaticTextCode[size];
+        }
+    };
 }

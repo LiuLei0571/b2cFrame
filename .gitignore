@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+app/src/main/java/com/jinqiao/b2c/common/log/
+app/src/main/java/com/jinqiao/b2c/compent/fragmnentList/
+app/src/main/java/com/jinqiao/b2c/compent/log/
+app/src/main/java/com/jinqiao/b2c/project/buyer/order/
+app/src/main/java/com/jinqiao/b2c/project/common/presenter/
+app/src/main/java/com/jinqiao/b2c/project/express/home/manager/
+app/src/main/java/com/jinqiao/b2c/project/express/home/presenter/
+app/src/main/java/com/jinqiao/b2c/project/express/home/temple/
+app/src/main/java/com/jinqiao/b2c/project/express/home/widget/
+app/src/main/java/com/jinqiao/b2c/project/express/order/
+app/src/main/java/com/jinqiao/b2c/project/logistics/home/manager/
+app/src/main/java/com/jinqiao/b2c/project/logistics/home/presenter/
+app/src/main/java/com/jinqiao/b2c/project/logistics/home/temple/
+app/src/main/java/com/jinqiao/b2c/project/logistics/home/widget/
+app/src/main/java/com/jinqiao/b2c/project/logistics/order/
+app/src/main/java/com/jinqiao/b2c/project/seller/home/manager/
+app/src/main/java/com/jinqiao/b2c/project/seller/home/presenter/
+app/src/main/java/com/jinqiao/b2c/project/seller/home/temple/
+app/src/main/java/com/jinqiao/b2c/project/seller/home/widget/
+app/src/main/java/com/jinqiao/b2c/project/seller/order/

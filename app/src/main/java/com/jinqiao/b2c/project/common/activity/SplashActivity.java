@@ -71,6 +71,7 @@ public class SplashActivity extends TempleActivity {
             public void run() {
                 if (!DeviceHelper.getNetworkState() && mTranslatesString != null && mTranslatesList != null) {
                     doMainMethod();
+                    finish();
                 } else {
                     initData();
 
@@ -95,6 +96,12 @@ public class SplashActivity extends TempleActivity {
                     }
                     doMainMethod();
                 }
+            }
+
+            @Override
+            public void onAfterCall() {
+                super.onAfterCall();
+                finish();
             }
         });
     }

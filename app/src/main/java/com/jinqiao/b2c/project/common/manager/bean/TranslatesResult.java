@@ -1,8 +1,9 @@
 package com.jinqiao.b2c.project.common.manager.bean;
 
 
+import java.io.Serializable;
 
-public class TranslatesResult {
+public class TranslatesResult implements Serializable {
 	private Translates translates;
 
 	public Translates getTranslates() {

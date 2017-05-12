@@ -1,7 +1,9 @@
 package com.jinqiao.b2c.project.common.manager.bean;
 
 
-public class Translates {
+import java.io.Serializable;
+
+public class Translates  implements Serializable{
     private MobileStaticTextCode mobileStaticTextCode;
     private OptionList optionList;
 
