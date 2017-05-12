@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressImage">
+        <attr name="maxRadius" format="dimension" />
+        <attr name="minRadius" format="dimension" />
+        <attr name="pointColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="Tab">
+        <attr name="defaultTitle" format="string" />
+        <attr name="defaultDes" format="reference" />
+        <attr name="selectDes" format="reference" />
+    </declare-styleable>
+</resources>

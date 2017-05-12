@@ -1,0 +1,20 @@
+package com.jinqiao.b2c.common.http;
+
+/**
+ * 用途：
+ * Created by milk on 17/4/21.
+ * 邮箱：649444395@qq.com
+ */
+
+public interface ICall extends ICancelable {
+    int SATUS_NEW = 0;
+    int STATUE_READY = 1;
+    int STATUS_RUNNING = 3;
+    int STATUS_OVER = 4;
+
+    int getStatus();
+
+    IResponse execute() throws Exception;
+
+    IRequest getRequest();
+}

@@ -1,0 +1,56 @@
+package com.jinqiao.b2c.compent.helper;
+
+
+import com.jinqiao.b2c.common.helper.ThreadHelper;
+import com.jinqiao.b2c.common.http.HttpScheduler;
+import com.jinqiao.b2c.common.http.ICall;
+import com.jinqiao.b2c.common.http.IRequest;
+import com.jinqiao.b2c.common.http.IResult;
+import com.jinqiao.b2c.common.thread.ThreadLocalHelper;
+import com.jinqiao.b2c.compent.http.Api;
+import com.jinqiao.b2c.compent.http.DemoHttpRequest;
+
+/**
+ * 用途：
+ * Created by milk on 17/4/21.
+ * 邮箱：649444395@qq.com
+ */
+
+public class HttpHelper {
+    private static HttpScheduler sHttpScheduler;
+
+    static {
+        sHttpScheduler = CDIHelper.getInstance().mHttpScheduler;
+    }
+
+    public static <T> IResult<T> execute(Api api, Object params) {
+
+        return execute(DemoHttpRequest.build(api).setParams(params));
+    }
+
+    private static <T> IResult<T> execute(IRequest demoHttpRequest) {
+        if (!DeviceHelper.getNetworkState()) {
+            throw new RuntimeException();
+        }
+        ICall icall = sHttpScheduler.newCall(demoHttpRequest);
+        ThreadLocalHelper.TaskInfo taskInfo = ThreadLocalHelper.getInfoThreadLocal();
+        IResult<T> result = sHttpScheduler.execute(icall, "at", "group");
+        return result;
+    }
+
+    private static <T> IResult<T> executeString(IRequest demoHttpRequest) {
+        ICall icall = sHttpScheduler.newCall(demoHttpRequest);
+        ThreadLocalHelper.TaskInfo taskInfo = ThreadLocalHelper.getInfoThreadLocal();
+        IResult<T> result = sHttpScheduler.execute(icall, taskInfo.groupName, taskInfo.taskName);
+        return result;
+    }
+
+    public static void cancelGroup(String groupName) {
+        ThreadHelper.postMain(new Runnable() {
+            @Override
+            public void run() {
+                sHttpScheduler.cancelGroup(groupName);
+            }
+        });
+    }
+}
