@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.utils.lang.Strings;
 import com.jinqiao.b2c.compent.base.IAct;
+import com.jinqiao.b2c.compent.helper.ImageHelper;
 import com.jinqiao.b2c.project.buyer.home.adapter.CategoryAdapter;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.ModelPage;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.ModelPageItem;
@@ -64,7 +65,7 @@ public class CategoryInfoTemplate extends BaseTemplate<ModelPage, CategoryInfoTe
         categoryAdapter.setListener(getOnClick());
         holder.container.setAdapter(categoryAdapter);
         if (!Strings.EMPTY.equals(model.getBackGroundImage())) {
-//            ImageHelper.display(model.getBackGroundImage(), holder.bgImg);
+            ImageHelper.display( holder.bgImg,model.getBackGroundImage());
         }
     }
 

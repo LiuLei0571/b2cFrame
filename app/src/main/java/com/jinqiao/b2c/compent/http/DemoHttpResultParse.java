@@ -45,7 +45,11 @@ public class DemoHttpResultParse implements HttpResultParse {
                     if (type == String.class || type == List.class) {
                         body = body.toString();
                     } else {
-                        body = JSON.parseObject(body.toString().replace(".","_"), type);
+                        String json1 = body.toString();
+                        if (json1.indexOf("translate")!=-1) {
+                            json1 = json1.replace(".", "_");
+                        }
+                        body = JSON.parseObject(json1, type);
                     }
                 }
                 return new Result<>(body, errorInfo).setMeta(errorInfo).setMsg(errorInfo.getErrorInfo()).setSuccess(errorInfo.isSuccess());
