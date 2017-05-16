@@ -2,6 +2,7 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import android.content.Context;
 
+import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.event.IEvent;
 import com.jinqiao.b2c.common.event.impl.EventBusImpl;
 import com.jinqiao.b2c.common.http.HttpResultParse;
@@ -11,7 +12,7 @@ import com.jinqiao.b2c.common.http.impl.okhttp3.CookiesManager;
 import com.jinqiao.b2c.common.http.impl.okhttp3.ICookieStore;
 import com.jinqiao.b2c.common.http.impl.okhttp3.OkHttpSchedule;
 import com.jinqiao.b2c.common.image.ImageDisplayLoader;
-import com.jinqiao.b2c.common.image.glide.GlideImageLoader;
+import com.jinqiao.b2c.common.image.VILImageLoader;
 import com.jinqiao.b2c.common.parse.IParse;
 import com.jinqiao.b2c.common.parse.impl.FastJsonParse;
 import com.jinqiao.b2c.common.task.TaskScheduler;
@@ -20,6 +21,12 @@ import com.jinqiao.b2c.compent.http.DemoHttpResultParse;
 import com.jinqiao.b2c.compent.http.OkHttpRequestListener;
 import com.jinqiao.b2c.compent.http.PersistentCookieStoreNew;
 import com.jinqiao.b2c.compent.ui.AppToast;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.CookieSyncManager;
 
@@ -61,12 +68,37 @@ public class AppModule {
         return new FastJsonParse();
     }
 
+    //图片加载器
     @Provides
     @Singleton
-    protected ImageDisplayLoader provideImageLoader() {
-        GlideImageLoader imageLoader = new GlideImageLoader(mContext);
-        return imageLoader;
+    protected ImageDisplayLoader provideImageLoader_back() {
+        ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(mContext);
+        config.threadPriority(Thread.NORM_PRIORITY - 2);
+        config.memoryCacheSizePercentage(20);
+        config.denyCacheImageMultipleSizesInMemory();
+        config.diskCacheFileNameGenerator(new Md5FileNameGenerator());
+        config.diskCacheSize(100 * 1024 * 1024); // 50 MiB
+        config.tasksProcessingOrder(QueueProcessingType.LIFO);
+
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        imageLoader.init(config.build());
+
+        DisplayImageOptions displayOption = new DisplayImageOptions.Builder()
+                .cacheOnDisk(true).cacheInMemory(true).showImageOnLoading(0)
+                .showImageOnFail(R.drawable.ic_default)
+                .displayer(new FadeInBitmapDisplayer(300, true, true, false))
+                .build();
+
+        VILImageLoader imageDisplayLoader = new VILImageLoader(imageLoader, displayOption);
+        return imageDisplayLoader;
     }
+
+//    @Provides
+//    @Singleton
+//    protected ImageDisplayLoader provideImageLoader() {
+//        GlideImageLoader imageLoader = new GlideImageLoader(mContext);
+//        return imageLoader;
+//    }
 
     @Provides
     @Singleton

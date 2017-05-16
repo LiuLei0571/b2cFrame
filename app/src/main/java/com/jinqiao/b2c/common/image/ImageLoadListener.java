@@ -18,7 +18,7 @@ public interface ImageLoadListener {
     /*
     加载成功
      */
-    void onLoadSucess(String url, View view, Bitmap bitmap);
+    void onLoadSucess( View view, Bitmap bitmap);
 
     void onProgressUpdate(int current, int total);
 }

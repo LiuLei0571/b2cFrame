@@ -27,28 +27,28 @@ public class ImageHelper {
         if (displayOption == null) {
             displayOption = DisplayOption.builder().setDefaultResId(defaultImage);
         }
-        sLoader.display(imageView, url, null, displayOption, false, false);
+        sLoader.display(imageView, url, null, displayOption);
     }
 
     public static void display(ImageView imageView, String url) {
-        sLoader.display(imageView, url, null, null, false, false);
+        sLoader.display(imageView, url, null, null);
     }
 
     public static void display(ImageView imageView, String url, boolean round, boolean circle) {
-        sLoader.display(imageView, url, null, null, round, circle);
+        sLoader.display(imageView, url, null, null);
     }
 
     public static void display(ImageView imageView, String url, boolean circle) {
-        sLoader.display(imageView, url, null, null, false, circle);
+        sLoader.display(imageView, url, null, null);
     }
 
     public static void display(ImageView imageView, String url, ImageLoadListener listener) {
-        sLoader.display(imageView, url, listener, null, false, false);
+        sLoader.display(imageView, url, listener, null);
 
     }
 
     public static void display(ImageView imageView, String url, DisplayOption option) {
-        sLoader.display(imageView, url, null, option, false, false);
+        sLoader.display(imageView, url, null, option);
 
     }
 

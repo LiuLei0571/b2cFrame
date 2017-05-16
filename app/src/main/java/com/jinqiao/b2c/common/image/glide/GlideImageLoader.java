@@ -8,7 +8,6 @@ import com.bumptech.glide.DrawableTypeRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.jinqiao.b2c.R;
@@ -16,8 +15,6 @@ import com.jinqiao.b2c.common.helper.ThreadHelper;
 import com.jinqiao.b2c.common.image.DisplayOption;
 import com.jinqiao.b2c.common.image.ImageDisplayLoader;
 import com.jinqiao.b2c.common.image.ImageLoadListener;
-import com.jinqiao.b2c.common.image.glide.module.GlideCircleTransform;
-import com.jinqiao.b2c.common.image.glide.module.GlideRoundTransform;
 
 import java.io.File;
 
@@ -35,56 +32,52 @@ public class GlideImageLoader implements ImageDisplayLoader {
     }
 
     @Override
-    public void display(ImageView imageView, String url, ImageLoadListener listener, DisplayOption option, boolean round, boolean circle) {
+    public void display(ImageView imageView, String url, ImageLoadListener listener, DisplayOption  opts) {
         if (imageView != null) {
             DrawableTypeRequest<String> drawableTypeRequest = Glide.with(mContext).load(url);
-            if (option != null) {
-                if (option.cacheMemory != null) {
-                    drawableTypeRequest.skipMemoryCache(!option.cacheMemory);
+            if (opts != null) {
+                if (opts.cacheMemory != null) {
+                    drawableTypeRequest.skipMemoryCache(!opts.cacheMemory);
                 }
-                if (option.cacheOnDisk != null) {
-                    if (option.cacheOnDisk) {
+                if (opts.cacheOnDisk != null) {
+                    if (opts.cacheOnDisk) {
                         drawableTypeRequest.diskCacheStrategy(DiskCacheStrategy.SOURCE);
                     } else {
                         drawableTypeRequest.diskCacheStrategy(DiskCacheStrategy.NONE);
                     }
                 }
-                if (option.errorResId != null) {
-                    drawableTypeRequest.error(option.errorResId);
+                if (opts.errorResId != null) {
+                    drawableTypeRequest.error(opts.errorResId);
                 }
-                if (option.maxWith != null && option.maxHeight != null) {
-                    drawableTypeRequest.override(option.maxWith, option.maxHeight);
+                if (opts.maxHeight != null && opts.maxWith != null) {
+                    drawableTypeRequest.override(opts.maxWith, opts.maxHeight);
                 }
-                if (option.defaultResId != -1) {
-                    drawableTypeRequest.placeholder(option.defaultResId);
+                if (opts.defaultResId != -1) {
+                    drawableTypeRequest.placeholder(opts.defaultResId);
                 }
-                if (option.loadingResId != -1) {
-                    drawableTypeRequest.placeholder(option.loadingResId);
+                if (opts.loadingResId != -1) {
+                    drawableTypeRequest.placeholder(opts.loadingResId);
                 }
             }
             if (listener != null) {
-                drawableTypeRequest.listener(new RequestListener<String, GlideDrawable>() {
+                drawableTypeRequest.listener(new RequestListener() {
                     @Override
-                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                    public boolean onException(Exception e, Object model, Target target, boolean isFirstResource) {
                         listener.onLoadFail(url, imageView, e);
                         return false;
                     }
 
                     @Override
-                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                        if (resource instanceof GlideDrawable) {
-                            GlideBitmapDrawable resourcel = (GlideBitmapDrawable) resource;
-                            listener.onLoadSucess(url, imageView, null);
+                    public boolean onResourceReady(Object resource, Object model, Target target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        if (resource instanceof GlideBitmapDrawable) {
+                            GlideBitmapDrawable resource1 = (GlideBitmapDrawable) resource;
+                            listener.onLoadSucess(imageView, resource1.getBitmap());
+                        } else {
+                            listener.onLoadSucess(imageView, null);
                         }
                         return false;
                     }
                 });
-            }
-            if (round) {
-                drawableTypeRequest.transform(new GlideCircleTransform(mContext));
-            }
-            if (circle) {
-                drawableTypeRequest.transform(new GlideRoundTransform(mContext));
             }
             drawableTypeRequest.thumbnail(0.4f).dontAnimate().into(imageView);
         }
@@ -93,7 +86,7 @@ public class GlideImageLoader implements ImageDisplayLoader {
     @Override
     public Bitmap syncLoad(File file) {
         try {
-            return Glide.with(mContext).load(file).asBitmap().dontAnimate().placeholder(R.drawable.ic_default).thumbnail(0.4f).into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
+            return Glide.with(mContext).load(file).asBitmap().dontAnimate().placeholder(R.drawable.ic_no_image).thumbnail(0.4f).into(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get();
         } catch (Exception e) {
 
         }
@@ -157,11 +150,11 @@ public class GlideImageLoader implements ImageDisplayLoader {
             ThreadHelper.postMain(new Runnable() {
                 @Override
                 public void run() {
-                    Glide.with(mContext).load(url).asBitmap().placeholder(R.drawable.ic_default).preload(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
+                    Glide.with(mContext).load(url).asBitmap().placeholder(R.drawable.ic_no_image).preload(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
                 }
             });
         } else {
-            Glide.with(mContext).load(url).asBitmap().placeholder(R.drawable.ic_default).preload(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
+            Glide.with(mContext).load(url).asBitmap().placeholder(R.drawable.ic_no_image).preload(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
 
         }
     }
