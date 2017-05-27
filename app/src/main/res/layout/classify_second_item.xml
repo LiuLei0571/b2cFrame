@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_child_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tv_classify_item"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_135"
+        android:layout_marginLeft="@dimen/margin_father_left_normal"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_text_major"
+        android:textSize="@dimen/size_minor_large"/>
+
+</LinearLayout>

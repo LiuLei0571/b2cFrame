@@ -6,10 +6,9 @@ import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCarFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeClassifyFragment;
+import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeIndexFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeMineFragment;
-import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
-import com.jinqiao.b2c.project.buyer.home.manager.HomeManager;
 
 import javax.inject.Inject;
 
@@ -20,8 +19,6 @@ import javax.inject.Inject;
  */
 
 public class HomePresenter extends BasePresenter<BuyerHomeActivity> {
-    @Inject
-    HomeManager manager;
     private static HomePage[] pages = new HomePage[]{
             new HomePage("商城", BuyerHomeIndexFragment.class),
             new HomePage("分类", BuyerHomeClassifyFragment.class),

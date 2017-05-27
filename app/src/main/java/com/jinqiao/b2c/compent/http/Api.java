@@ -24,7 +24,7 @@ public class Api implements IApi {
     private ParamType mParamType;
     private ContentType mContentType;
     private IParamBuilder mIParamBuilder;
-    private IHost mIHost= Hosts.defaults;
+    private IHost mIHost = Hosts.defaults;
     private boolean enableCache = true;
     private String url;
     private boolean isLogin;
@@ -118,6 +118,17 @@ public class Api implements IApi {
     public static Api GET(String path) {
         Api api = new Api();
         api.path = path;
+        api.mRequestMethod = RequestMethod.Get;
+        api.mContentType = ContentType.APP_FORM_URLENCODED;
+        api.mParamType = ParamType.normal;
+        api.mIParamBuilder = ParamBuilders.normal;
+        return api;
+    }
+
+    public static Api GET(String path, Type type) {
+        Api api = new Api();
+        api.path = path;
+        api.mType = type;
         api.mRequestMethod = RequestMethod.Get;
         api.mContentType = ContentType.APP_FORM_URLENCODED;
         api.mParamType = ParamType.normal;

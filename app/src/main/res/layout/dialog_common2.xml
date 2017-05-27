@@ -26,7 +26,7 @@
             android:paddingRight="10dp"
             android:text="Hello World!!!"
             android:textColor="@color/color_text_major"
-            android:textSize="@dimen/text_large" />
+            android:textSize="@dimen/size_large" />
 
         <FrameLayout
             android:layout_width="match_parent"
