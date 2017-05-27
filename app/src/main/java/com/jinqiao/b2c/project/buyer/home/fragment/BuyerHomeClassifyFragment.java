@@ -1,7 +1,9 @@
 package com.jinqiao.b2c.project.buyer.home.fragment;
 
+import android.os.Bundle;
+
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.compent.base.BaseFragment;
+import com.jinqiao.b2c.compent.base.TempleFragment;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 
 /**
@@ -11,7 +13,7 @@ import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
  */
 
 
-public class BuyerHomeClassifyFragment extends BaseFragment{
+public class BuyerHomeClassifyFragment extends TempleFragment{
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -20,5 +22,11 @@ public class BuyerHomeClassifyFragment extends BaseFragment{
     @Override
     protected int getRootViewId() {
         return R.layout.fragment_buyer_index;
+    }
+
+    @Override
+    public void afterViewBind(Bundle saveInstanceState) {
+        super.afterViewBind(saveInstanceState);
+        setTitle(mTranslatesString.getCommon_sampleclassify());
     }
 }

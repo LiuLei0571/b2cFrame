@@ -53,9 +53,11 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mView == null) {
-            mView = inflater.inflate(getRootViewId(), container, false);
+        if (mView != null) {
+            return mView;
         }
+        mView = inflater.inflate(getRootViewId(), container, false);
+
         beforeViewBind(mView);
         bindView(mView);
         afterViewBind(savedInstanceState);
@@ -100,7 +102,6 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     @Override
     public void onDestroy() {
         super.onDestroy();
-        EventHelper.unRegister(this);
         HttpHelper.cancelGroup(groupName());
         if (mPresenterConnector != null) {
             mPresenterConnector.destory();
@@ -114,6 +115,7 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
             }
             mView = null;
         }
+        EventHelper.unRegister(this);
     }
 
     @Override
@@ -126,8 +128,8 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
 
     @Override
     public void beforeViewBind(View rootView) {
-        mTranslatesString =  TranslateHelper.getMobileText();
-        mTranslatesList =  TranslateHelper.getMobileList();
+        mTranslatesString = TranslateHelper.getMobileText();
+        mTranslatesList = TranslateHelper.getMobileList();
     }
 
     @Override
@@ -228,6 +230,7 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     protected void onGone() {
 
     }
+
     public void onEvent(EmptyEvent event) {
     }
 

@@ -14,4 +14,5 @@ import com.jinqiao.b2c.project.common.manager.bean.TranslatesResult;
 public interface Apis {
     Api home = Api.Post("banner/homePage.htm", Types.home).setLogin(false);
     Api translates=Api.Post("common/listTranslates.htm",TranslatesResult.class);
+    Api homeClassifty=Api.GET("category/getCategoryList.htm");
 }
