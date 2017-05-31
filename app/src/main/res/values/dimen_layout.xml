@@ -6,5 +6,6 @@
     <dimen name="margin_middle">10dp</dimen>
     <dimen name="list_height">42dp</dimen>
     <dimen name="margin_father_left_normal">15dp</dimen>
+    <dimen name="margin_father_left_larger">20dp</dimen>
     <dimen name="margin_father_right_normal">15dp</dimen>
 </resources>

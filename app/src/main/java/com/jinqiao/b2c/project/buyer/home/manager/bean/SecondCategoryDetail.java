@@ -19,5 +19,20 @@ public class SecondCategoryDetail {
 	public ArrayList<ThirdCategoryDetail> getThirdCategoryList() {
 		return thirdCategoryList;
 	}
-	
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setCategoryLevel(int categoryLevel) {
+		this.categoryLevel = categoryLevel;
+	}
+
+	public void setThirdCategoryList(ArrayList<ThirdCategoryDetail> thirdCategoryList) {
+		this.thirdCategoryList = thirdCategoryList;
+	}
 }

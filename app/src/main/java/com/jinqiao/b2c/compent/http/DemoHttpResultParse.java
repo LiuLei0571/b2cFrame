@@ -32,6 +32,7 @@ public class DemoHttpResultParse implements HttpResultParse {
         return result;
     }
 
+
     public Result parseResultCommon(String json, Type type) {
         if (TextUtils.isEmpty(json)) {
             return Result.fail("网络异常！");
@@ -46,7 +47,7 @@ public class DemoHttpResultParse implements HttpResultParse {
                         body = body.toString();
                     } else {
                         String json1 = body.toString();
-                        if (json1.indexOf("translate")!=-1) {
+                        if (json1.indexOf("translate") != -1) {
                             json1 = json1.replace(".", "_");
                         }
                         body = JSON.parseObject(json1, type);

@@ -4,15 +4,13 @@ package com.jinqiao.b2c.project.buyer.home.manager.bean;
 import java.util.ArrayList;
 
 public class CategoryFirstListResult {
-    private ArrayList<FirstCategoryDetail> firstCategoryList = new ArrayList<FirstCategoryDetail>();
+    private ArrayList<FirstCategoryDetail> firstCategory = new ArrayList<FirstCategoryDetail>();
 
-
-    public ArrayList<FirstCategoryDetail> getFirstCategoryList() {
-        return firstCategoryList;
+    public ArrayList<FirstCategoryDetail> getFirstCategory() {
+        return firstCategory;
     }
 
-    public void setFirstCategoryList(
-            ArrayList<FirstCategoryDetail> firstCategoryList) {
-        this.firstCategoryList = firstCategoryList;
+    public void setFirstCategory(ArrayList<FirstCategoryDetail> firstCategory) {
+        this.firstCategory = firstCategory;
     }
 }

@@ -11,35 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11b20659-e0ba-468c-8f05-8cf85256d9c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/classify_indicator_expand.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/classify_indicator_unexpand.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyChildListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransFirstCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransSecondCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/classify_child_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/classify_gourp_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/classify_second_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/Api.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/Api.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_common2.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_common2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_index.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_index.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/FirstCategoryDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/FirstCategoryDetail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/SecondCategoryDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/SecondCategoryDetail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/ThirdCategoryDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/ThirdCategoryDetail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_classify.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_classify.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_widget_headbar.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_widget_headbar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/toobar.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/toobar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens_text.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens_text.xml" />
     </list>
     <ignored path="B2cFrame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,46 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClassifyExpandListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyerHomeIndexFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeIndexFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1207">
-              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-              <folding>
-                <element signature="e#2170#2171#0" expanded="true" />
-                <element signature="e#2222#2223#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BuyerHomeClassifyFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,27 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_buyer_classify.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_classify.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="TempleFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/TempleFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toobar.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toobar.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="41">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -147,9 +82,12 @@
       <file leaf-file-name="HeadBar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/ui/HeadBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+              <folding>
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="e#1947#1948#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,28 +98,312 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="217">
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryFirstListResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java">
+      <file leaf-file-name="TextView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/TextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="160">
+              <caret line="4310" column="22" selection-start-line="4310" selection-start-column="22" selection-end-line="4310" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#388518#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#16257#16258#0" expanded="false" />
+                <element signature="e#16337#16338#0" expanded="false" />
+                <element signature="e#27972#27973#0" expanded="false" />
+                <element signature="e#28007#28008#0" expanded="false" />
+                <element signature="e#65361#65362#0" expanded="false" />
+                <element signature="e#65389#65390#0" expanded="false" />
+                <element signature="e#65534#65535#0" expanded="false" />
+                <element signature="e#65561#65562#0" expanded="false" />
+                <element signature="e#66099#66100#0" expanded="false" />
+                <element signature="e#66127#66128#0" expanded="false" />
+                <element signature="e#66249#66250#0" expanded="false" />
+                <element signature="e#66286#66287#0" expanded="false" />
+                <element signature="e#67173#67174#0" expanded="false" />
+                <element signature="e#67203#67204#0" expanded="false" />
+                <element signature="e#67361#67362#0" expanded="false" />
+                <element signature="e#67395#67396#0" expanded="false" />
+                <element signature="e#68021#68022#0" expanded="false" />
+                <element signature="e#68051#68052#0" expanded="false" />
+                <element signature="e#72455#72456#0" expanded="false" />
+                <element signature="e#72487#72488#0" expanded="false" />
+                <element signature="e#74274#74275#0" expanded="false" />
+                <element signature="e#74312#74313#0" expanded="false" />
+                <element signature="e#80775#80776#0" expanded="false" />
+                <element signature="e#80822#80823#0" expanded="false" />
+                <element signature="e#80975#80976#0" expanded="false" />
+                <element signature="e#81023#81024#0" expanded="false" />
+                <element signature="e#81176#81177#0" expanded="false" />
+                <element signature="e#81224#81225#0" expanded="false" />
+                <element signature="e#81371#81372#0" expanded="false" />
+                <element signature="e#81417#81418#0" expanded="false" />
+                <element signature="e#81673#81674#0" expanded="false" />
+                <element signature="e#81745#81746#0" expanded="false" />
+                <element signature="e#106529#106530#0" expanded="false" />
+                <element signature="e#106565#106566#0" expanded="false" />
+                <element signature="e#107200#107201#0" expanded="false" />
+                <element signature="e#107250#107251#0" expanded="false" />
+                <element signature="e#110504#110505#0" expanded="false" />
+                <element signature="e#110553#110554#0" expanded="false" />
+                <element signature="e#110785#110786#0" expanded="false" />
+                <element signature="e#110835#110836#0" expanded="false" />
+                <element signature="e#112709#112710#0" expanded="false" />
+                <element signature="e#112756#112757#0" expanded="false" />
+                <element signature="e#112963#112964#0" expanded="false" />
+                <element signature="e#113031#113032#0" expanded="false" />
+                <element signature="e#113988#113989#0" expanded="false" />
+                <element signature="e#114049#114050#0" expanded="false" />
+                <element signature="e#115154#115155#0" expanded="false" />
+                <element signature="e#115203#115204#0" expanded="false" />
+                <element signature="e#116889#116890#0" expanded="false" />
+                <element signature="e#116936#116937#0" expanded="false" />
+                <element signature="e#117893#117894#0" expanded="false" />
+                <element signature="e#117945#117946#0" expanded="false" />
+                <element signature="e#119206#119207#0" expanded="false" />
+                <element signature="e#119264#119265#0" expanded="false" />
+                <element signature="e#120155#120156#0" expanded="false" />
+                <element signature="e#120192#120193#0" expanded="false" />
+                <element signature="e#121040#121041#0" expanded="false" />
+                <element signature="e#121084#121085#0" expanded="false" />
+                <element signature="e#123569#123570#0" expanded="false" />
+                <element signature="e#123602#123603#0" expanded="false" />
+                <element signature="e#123797#123798#0" expanded="false" />
+                <element signature="e#123833#123834#0" expanded="false" />
+                <element signature="e#124447#124448#0" expanded="false" />
+                <element signature="e#124485#124486#0" expanded="false" />
+                <element signature="e#126601#126602#0" expanded="false" />
+                <element signature="e#126637#126638#0" expanded="false" />
+                <element signature="e#126867#126868#0" expanded="false" />
+                <element signature="e#126899#126900#0" expanded="false" />
+                <element signature="e#127127#127128#0" expanded="false" />
+                <element signature="e#127159#127160#0" expanded="false" />
+                <element signature="e#127395#127396#0" expanded="false" />
+                <element signature="e#127430#127431#0" expanded="false" />
+                <element signature="e#127617#127618#0" expanded="false" />
+                <element signature="e#127650#127651#0" expanded="false" />
+                <element signature="e#127960#127961#0" expanded="false" />
+                <element signature="e#127996#127997#0" expanded="false" />
+                <element signature="e#128412#128413#0" expanded="false" />
+                <element signature="e#128453#128454#0" expanded="false" />
+                <element signature="e#128822#128823#0" expanded="false" />
+                <element signature="e#128860#128861#0" expanded="false" />
+                <element signature="e#130744#130745#0" expanded="false" />
+                <element signature="e#130781#130782#0" expanded="false" />
+                <element signature="e#132245#132246#0" expanded="false" />
+                <element signature="e#132282#132283#0" expanded="false" />
+                <element signature="e#133845#133846#0" expanded="false" />
+                <element signature="e#133876#133877#0" expanded="false" />
+                <element signature="e#134023#134024#0" expanded="false" />
+                <element signature="e#134067#134068#0" expanded="false" />
+                <element signature="e#135405#135406#0" expanded="false" />
+                <element signature="e#135450#135451#0" expanded="false" />
+                <element signature="e#136278#136279#0" expanded="false" />
+                <element signature="e#136334#136335#0" expanded="false" />
+                <element signature="e#137098#137099#0" expanded="false" />
+                <element signature="e#137155#137156#0" expanded="false" />
+                <element signature="e#137892#137893#0" expanded="false" />
+                <element signature="e#137948#137949#0" expanded="false" />
+                <element signature="e#138796#138797#0" expanded="false" />
+                <element signature="e#138853#138854#0" expanded="false" />
+                <element signature="e#140593#140594#0" expanded="false" />
+                <element signature="e#140653#140654#0" expanded="false" />
+                <element signature="e#141337#141338#0" expanded="false" />
+                <element signature="e#141400#141401#0" expanded="false" />
+                <element signature="e#142073#142074#0" expanded="false" />
+                <element signature="e#142133#142134#0" expanded="false" />
+                <element signature="e#142816#142817#0" expanded="false" />
+                <element signature="e#142879#142880#0" expanded="false" />
+                <element signature="e#144898#144899#0" expanded="false" />
+                <element signature="e#144933#144934#0" expanded="false" />
+                <element signature="e#145289#145290#0" expanded="false" />
+                <element signature="e#145323#145324#0" expanded="false" />
+                <element signature="e#145559#145560#0" expanded="false" />
+                <element signature="e#145605#145606#0" expanded="false" />
+                <element signature="e#152174#152393#0" expanded="false" />
+                <element signature="e#152392#152393#0" expanded="false" />
+                <element signature="e#153420#153421#0" expanded="false" />
+                <element signature="e#153462#153463#0" expanded="false" />
+                <element signature="e#153788#153789#0" expanded="false" />
+                <element signature="e#153823#153824#0" expanded="false" />
+                <element signature="e#155396#155397#0" expanded="false" />
+                <element signature="e#155447#155448#0" expanded="false" />
+                <element signature="e#165288#165289#0" expanded="false" />
+                <element signature="e#165316#165317#0" expanded="false" />
+                <element signature="e#165346#165347#0" expanded="false" />
+                <element signature="e#165380#165381#0" expanded="false" />
+                <element signature="e#184462#184463#0" expanded="false" />
+                <element signature="e#184524#184525#0" expanded="false" />
+                <element signature="e#188365#188366#0" expanded="false" />
+                <element signature="e#188396#188397#0" expanded="false" />
+                <element signature="e#198517#198518#0" expanded="false" />
+                <element signature="e#198580#198581#0" expanded="false" />
+                <element signature="e#198820#198821#0" expanded="false" />
+                <element signature="e#198887#198888#0" expanded="false" />
+                <element signature="e#198947#198948#0" expanded="false" />
+                <element signature="e#199014#199015#0" expanded="false" />
+                <element signature="e#209504#209505#0" expanded="false" />
+                <element signature="e#209528#209529#0" expanded="false" />
+                <element signature="e#218988#218989#0" expanded="false" />
+                <element signature="e#219055#219056#0" expanded="false" />
+                <element signature="e#247583#247584#0" expanded="false" />
+                <element signature="e#247644#247645#0" expanded="false" />
+                <element signature="e#247678#247679#0" expanded="false" />
+                <element signature="e#247737#247738#0" expanded="false" />
+                <element signature="e#248717#248718#0" expanded="false" />
+                <element signature="e#248745#248746#0" expanded="false" />
+                <element signature="e#262307#262444#0" expanded="false" />
+                <element signature="e#262443#262444#0" expanded="false" />
+                <element signature="e#264034#264035#0" expanded="false" />
+                <element signature="e#264068#264069#0" expanded="false" />
+                <element signature="e#288933#288934#0" expanded="false" />
+                <element signature="e#288991#288992#0" expanded="false" />
+                <element signature="e#290068#290069#0" expanded="false" />
+                <element signature="e#290129#290130#0" expanded="false" />
+                <element signature="e#290290#290291#0" expanded="false" />
+                <element signature="e#290349#290350#0" expanded="false" />
+                <element signature="e#291223#291224#0" expanded="false" />
+                <element signature="e#291258#291259#0" expanded="false" />
+                <element signature="e#295398#295399#0" expanded="false" />
+                <element signature="e#295448#295449#0" expanded="false" />
+                <element signature="e#295877#295878#0" expanded="false" />
+                <element signature="e#295919#295920#0" expanded="false" />
+                <element signature="e#296125#296126#0" expanded="false" />
+                <element signature="e#296158#296159#0" expanded="false" />
+                <element signature="e#318646#318647#0" expanded="false" />
+                <element signature="e#318715#318716#0" expanded="false" />
+                <element signature="e#319252#319253#0" expanded="false" />
+                <element signature="e#319281#319282#0" expanded="false" />
+                <element signature="e#329544#329545#0" expanded="false" />
+                <element signature="e#329572#329573#0" expanded="false" />
+                <element signature="e#330461#330605#0" expanded="false" />
+                <element signature="e#330604#330605#0" expanded="false" />
+                <element signature="e#331174#331175#0" expanded="false" />
+                <element signature="e#331215#331216#0" expanded="false" />
+                <element signature="e#332358#332359#0" expanded="false" />
+                <element signature="e#332405#332406#0" expanded="false" />
+                <element signature="e#346587#346588#0" expanded="false" />
+                <element signature="e#346653#346654#0" expanded="false" />
+                <element signature="e#358840#358841#0" expanded="false" />
+                <element signature="e#358899#358900#0" expanded="false" />
+                <element signature="e#358924#358925#0" expanded="false" />
+                <element signature="e#358983#358984#0" expanded="false" />
+                <element signature="e#371315#371316#0" expanded="false" />
+                <element signature="e#371343#371344#0" expanded="false" />
+                <element signature="e#372868#372869#0" expanded="false" />
+                <element signature="e#372910#372911#0" expanded="false" />
+                <element signature="e#372998#372999#0" expanded="false" />
+                <element signature="e#373025#373026#0" expanded="false" />
+                <element signature="e#373117#373118#0" expanded="false" />
+                <element signature="e#373157#373158#0" expanded="false" />
+                <element signature="e#375326#375327#0" expanded="false" />
+                <element signature="e#375367#375368#0" expanded="false" />
+                <element signature="e#376652#376653#0" expanded="false" />
+                <element signature="e#376709#376710#0" expanded="false" />
+                <element signature="e#376763#376764#0" expanded="false" />
+                <element signature="e#376822#376823#0" expanded="false" />
+                <element signature="e#377879#377880#0" expanded="false" />
+                <element signature="e#377917#377918#0" expanded="false" />
+                <element signature="e#377956#377957#0" expanded="false" />
+                <element signature="e#378007#378008#0" expanded="false" />
+                <element signature="e#378061#378062#0" expanded="false" />
+                <element signature="e#378127#378128#0" expanded="false" />
+                <element signature="e#381781#381941#0" expanded="false" />
+                <element signature="e#381940#381941#0" expanded="false" />
+                <element signature="e#382005#382274#0" expanded="false" />
+                <element signature="e#382273#382274#0" expanded="false" />
+                <element signature="e#382340#382692#0" expanded="false" />
+                <element signature="e#382691#382692#0" expanded="false" />
+                <element signature="e#385211#385212#0" expanded="false" />
+                <element signature="e#385254#385255#0" expanded="false" />
+                <element signature="e#385283#385284#0" expanded="false" />
+                <element signature="e#385321#385322#0" expanded="false" />
+                <element signature="e#385357#385358#0" expanded="false" />
+                <element signature="e#385402#385403#0" expanded="false" />
+                <element signature="e#385442#385443#0" expanded="false" />
+                <element signature="e#385493#385494#0" expanded="false" />
+                <element signature="e#385530#385531#0" expanded="false" />
+                <element signature="e#385612#385613#0" expanded="false" />
+                <element signature="e#385643#385644#0" expanded="false" />
+                <element signature="e#385700#385701#0" expanded="false" />
+                <element signature="e#385731#385732#0" expanded="false" />
+                <element signature="e#385788#385789#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemplateRecyclerAdapterNew.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/TemplateRecyclerAdapterNew.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransCategory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransCategory.java">
+      <file leaf-file-name="FirstCategoryDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/FirstCategoryDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#844#845#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassifyExpandListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classify_third_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimen_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -1997,22 +2219,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/Classify_List_Adapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransSecondCategory.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/classify_child_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens_text.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/classify_gourp_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/classify_second_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyChildListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransCategory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/Api.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/HomeManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_classify.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/toobar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_buyer_classify.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/FirstCategoryDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/SecondCategoryDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/ThirdCategoryDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_widget_headbar.xml" />
       </list>
     </option>
@@ -2584,6 +2810,52 @@
               <option name="myItemId" value="b2c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buyer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="B2cFrame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="B2cFrame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b2c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -2600,7 +2872,11 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="0309f07108e5a251" />
-    <property name="SearchEverywhereHistoryKey" value="Apis&#9;PSI&#9;JAVA://com.jinqiao.b2c.compent.constants.Apis" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/liulei/Product/B2cFrame/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java&#10;Apis&#9;FILE&#9;file:///Users/liulei/Product/B2cFrame/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java&#10;Http&#9;PSI&#9;JAVA://com.jinqiao.b2c.common.http.HttpResultParse" />
+    <property name="DEBUGGABLE_DEVICE" value="lge-nexus_5-0309f07108e5a251" />
+    <property name="DEBUGGABLE_PROCESS" value="com.jinqiao.b2c" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="DEBUGGER_ID" value="Auto" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -2944,7 +3220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495870234464</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="加入类名的布局">
+      <created>1495880803079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495880803079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2952,13 +3235,13 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42105263" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23347701" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2994,18 +3277,68 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="解决tab切换问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决tab切换问题" />
+    <MESSAGE value="加入类名的布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入类名的布局" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/BaseFragment.java</url>
-          <line>136</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java</url>
+          <line>87</line>
           <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/TempleFragment.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/ui/HeadBar.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3014,7 +3347,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4142#4143#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3023,8 +3358,8 @@
         <state relative-caret-position="187">
           <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="false" />
+            <element signature="e#2222#2223#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3044,22 +3379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/TempleFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -3118,14 +3437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/classify_second_item.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3152,21 +3463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#435#454#0" expanded="true" />
-            <element signature="e#489#523#0" expanded="true" />
-            <element signature="e#643#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyChildListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1551">
@@ -3181,14 +3477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -3209,36 +3497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/TransCategory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -3248,16 +3510,50 @@
         <state relative-caret-position="-1207">
           <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
           <folding>
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="false" />
+            <element signature="e#2222#2223#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/BaseFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        <state relative-caret-position="142">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="e#4142#4143#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/presenter/HomePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/common/http/HttpResultParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/constants/Apis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/http/DemoHttpResultParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3269,8 +3565,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -3280,17 +3576,372 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/CategoryFirstListResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/SecondCategoryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/ThirdCategoryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/manager/bean/FirstCategoryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/classify_third_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/ClassifyExpandListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/adapter/TemplateRecyclerAdapterNew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/project/buyer/home/fragment/BuyerHomeClassifyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/base/TempleFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="4310" column="22" selection-start-line="4310" selection-start-column="22" selection-end-line="4310" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#388518#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#16257#16258#0" expanded="false" />
+            <element signature="e#16337#16338#0" expanded="false" />
+            <element signature="e#27972#27973#0" expanded="false" />
+            <element signature="e#28007#28008#0" expanded="false" />
+            <element signature="e#65361#65362#0" expanded="false" />
+            <element signature="e#65389#65390#0" expanded="false" />
+            <element signature="e#65534#65535#0" expanded="false" />
+            <element signature="e#65561#65562#0" expanded="false" />
+            <element signature="e#66099#66100#0" expanded="false" />
+            <element signature="e#66127#66128#0" expanded="false" />
+            <element signature="e#66249#66250#0" expanded="false" />
+            <element signature="e#66286#66287#0" expanded="false" />
+            <element signature="e#67173#67174#0" expanded="false" />
+            <element signature="e#67203#67204#0" expanded="false" />
+            <element signature="e#67361#67362#0" expanded="false" />
+            <element signature="e#67395#67396#0" expanded="false" />
+            <element signature="e#68021#68022#0" expanded="false" />
+            <element signature="e#68051#68052#0" expanded="false" />
+            <element signature="e#72455#72456#0" expanded="false" />
+            <element signature="e#72487#72488#0" expanded="false" />
+            <element signature="e#74274#74275#0" expanded="false" />
+            <element signature="e#74312#74313#0" expanded="false" />
+            <element signature="e#80775#80776#0" expanded="false" />
+            <element signature="e#80822#80823#0" expanded="false" />
+            <element signature="e#80975#80976#0" expanded="false" />
+            <element signature="e#81023#81024#0" expanded="false" />
+            <element signature="e#81176#81177#0" expanded="false" />
+            <element signature="e#81224#81225#0" expanded="false" />
+            <element signature="e#81371#81372#0" expanded="false" />
+            <element signature="e#81417#81418#0" expanded="false" />
+            <element signature="e#81673#81674#0" expanded="false" />
+            <element signature="e#81745#81746#0" expanded="false" />
+            <element signature="e#106529#106530#0" expanded="false" />
+            <element signature="e#106565#106566#0" expanded="false" />
+            <element signature="e#107200#107201#0" expanded="false" />
+            <element signature="e#107250#107251#0" expanded="false" />
+            <element signature="e#110504#110505#0" expanded="false" />
+            <element signature="e#110553#110554#0" expanded="false" />
+            <element signature="e#110785#110786#0" expanded="false" />
+            <element signature="e#110835#110836#0" expanded="false" />
+            <element signature="e#112709#112710#0" expanded="false" />
+            <element signature="e#112756#112757#0" expanded="false" />
+            <element signature="e#112963#112964#0" expanded="false" />
+            <element signature="e#113031#113032#0" expanded="false" />
+            <element signature="e#113988#113989#0" expanded="false" />
+            <element signature="e#114049#114050#0" expanded="false" />
+            <element signature="e#115154#115155#0" expanded="false" />
+            <element signature="e#115203#115204#0" expanded="false" />
+            <element signature="e#116889#116890#0" expanded="false" />
+            <element signature="e#116936#116937#0" expanded="false" />
+            <element signature="e#117893#117894#0" expanded="false" />
+            <element signature="e#117945#117946#0" expanded="false" />
+            <element signature="e#119206#119207#0" expanded="false" />
+            <element signature="e#119264#119265#0" expanded="false" />
+            <element signature="e#120155#120156#0" expanded="false" />
+            <element signature="e#120192#120193#0" expanded="false" />
+            <element signature="e#121040#121041#0" expanded="false" />
+            <element signature="e#121084#121085#0" expanded="false" />
+            <element signature="e#123569#123570#0" expanded="false" />
+            <element signature="e#123602#123603#0" expanded="false" />
+            <element signature="e#123797#123798#0" expanded="false" />
+            <element signature="e#123833#123834#0" expanded="false" />
+            <element signature="e#124447#124448#0" expanded="false" />
+            <element signature="e#124485#124486#0" expanded="false" />
+            <element signature="e#126601#126602#0" expanded="false" />
+            <element signature="e#126637#126638#0" expanded="false" />
+            <element signature="e#126867#126868#0" expanded="false" />
+            <element signature="e#126899#126900#0" expanded="false" />
+            <element signature="e#127127#127128#0" expanded="false" />
+            <element signature="e#127159#127160#0" expanded="false" />
+            <element signature="e#127395#127396#0" expanded="false" />
+            <element signature="e#127430#127431#0" expanded="false" />
+            <element signature="e#127617#127618#0" expanded="false" />
+            <element signature="e#127650#127651#0" expanded="false" />
+            <element signature="e#127960#127961#0" expanded="false" />
+            <element signature="e#127996#127997#0" expanded="false" />
+            <element signature="e#128412#128413#0" expanded="false" />
+            <element signature="e#128453#128454#0" expanded="false" />
+            <element signature="e#128822#128823#0" expanded="false" />
+            <element signature="e#128860#128861#0" expanded="false" />
+            <element signature="e#130744#130745#0" expanded="false" />
+            <element signature="e#130781#130782#0" expanded="false" />
+            <element signature="e#132245#132246#0" expanded="false" />
+            <element signature="e#132282#132283#0" expanded="false" />
+            <element signature="e#133845#133846#0" expanded="false" />
+            <element signature="e#133876#133877#0" expanded="false" />
+            <element signature="e#134023#134024#0" expanded="false" />
+            <element signature="e#134067#134068#0" expanded="false" />
+            <element signature="e#135405#135406#0" expanded="false" />
+            <element signature="e#135450#135451#0" expanded="false" />
+            <element signature="e#136278#136279#0" expanded="false" />
+            <element signature="e#136334#136335#0" expanded="false" />
+            <element signature="e#137098#137099#0" expanded="false" />
+            <element signature="e#137155#137156#0" expanded="false" />
+            <element signature="e#137892#137893#0" expanded="false" />
+            <element signature="e#137948#137949#0" expanded="false" />
+            <element signature="e#138796#138797#0" expanded="false" />
+            <element signature="e#138853#138854#0" expanded="false" />
+            <element signature="e#140593#140594#0" expanded="false" />
+            <element signature="e#140653#140654#0" expanded="false" />
+            <element signature="e#141337#141338#0" expanded="false" />
+            <element signature="e#141400#141401#0" expanded="false" />
+            <element signature="e#142073#142074#0" expanded="false" />
+            <element signature="e#142133#142134#0" expanded="false" />
+            <element signature="e#142816#142817#0" expanded="false" />
+            <element signature="e#142879#142880#0" expanded="false" />
+            <element signature="e#144898#144899#0" expanded="false" />
+            <element signature="e#144933#144934#0" expanded="false" />
+            <element signature="e#145289#145290#0" expanded="false" />
+            <element signature="e#145323#145324#0" expanded="false" />
+            <element signature="e#145559#145560#0" expanded="false" />
+            <element signature="e#145605#145606#0" expanded="false" />
+            <element signature="e#152174#152393#0" expanded="false" />
+            <element signature="e#152392#152393#0" expanded="false" />
+            <element signature="e#153420#153421#0" expanded="false" />
+            <element signature="e#153462#153463#0" expanded="false" />
+            <element signature="e#153788#153789#0" expanded="false" />
+            <element signature="e#153823#153824#0" expanded="false" />
+            <element signature="e#155396#155397#0" expanded="false" />
+            <element signature="e#155447#155448#0" expanded="false" />
+            <element signature="e#165288#165289#0" expanded="false" />
+            <element signature="e#165316#165317#0" expanded="false" />
+            <element signature="e#165346#165347#0" expanded="false" />
+            <element signature="e#165380#165381#0" expanded="false" />
+            <element signature="e#184462#184463#0" expanded="false" />
+            <element signature="e#184524#184525#0" expanded="false" />
+            <element signature="e#188365#188366#0" expanded="false" />
+            <element signature="e#188396#188397#0" expanded="false" />
+            <element signature="e#198517#198518#0" expanded="false" />
+            <element signature="e#198580#198581#0" expanded="false" />
+            <element signature="e#198820#198821#0" expanded="false" />
+            <element signature="e#198887#198888#0" expanded="false" />
+            <element signature="e#198947#198948#0" expanded="false" />
+            <element signature="e#199014#199015#0" expanded="false" />
+            <element signature="e#209504#209505#0" expanded="false" />
+            <element signature="e#209528#209529#0" expanded="false" />
+            <element signature="e#218988#218989#0" expanded="false" />
+            <element signature="e#219055#219056#0" expanded="false" />
+            <element signature="e#247583#247584#0" expanded="false" />
+            <element signature="e#247644#247645#0" expanded="false" />
+            <element signature="e#247678#247679#0" expanded="false" />
+            <element signature="e#247737#247738#0" expanded="false" />
+            <element signature="e#248717#248718#0" expanded="false" />
+            <element signature="e#248745#248746#0" expanded="false" />
+            <element signature="e#262307#262444#0" expanded="false" />
+            <element signature="e#262443#262444#0" expanded="false" />
+            <element signature="e#264034#264035#0" expanded="false" />
+            <element signature="e#264068#264069#0" expanded="false" />
+            <element signature="e#288933#288934#0" expanded="false" />
+            <element signature="e#288991#288992#0" expanded="false" />
+            <element signature="e#290068#290069#0" expanded="false" />
+            <element signature="e#290129#290130#0" expanded="false" />
+            <element signature="e#290290#290291#0" expanded="false" />
+            <element signature="e#290349#290350#0" expanded="false" />
+            <element signature="e#291223#291224#0" expanded="false" />
+            <element signature="e#291258#291259#0" expanded="false" />
+            <element signature="e#295398#295399#0" expanded="false" />
+            <element signature="e#295448#295449#0" expanded="false" />
+            <element signature="e#295877#295878#0" expanded="false" />
+            <element signature="e#295919#295920#0" expanded="false" />
+            <element signature="e#296125#296126#0" expanded="false" />
+            <element signature="e#296158#296159#0" expanded="false" />
+            <element signature="e#318646#318647#0" expanded="false" />
+            <element signature="e#318715#318716#0" expanded="false" />
+            <element signature="e#319252#319253#0" expanded="false" />
+            <element signature="e#319281#319282#0" expanded="false" />
+            <element signature="e#329544#329545#0" expanded="false" />
+            <element signature="e#329572#329573#0" expanded="false" />
+            <element signature="e#330461#330605#0" expanded="false" />
+            <element signature="e#330604#330605#0" expanded="false" />
+            <element signature="e#331174#331175#0" expanded="false" />
+            <element signature="e#331215#331216#0" expanded="false" />
+            <element signature="e#332358#332359#0" expanded="false" />
+            <element signature="e#332405#332406#0" expanded="false" />
+            <element signature="e#346587#346588#0" expanded="false" />
+            <element signature="e#346653#346654#0" expanded="false" />
+            <element signature="e#358840#358841#0" expanded="false" />
+            <element signature="e#358899#358900#0" expanded="false" />
+            <element signature="e#358924#358925#0" expanded="false" />
+            <element signature="e#358983#358984#0" expanded="false" />
+            <element signature="e#371315#371316#0" expanded="false" />
+            <element signature="e#371343#371344#0" expanded="false" />
+            <element signature="e#372868#372869#0" expanded="false" />
+            <element signature="e#372910#372911#0" expanded="false" />
+            <element signature="e#372998#372999#0" expanded="false" />
+            <element signature="e#373025#373026#0" expanded="false" />
+            <element signature="e#373117#373118#0" expanded="false" />
+            <element signature="e#373157#373158#0" expanded="false" />
+            <element signature="e#375326#375327#0" expanded="false" />
+            <element signature="e#375367#375368#0" expanded="false" />
+            <element signature="e#376652#376653#0" expanded="false" />
+            <element signature="e#376709#376710#0" expanded="false" />
+            <element signature="e#376763#376764#0" expanded="false" />
+            <element signature="e#376822#376823#0" expanded="false" />
+            <element signature="e#377879#377880#0" expanded="false" />
+            <element signature="e#377917#377918#0" expanded="false" />
+            <element signature="e#377956#377957#0" expanded="false" />
+            <element signature="e#378007#378008#0" expanded="false" />
+            <element signature="e#378061#378062#0" expanded="false" />
+            <element signature="e#378127#378128#0" expanded="false" />
+            <element signature="e#381781#381941#0" expanded="false" />
+            <element signature="e#381940#381941#0" expanded="false" />
+            <element signature="e#382005#382274#0" expanded="false" />
+            <element signature="e#382273#382274#0" expanded="false" />
+            <element signature="e#382340#382692#0" expanded="false" />
+            <element signature="e#382691#382692#0" expanded="false" />
+            <element signature="e#385211#385212#0" expanded="false" />
+            <element signature="e#385254#385255#0" expanded="false" />
+            <element signature="e#385283#385284#0" expanded="false" />
+            <element signature="e#385321#385322#0" expanded="false" />
+            <element signature="e#385357#385358#0" expanded="false" />
+            <element signature="e#385402#385403#0" expanded="false" />
+            <element signature="e#385442#385443#0" expanded="false" />
+            <element signature="e#385493#385494#0" expanded="false" />
+            <element signature="e#385530#385531#0" expanded="false" />
+            <element signature="e#385612#385613#0" expanded="false" />
+            <element signature="e#385643#385644#0" expanded="false" />
+            <element signature="e#385700#385701#0" expanded="false" />
+            <element signature="e#385731#385732#0" expanded="false" />
+            <element signature="e#385788#385789#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jinqiao/b2c/compent/ui/HeadBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#1947#1948#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3299,8 +3950,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="217">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding />
         </state>
       </provider>

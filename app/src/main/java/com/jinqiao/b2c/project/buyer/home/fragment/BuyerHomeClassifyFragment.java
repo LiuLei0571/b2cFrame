@@ -61,7 +61,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             public void onSuccess(IResult<CategoryFirstListResult> result) {
                 super.onSuccess(result);
                 if (result.data() != null) {
-                    categoryList = result.data().getFirstCategoryList();
+                    categoryList = result.data().getFirstCategory();
                     initData();
                 }
             }
