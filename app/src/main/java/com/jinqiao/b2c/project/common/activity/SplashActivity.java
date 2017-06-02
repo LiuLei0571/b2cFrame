@@ -77,8 +77,7 @@ public class SplashActivity extends TempleActivity {
 
                 }
             }
-        }, 2000);
-
+        },2000);
     }
 
     private void initData() {

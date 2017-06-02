@@ -1,6 +1,5 @@
 package com.jinqiao.b2c.project.buyer.home.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
 
@@ -11,8 +10,7 @@ import com.jinqiao.b2c.compent.base.TempleFragment;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.thread.ApiCallback;
-import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
-import com.jinqiao.b2c.project.buyer.home.adapter.ClassifyExpandListAdapter;
+import com.jinqiao.b2c.project.buyer.home.adapter.ClassifyExpandListAdapterNew;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.CategoryFirstListResult;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FirstCategoryDetail;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransCategory;
@@ -74,21 +72,12 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
 
     private void initData() {
 
-        ClassifyExpandListAdapter adapter = new ClassifyExpandListAdapter(
-                getActivity(), TransCategory(), "fragment") {
-            @Override
-            public void itemClick(String name) {
-                Intent intent = new Intent(getActivity(), GoodsListActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("categoryId", name);
-                intent.putExtras(bundle);
-                getActivity().startActivity(intent);
-            }
-        };
+        ClassifyExpandListAdapterNew adapter = new ClassifyExpandListAdapterNew(getContext());
+        adapter.addAll(getData());
         mElvClassify.setAdapter(adapter);
     }
 
-    public List<TransFirstCategory> TransCategory() {// 由于分类使用的是二级扩展目录，而传回的是三级目录，所以将三级目录转换为二级目录进行显示，同时将目录的值也做复制
+    public List<TransFirstCategory> getData() {// 由于分类使用的是二级扩展目录，而传回的是三级目录，所以将三级目录转换为二级目录进行显示，同时将目录的值也做复制
         TransCategory transCategory = new TransCategory();
         for (int i = 0; i < categoryList.size(); i++) {
             TransFirstCategory temp_first = new TransFirstCategory();

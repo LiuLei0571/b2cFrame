@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tv_classify_item"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/height_135"
         android:layout_marginLeft="@dimen/margin_father_left_normal"
         android:gravity="center_vertical"

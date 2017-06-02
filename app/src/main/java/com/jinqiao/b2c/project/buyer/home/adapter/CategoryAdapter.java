@@ -15,7 +15,7 @@ import com.jinqiao.b2c.project.buyer.home.manager.bean.ModelPageItem;
 
 
 /**
- * @author Created by zhangzh on 2016/05/25.
+ * @author Created by milk on 2016/05/25.
  */
 public class CategoryAdapter extends BaseAdapter<ModelPageItem> {
     private View.OnClickListener listener;

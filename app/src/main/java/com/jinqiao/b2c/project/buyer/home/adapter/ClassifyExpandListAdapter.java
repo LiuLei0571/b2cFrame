@@ -102,6 +102,11 @@ public abstract class ClassifyExpandListAdapter extends BaseExpandableListAdapte
     }
 
     @Override
+    public void onGroupExpanded(int groupPosition) {
+        super.onGroupExpanded(groupPosition);
+    }
+
+    @Override
     public View getGroupView(int position, boolean isExpanded, View convertView, ViewGroup parent) {
         GroupViewHolder groupHolder;
         if (convertView == null) {
