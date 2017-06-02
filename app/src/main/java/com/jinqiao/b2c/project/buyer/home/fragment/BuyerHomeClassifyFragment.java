@@ -38,7 +38,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     private List<FirstCategoryDetail> categoryList;
     @Inject
     SimplePresenter mPresenter;
-
+    ClassifyExpandListAdapterNew adapter;
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -60,7 +60,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
                 super.onSuccess(result);
                 if (result.data() != null) {
                     categoryList = result.data().getFirstCategory();
-                    initData();
+                    adapter.addAll(getData());
                 }
             }
 
@@ -68,13 +68,9 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             public void onFailure(IResult<String> result) {
             }
         });
-    }
-
-    private void initData() {
-
-        ClassifyExpandListAdapterNew adapter = new ClassifyExpandListAdapterNew(getContext());
-        adapter.addAll(getData());
+          adapter = new ClassifyExpandListAdapterNew(getContext());
         mElvClassify.setAdapter(adapter);
+
     }
 
     public List<TransFirstCategory> getData() {// 由于分类使用的是二级扩展目录，而传回的是三级目录，所以将三级目录转换为二级目录进行显示，同时将目录的值也做复制

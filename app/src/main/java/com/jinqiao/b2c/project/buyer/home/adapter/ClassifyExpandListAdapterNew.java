@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.BaseExpandableAdapter;
+import com.jinqiao.b2c.compent.helper.UIHelper;
 import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransFirstCategory;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransSecondCategory;
@@ -45,6 +47,10 @@ public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFir
             mSecondCategory = item.getSecondCategoryList().get(childPosition);
             if (mSecondCategory != null) {
                 TextView mTvItem = viewHolder.findViewById(R.id.tv_classify_item);
+                if (mSecondCategory.getCategoryLevel() == 2) {
+                    LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) mTvItem.getLayoutParams();
+                    layoutParams.setMarginStart(UIHelper.dip2px(getContext(), 15));
+                }
                 mTvItem.setText(mSecondCategory.getName());
                 mTvItem.setOnClickListener(new View.OnClickListener() {
                     @Override
