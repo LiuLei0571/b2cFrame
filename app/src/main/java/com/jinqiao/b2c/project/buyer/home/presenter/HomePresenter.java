@@ -25,7 +25,6 @@ public class HomePresenter extends BasePresenter<BuyerHomeActivity> {
             new HomePage("购物车", BuyerHomeCarFragment.class),
             new HomePage("收藏", BuyerHomeCollectionFragment.class),
             new HomePage("我的", BuyerHomeMineFragment.class)
-
     };
 
     @Inject

@@ -9,9 +9,11 @@ import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.helper.ToastHelper;
+import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.Tab;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommond;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomePresenter;
+import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 
 import javax.inject.Inject;
 
@@ -85,13 +87,25 @@ public class BuyerHomeActivity extends TempleActivity {
                 presenter.onTabClick(1);
                 break;
             case R.id.tab_car:
-                presenter.onTabClick(2);
+                if (UserHelper.isBuyerLogin()) {
+                    presenter.onTabClick(2);
+                } else {
+                    startActivity(new Intent(this, SelectLoginActivity.class));
+                }
                 break;
             case R.id.tab_collection:
-                presenter.onTabClick(3);
+                if (UserHelper.isBuyerLogin()) {
+                    presenter.onTabClick(3);
+                } else {
+                    startActivity(new Intent(this, SelectLoginActivity.class));
+                }
                 break;
             case R.id.tab_mine:
-                presenter.onTabClick(4);
+                if (UserHelper.isBuyerLogin()) {
+                    presenter.onTabClick(4);
+                } else {
+                    startActivity(new Intent(this, SelectLoginActivity.class));
+                }
                 break;
         }
     }

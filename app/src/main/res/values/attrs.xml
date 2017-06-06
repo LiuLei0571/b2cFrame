@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ProgressImage">
-        <attr name="maxRadius" format="dimension" />
-        <attr name="minRadius" format="dimension" />
-        <attr name="pointColor" format="color" />
+        <attr name="maxRadius" format="dimension"/>
+        <attr name="minRadius" format="dimension"/>
+        <attr name="pointColor" format="color"/>
     </declare-styleable>
     <declare-styleable name="Tab">
-        <attr name="defaultTitle" format="string" />
-        <attr name="defaultDes" format="reference" />
-        <attr name="selectDes" format="reference" />
+        <attr name="defaultTitle" format="string"/>
+        <attr name="defaultDes" format="reference"/>
+        <attr name="selectDes" format="reference"/>
     </declare-styleable>
     <declare-styleable name="ResizeLayout">
-        <attr name="resizewidth" format="integer" />
-        <attr name="resizeheight" format="integer" />
+        <attr name="resizewidth" format="integer"/>
+        <attr name="resizeheight" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="BtnButton">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="defaultColor" format="color"/>
+        <attr name="pressColor" format="color"/>
+        <attr name="dismissColor" format="color"/>
+        <attr name="defaultTextColor" format="color"/>
+        <attr name="dismissTextColor" format="color"/>
+        <attr name="selectStrokeColor" format="color"/>
+        <attr name="ripple" format="boolean"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="TopLeftRadius" format="dimension"/>
+        <attr name="TopRightRadius" format="dimension"/>
+        <attr name="BottomLeftRadius" format="dimension"/>
+        <attr name="BottomRightRadius" format="float"/>
+        <attr name="parameter" format="float"/>
     </declare-styleable>
 </resources>

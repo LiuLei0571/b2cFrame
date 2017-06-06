@@ -18,10 +18,6 @@ import java.util.List;
 
 public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFirstCategory, TransSecondCategory> {
     private List<TransFirstCategory> firstCategoryList;
-    private String type;
-    String categoryName = "";
-    TransFirstCategory mFirstCategory;
-    TransSecondCategory mSecondCategory;
 
     public ClassifyExpandListAdapterNew(Context context) {
         super(context, R.layout.classify_gourp_item, R.layout.classify_second_item);
@@ -44,7 +40,7 @@ public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFir
     @Override
     protected void renderChildView(ChildViewHoldFactory viewHolder, int childPosition, TransFirstCategory item) {
         if (item.getSecondCategoryList().size() > 0) {
-            mSecondCategory = item.getSecondCategoryList().get(childPosition);
+            TransSecondCategory mSecondCategory = item.getSecondCategoryList().get(childPosition);
             if (mSecondCategory != null) {
                 TextView mTvItem = viewHolder.findViewById(R.id.tv_classify_item);
                 if (mSecondCategory.getCategoryLevel() == 2) {
@@ -67,15 +63,13 @@ public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFir
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        mFirstCategory = getGroup(groupPosition);
-        return mFirstCategory.getSecondCategoryList().size();
+        return getGroup(groupPosition).getSecondCategoryList().size();
     }
 
     @Override
     public TransSecondCategory getChild(int groupPosition, int childPosition) {
-        mFirstCategory = getGroup(groupPosition);
 
-        return mFirstCategory.getSecondCategoryList().get(childPosition);
+        return getGroup(groupPosition).getSecondCategoryList().get(childPosition);
     }
 
 }

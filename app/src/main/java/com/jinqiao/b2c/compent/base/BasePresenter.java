@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.jinqiao.b2c.compent.event.EmptyEvent;
 import com.jinqiao.b2c.compent.helper.EventHelper;
+import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 
 import java.util.List;
 

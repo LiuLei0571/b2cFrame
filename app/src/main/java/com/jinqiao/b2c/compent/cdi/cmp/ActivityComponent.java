@@ -8,6 +8,8 @@ import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.SearchActivity;
+import com.jinqiao.b2c.project.buyer.user.LoginActivity;
+import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
 import com.jinqiao.b2c.project.logistics.LivesCommuntiyHomeActivity;
@@ -47,4 +49,8 @@ public interface ActivityComponent {
     void plus(SearchActivity searchActivity);
 
     void plus(LivesCommuntiyHomeActivity livesCommuntiyHomeActivity);
+
+    void plus(LoginActivity loginActivity);
+
+    void plus(SelectLoginActivity sellectLoginActivity);
 }

@@ -55,6 +55,7 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     final List<ITemplateModel> list = new ArrayList<>();
     @Inject
     SimplePresenter mPresenter;
+
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -137,12 +138,12 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     }
 
     private void initData() {
-        mPresenter.apiCall(Apis.home,new ApiCallback<List<ModelPage>>(getBaseActivity()){
+        mPresenter.apiCall(Apis.home, new ApiCallback<List<ModelPage>>() {
             @Override
             public void onSuccess(IResult result) {
                 super.onSuccess(result);
                 if (result.data() != null) {
-                    List<ModelPage> results= (List<ModelPage>) result.data();
+                    List<ModelPage> results = (List<ModelPage>) result.data();
                     formatData(results);
                 }
             }

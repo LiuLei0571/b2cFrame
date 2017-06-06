@@ -3,7 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#ffffff</color>
     <color name="transparent">#0000</color>
     <color name="btn_background">#44B0A0</color>
     <color name="title_background">#44B0A0</color>
@@ -13,7 +12,13 @@
     <!--重要按钮色块按下颜色-->
     <color name="color_btn_major_deep">#EFC71B</color>
     <color name="gray">#bbbbbb</color>
-    <color name="color_btn_cancel">#E3E3E3</color>
-    <color name="color_line">#e4e4e4</color>
     <color name="hand">#44B0A0</color>
+    <!--用于全站分割线颜色-->
+    <color name="color_line">#E4E4E4</color>
+    <color name="color_btn_cancel">#E3E3E3</color>
+    <!--用于全站背景以及分割线色块-->
+    <color name="color_background">#F4F5F9</color>
+    <color name="color_btn_background">#FFFBFBFB</color>
+    <color name="color_item">#F7F7F7</color>
+    <color name="color_white">#ffffff</color>
 </resources>

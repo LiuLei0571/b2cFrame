@@ -39,6 +39,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     @Inject
     SimplePresenter mPresenter;
     ClassifyExpandListAdapterNew adapter;
+
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -68,7 +69,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             public void onFailure(IResult<String> result) {
             }
         });
-          adapter = new ClassifyExpandListAdapterNew(getContext());
+        adapter = new ClassifyExpandListAdapterNew(getContext());
         mElvClassify.setAdapter(adapter);
 
     }
