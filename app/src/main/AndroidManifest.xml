@@ -34,6 +34,11 @@
         <activity android:name=".project.buyer.goods.ShopHomesActivity" />
         <activity android:name=".project.buyer.goods.GoodsListActivity" />
         <activity android:name=".project.logistics.LivesCommuntiyHomeActivity" />
+        <activity android:name=".project.common.activity.SelectLoginActivity"/>
+        <activity android:name=".project.logistics.user.CompanyLoginActivity"/>
+        <activity android:name=".project.express.user.activity.ExpressLoginActivity"/>
+        <activity android:name=".project.seller.user.SellerLoginActivity"/>
+        <activity android:name=".project.buyer.user.activity.BuyerLoginActivity"/>
     </application>
 
 </manifest>

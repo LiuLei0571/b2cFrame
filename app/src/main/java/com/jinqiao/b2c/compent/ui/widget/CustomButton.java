@@ -93,7 +93,7 @@ public class CustomButton extends AppCompatTextView {
         bottomRightRadius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_BottomLeftRadius, 0);
 
         defaultColor = typedArray.getColor(R.styleable.BtnButton_defaultColor, UIHelper.getColor("#44B0A0"));
-        pressColor = typedArray.getColor(R.styleable.BtnButton_pressColor, UIHelper.getColor("#292026"));
+        pressColor = typedArray.getColor(R.styleable.BtnButton_pressColor, UIHelper.getColor("#3A9F90"));
         textColor = typedArray.getColor(R.styleable.BtnButton_defaultColor, UIHelper.getColor("#ffffff"));
         dismisTextColor = typedArray.getColor(R.styleable.BtnButton_dismissTextColor, UIHelper.getColor("#cccccc"));
 

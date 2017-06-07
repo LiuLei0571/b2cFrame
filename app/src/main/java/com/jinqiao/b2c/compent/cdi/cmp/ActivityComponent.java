@@ -8,13 +8,16 @@ import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.SearchActivity;
-import com.jinqiao.b2c.project.buyer.user.LoginActivity;
+import com.jinqiao.b2c.project.buyer.user.activity.BuyerLoginActivity;
 import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
+import com.jinqiao.b2c.project.express.user.activity.ExpressLoginActivity;
 import com.jinqiao.b2c.project.logistics.LivesCommuntiyHomeActivity;
 import com.jinqiao.b2c.project.logistics.home.activity.LogisticsHomeActivity;
+import com.jinqiao.b2c.project.logistics.user.CompanyLoginActivity;
 import com.jinqiao.b2c.project.seller.home.activity.SellerHomeActivity;
+import com.jinqiao.b2c.project.seller.user.SellerLoginActivity;
 
 import dagger.Subcomponent;
 
@@ -50,7 +53,13 @@ public interface ActivityComponent {
 
     void plus(LivesCommuntiyHomeActivity livesCommuntiyHomeActivity);
 
-    void plus(LoginActivity loginActivity);
+    void plus(BuyerLoginActivity loginActivity);
 
     void plus(SelectLoginActivity sellectLoginActivity);
+
+    void plus(CompanyLoginActivity companyLoginActivity);
+
+    void plus(ExpressLoginActivity expressLoginActivity);
+
+    void plus(SellerLoginActivity sellerLoginActivity);
 }

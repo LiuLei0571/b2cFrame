@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.project.buyer.user;
+package com.jinqiao.b2c.project.buyer.user.activity;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
@@ -11,7 +11,7 @@ import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
  */
 
 
-public class LoginActivity extends TempleActivity {
+public class BuyerLoginActivity extends TempleActivity {
 
 
     @Override
