@@ -3,6 +3,7 @@ package com.jinqiao.b2c.compent.helper;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.TextUtils;
@@ -18,10 +19,19 @@ import com.jinqiao.b2c.project.App;
 
 
 public class UIHelper {
+    public static Context context=App.getContext();
     public static String getString(int textId) {
         return App.getContext().getString(textId);
     }
-
+    /**
+     * 获取图片资源文件
+     *
+     * @param drawableId
+     * @return
+     */
+    public static Drawable getDrawable(int drawableId) {
+        return context.getResources().getDrawable(drawableId);
+    }
     public static int getColor(int color) {
         return ContextCompat.getColor(App.getContext(), color);
     }

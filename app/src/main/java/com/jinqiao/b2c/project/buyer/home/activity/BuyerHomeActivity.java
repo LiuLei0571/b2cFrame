@@ -8,10 +8,11 @@ import android.view.View;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
+import com.jinqiao.b2c.compent.constants.Extras;
 import com.jinqiao.b2c.compent.helper.ToastHelper;
 import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.Tab;
-import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommond;
+import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommand;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomePresenter;
 import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 
@@ -34,7 +35,7 @@ public class BuyerHomeActivity extends TempleActivity {
     @Bind(R.id.tab_mine)
     Tab mTabMine;
 
-    HomeCommond homeCommand;
+    HomeCommand homeCommand;
     private long mExitTime;
 
     @Override
@@ -44,7 +45,7 @@ public class BuyerHomeActivity extends TempleActivity {
 
     @Override
     protected void initParams(Bundle extras) {
-//        homeCommand = extras.getParcelable(Extras.HOME.KEY);
+        homeCommand = extras.getParcelable(Extras.HOME.COMMAND);
 
     }
 

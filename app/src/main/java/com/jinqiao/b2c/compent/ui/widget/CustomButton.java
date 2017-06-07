@@ -95,7 +95,7 @@ public class CustomButton extends AppCompatTextView {
         defaultColor = typedArray.getColor(R.styleable.BtnButton_defaultColor, UIHelper.getColor("#44B0A0"));
         pressColor = typedArray.getColor(R.styleable.BtnButton_pressColor, UIHelper.getColor("#3A9F90"));
         textColor = typedArray.getColor(R.styleable.BtnButton_defaultColor, UIHelper.getColor("#ffffff"));
-        dismisTextColor = typedArray.getColor(R.styleable.BtnButton_dismissTextColor, UIHelper.getColor("#cccccc"));
+        dismisTextColor = typedArray.getColor(R.styleable.BtnButton_dismissTextColor, UIHelper.getColor("#60E7E9"));
 
         strokeColor = typedArray.getColor(R.styleable.BtnButton_strokeColor, 0);
         selectStrokeColor = typedArray.getColor(R.styleable.BtnButton_selectStrokeColor, 0);

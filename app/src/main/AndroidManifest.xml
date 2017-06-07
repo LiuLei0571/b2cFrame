@@ -39,6 +39,8 @@
         <activity android:name=".project.express.user.activity.ExpressLoginActivity"/>
         <activity android:name=".project.seller.user.SellerLoginActivity"/>
         <activity android:name=".project.buyer.user.activity.BuyerLoginActivity"/>
+        <activity android:name=".project.buyer.user.activity.RegisterActivity"/>
+        <activity android:name=".project.buyer.user.activity.ForgetPswActivity"/>
     </application>
 
 </manifest>

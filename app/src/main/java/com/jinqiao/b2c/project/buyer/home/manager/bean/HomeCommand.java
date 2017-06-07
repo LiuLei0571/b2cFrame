@@ -12,42 +12,42 @@ import com.jinqiao.b2c.compent.constants.Extras;
  */
 
 
-public class HomeCommond implements Parcelable {
+public class HomeCommand implements Parcelable {
     private String action;
     private int index;
     private boolean enable;
 
-    public HomeCommond(String page, int index) {
+    public HomeCommand(String page, int index) {
         this.action = page;
         this.index = index;
     }
 
 
-    public static HomeCommond buyerhome() {
+    public static HomeCommand buyerhome() {
         return page(0);
     }
 
-    public static HomeCommond buyerclassify() {
+    public static HomeCommand buyerclassify() {
         return page(1);
     }
 
-    public static HomeCommond buyercar() {
+    public static HomeCommand buyercar() {
         return page(2);
     }
 
-    public static HomeCommond buyercollection() {
+    public static HomeCommand buyercollection() {
         return page(3);
     }
 
-    public static HomeCommond mine() {
+    public static HomeCommand mine() {
         return page(4);
     }
 
     /**
      * 跳转首页某个tab
      */
-    public static HomeCommond page(int index) {
-        return new HomeCommond(Extras.HOME.ACTION.PAGE, index);
+    public static HomeCommand page(int index) {
+        return new HomeCommand(Extras.HOME.ACTION.PAGE, index);
     }
 
 
@@ -75,6 +75,9 @@ public class HomeCommond implements Parcelable {
         this.enable = enable;
     }
 
+    public HomeCommand() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -87,24 +90,21 @@ public class HomeCommond implements Parcelable {
         dest.writeByte(this.enable ? (byte) 1 : (byte) 0);
     }
 
-    public HomeCommond() {
-    }
-
-    protected HomeCommond(Parcel in) {
+    protected HomeCommand(Parcel in) {
         this.action = in.readString();
         this.index = in.readInt();
         this.enable = in.readByte() != 0;
     }
 
-    public static final Parcelable.Creator<HomeCommond> CREATOR = new Parcelable.Creator<HomeCommond>() {
+    public static final Creator<HomeCommand> CREATOR = new Creator<HomeCommand>() {
         @Override
-        public HomeCommond createFromParcel(Parcel source) {
-            return new HomeCommond(source);
+        public HomeCommand createFromParcel(Parcel source) {
+            return new HomeCommand(source);
         }
 
         @Override
-        public HomeCommond[] newArray(int size) {
-            return new HomeCommond[size];
+        public HomeCommand[] newArray(int size) {
+            return new HomeCommand[size];
         }
     };
 }

@@ -1,6 +1,6 @@
 package com.jinqiao.b2c.compent.constants;
 
-import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommond;
+import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommand;
 
 /**
  * 用途：
@@ -39,12 +39,13 @@ public interface Extras {
           String PAGE="home_page";
        }
        String KEY="home_key";
+        String COMMAND="command";
     }
     interface HOMECOMMOND{
-        HomeCommond INDEX=HomeCommond.buyerhome();
-        HomeCommond CLASSIFY=HomeCommond.buyerclassify();
-        HomeCommond CAR=HomeCommond.buyercar();
-        HomeCommond COLLECTION=HomeCommond.buyercollection();
-        HomeCommond MINE=HomeCommond.mine();
+        HomeCommand INDEX= HomeCommand.buyerhome();
+        HomeCommand CLASSIFY= HomeCommand.buyerclassify();
+        HomeCommand CAR= HomeCommand.buyercar();
+        HomeCommand COLLECTION= HomeCommand.buyercollection();
+        HomeCommand MINE= HomeCommand.mine();
     }
 }

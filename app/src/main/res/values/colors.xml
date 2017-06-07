@@ -21,4 +21,5 @@
     <color name="color_btn_background">#FFFBFBFB</color>
     <color name="color_item">#F7F7F7</color>
     <color name="color_white">#ffffff</color>
+    <color name="main_blue">#3499DB</color>
 </resources>
