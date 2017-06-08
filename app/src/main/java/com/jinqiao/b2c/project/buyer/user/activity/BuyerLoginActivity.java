@@ -2,6 +2,7 @@ package com.jinqiao.b2c.project.buyer.user.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,6 +11,7 @@ import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.constants.Configs;
+import com.jinqiao.b2c.compent.ui.SimpleTextWatcher;
 import com.jinqiao.b2c.compent.ui.widget.CustomButton;
 import com.jinqiao.b2c.compent.ui.widget.EditTextWithDelete;
 import com.jinqiao.b2c.project.buyer.user.presenter.BuyerLoginPresenter;
@@ -74,6 +76,13 @@ public class BuyerLoginActivity extends TempleActivity {
         mBtnLogin.setText(mTranslatesString.getCommon_login());
         mTvRegister.setText(mTranslatesString.getCommon_registersongjuan());
         mTvFgtPsw.setText(mTranslatesString.getCommon_forgetpassword());
+        mEtPassword.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                mBtnLogin.setEnabled(true);
+
+            }
+        });
     }
 
     @OnClick({R.id.iv_eye, btn_login, R.id.face_book_login, R.id.tv_fgt_psw, tv_register})

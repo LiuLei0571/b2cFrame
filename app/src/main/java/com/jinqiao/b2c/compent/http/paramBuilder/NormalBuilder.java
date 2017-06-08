@@ -3,7 +3,7 @@ package com.jinqiao.b2c.compent.http.paramBuilder;
 
 import com.jinqiao.b2c.compent.http.IParamBuilder;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -15,7 +15,7 @@ import java.util.Map;
 public class NormalBuilder implements IParamBuilder {
     @Override
     public Map<String, Object> buildParams(Map<String, Object> authHeader, Object params) {
-        Map<String, Object> allParams = new HashMap<>();
+        Map<String, Object> allParams = new LinkedHashMap<>();
         if (allParams != null) {
             allParams.putAll(authHeader);
         }
@@ -23,11 +23,11 @@ public class NormalBuilder implements IParamBuilder {
             allParams.putAll(toMap(params));
         }
 
-        return null;
+        return allParams;
     }
 
     private Map<String, Object> toMap(Object object) {
-        Map<String, Object> result = new HashMap<>();
+        Map<String, Object> result =null;
         try {
             if (object instanceof Map) {
                 result = (Map<String, Object>) object;

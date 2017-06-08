@@ -32,7 +32,7 @@ import okhttp3.RequestBody;
  */
 
 public class OkHttpSchedule extends HttpScheduler {
-    public static final MediaType JSON = MediaType.parse("application/json: charset=utf-8");
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private OkHttpClient mClient;
 
     public OkHttpSchedule(OkHttpClient client, HttpResultParse httpResultParse) {
@@ -55,7 +55,7 @@ public class OkHttpSchedule extends HttpScheduler {
     @Override
     public ICall newCall(IRequest httpRequest) {
 
-        Map<String, Object> params = httpRequest.getParams();
+        Map<String, Object> params = httpRequest.getParams() ;
         IApi api = httpRequest.getAPi();
         RequestMethod method = api.getMethod();
         StringBuilder urlStringBuilder = new StringBuilder(api.getUrl());

@@ -45,7 +45,10 @@ public class BuyerHomeActivity extends TempleActivity {
 
     @Override
     protected void initParams(Bundle extras) {
-        homeCommand = extras.getParcelable(Extras.HOME.COMMAND);
+        super.initParams(extras);
+        if (extras != null) {
+            homeCommand = extras.getParcelable(Extras.HOME.COMMAND);
+        }
 
     }
 
