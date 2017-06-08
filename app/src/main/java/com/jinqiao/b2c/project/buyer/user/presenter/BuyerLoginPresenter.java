@@ -1,9 +1,12 @@
 package com.jinqiao.b2c.project.buyer.user.presenter;
 
+import android.os.Bundle;
+
 import com.jinqiao.b2c.common.http.IResult;
 import com.jinqiao.b2c.compent.base.BasePresenter;
 import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.compent.constants.Configs;
+import com.jinqiao.b2c.compent.constants.Extras;
 import com.jinqiao.b2c.compent.helper.SPHelper;
 import com.jinqiao.b2c.compent.helper.SysHelper;
 import com.jinqiao.b2c.compent.thread.ApiTask;
@@ -23,10 +26,18 @@ import javax.inject.Inject;
 public class BuyerLoginPresenter extends BasePresenter<BuyerLoginActivity> {
     @Inject
     BuyerUserManager mBuyerUserManager;
-
+    int index;
     @Inject
     public BuyerLoginPresenter(IView iView) {
         super(iView);
+    }
+
+    @Override
+    protected void initParams(Bundle params) {
+        super.initParams(params);
+        if (params != null) {
+            index=params.getInt(Extras.HOME.KEY,0);
+        }
     }
 
     public void login(String name, String password, String type) {
@@ -41,7 +52,7 @@ public class BuyerLoginPresenter extends BasePresenter<BuyerLoginActivity> {
                 super.onSuccess(result);
                 if (result.data() != null) {
                     SPHelper.putBean(Configs.BUYER.INFO, result.data());
-                    SysHelper.goBuyerHome(getBaseActivity(), 4);
+                    SysHelper.goBuyerHome(getBaseActivity(), index,"buyer");
                 }
             }
         });

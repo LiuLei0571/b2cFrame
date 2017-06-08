@@ -15,9 +15,18 @@ import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommand;
 
 
 public class SysHelper {
-    public static void goBuyerHome(IAct iAct, int index) {
-        Intent intent = new Intent(iAct.getActivity(), BuyerHomeActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra(Extras.HOME.COMMAND, HomeCommand.page(index));
+    public static void goBuyerHome(IAct iAct, int index, String type) {
+        Intent intent = null;
+        switch (type) {
+            case "buyer":
+                intent = new Intent(iAct.getActivity(), BuyerHomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(Extras.HOME.COMMAND, HomeCommand.page(index));
+                break;
+            default:
+                break;
+        }
+        iAct.startActivity(intent);
+
     }
 }

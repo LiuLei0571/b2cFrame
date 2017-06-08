@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
+import com.jinqiao.b2c.compent.constants.Extras;
 import com.jinqiao.b2c.compent.ui.widget.CustomButton;
 import com.jinqiao.b2c.project.buyer.user.activity.BuyerLoginActivity;
 import com.jinqiao.b2c.project.logistics.user.CompanyLoginActivity;
@@ -33,6 +34,16 @@ public class SelectLoginActivity extends TempleActivity {
     CustomButton mBtnSeller;
     @Bind(R.id.btn_company)
     CustomButton mBtnCompany;
+    private int index;
+
+    @Override
+    protected void initParams(Bundle extras) {
+        super.initParams(extras);
+        if (extras != null) {
+            index = extras.getInt(Extras.HOME.KEY, 0);
+
+        }
+    }
 
     @Override
     protected int getRootViewId() {
@@ -59,12 +70,15 @@ public class SelectLoginActivity extends TempleActivity {
         switch (view.getId()) {
             case R.id.btn_buyer:
                 intent = new Intent(getActivity(), BuyerLoginActivity.class);
+                intent.putExtra(Extras.HOME.KEY, index);
                 break;
             case R.id.btn_seller:
                 intent = new Intent(getActivity(), SellerLoginActivity.class);
+                intent.putExtra(Extras.HOME.KEY, index);
                 break;
             case R.id.btn_company:
                 intent = new Intent(getActivity(), CompanyLoginActivity.class);
+                intent.putExtra(Extras.HOME.KEY, index);
                 break;
             default:
                 break;

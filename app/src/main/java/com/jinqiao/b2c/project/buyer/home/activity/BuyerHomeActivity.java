@@ -83,6 +83,7 @@ public class BuyerHomeActivity extends TempleActivity {
 
     @OnClick({R.id.tab_home, R.id.tab_classify, R.id.tab_car, R.id.tab_collection, R.id.tab_mine})
     public void onViewClicked(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.tab_home:
                 presenter.onTabClick(0);
@@ -94,23 +95,30 @@ public class BuyerHomeActivity extends TempleActivity {
                 if (UserHelper.isBuyerLogin()) {
                     presenter.onTabClick(2);
                 } else {
-                    startActivity(new Intent(this, SelectLoginActivity.class));
+                    intent = new Intent(this, SelectLoginActivity.class);
+                    intent.putExtra(Extras.HOME.KEY,2);
                 }
                 break;
             case R.id.tab_collection:
                 if (UserHelper.isBuyerLogin()) {
                     presenter.onTabClick(3);
                 } else {
-                    startActivity(new Intent(this, SelectLoginActivity.class));
+                    intent = new Intent(this, SelectLoginActivity.class);
+                    intent.putExtra(Extras.HOME.KEY,3);
                 }
                 break;
             case R.id.tab_mine:
                 if (UserHelper.isBuyerLogin()) {
                     presenter.onTabClick(4);
                 } else {
-                    startActivity(new Intent(this, SelectLoginActivity.class));
+                    intent = new Intent(this, SelectLoginActivity.class);
+                    intent.putExtra(Extras.HOME.KEY,4);
+
                 }
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 
