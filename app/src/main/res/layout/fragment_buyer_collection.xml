@@ -21,7 +21,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:background="@color/white">
 
@@ -38,6 +38,17 @@
                     android:layout_weight="1"
                     app:defaultTitle="店铺收藏"
                     app:isDrawable="false"/>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:background="@color/divider_light"/>
+                </LinearLayout>
 
                 <com.jinqiao.b2c.compent.ui.widget.Tab
                     android:id="@+id/tab_mine"
