@@ -30,6 +30,7 @@ public class Tab extends BaseLinearLayout {
     private Drawable defaultRes;
     private CharSequence defaultTitle;
     private Drawable selectRes;
+    private Boolean isDrawable;
 
     public Tab(Context context) {
         super(context);
@@ -46,6 +47,7 @@ public class Tab extends BaseLinearLayout {
         defaultRes = t.getDrawable(R.styleable.Tab_defaultDes);
         defaultTitle = t.getText(R.styleable.Tab_defaultTitle);
         selectRes = t.getDrawable(R.styleable.Tab_selectDes);
+        isDrawable = t.getBoolean(R.styleable.Tab_isDrawable, true);
         t.recycle();
 
     }
@@ -67,6 +69,9 @@ public class Tab extends BaseLinearLayout {
                 mImageButton.setImageDrawable(selectRes);
             }
         });
+        if (!isDrawable) {
+            mImageButton.setVisibility(GONE);
+        }
     }
 
     public void setTabItem(boolean isSelect) {

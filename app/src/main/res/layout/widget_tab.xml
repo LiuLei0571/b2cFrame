@@ -17,7 +17,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:paddingTop="1dp"
         android:textColor="@color/color_text_major"
         android:textSize="14dp" />
