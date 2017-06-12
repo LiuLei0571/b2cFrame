@@ -8,11 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.jinqiao.b2c.compent.event.EmptyEvent;
 import com.jinqiao.b2c.compent.helper.EventHelper;
+import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
 import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 
 import java.util.List;
 
 import icepick.Icepick;
+
+import static android.R.attr.fragment;
 
 /**
  * 用途：
@@ -93,7 +96,8 @@ public class BasePresenter<T extends IView> extends BaseViewPresenter<T> {
     protected FragmentManager getSupportsFragmentManager() {
         return mBaseActivity.getSupportFragmentManager();
     }
-    public synchronized BaseFragment setCurrentTab(int position,HomePage[] pages) {
+
+    public synchronized BaseFragment setCurrentTab(int position, HomePage[] pages) {
         BaseFragment baseFragment = null;
 
         if (position >= 0 && position < pages.length) {
@@ -141,4 +145,41 @@ public class BasePresenter<T extends IView> extends BaseViewPresenter<T> {
         }
     }
 
+    public synchronized BaseFragment setCurrentChildTab(int position, HomePage[] pages, BaseFragment fatherFragment) {
+        BaseFragment baseFragment = null;
+
+        if (position >= 0 && position < pages.length) {
+            HomePage page = pages[position];
+            Class<? extends BaseFragment> cls = page.fragmentCls;
+            List<Fragment> fragments = fatherFragment.getChildFragmentManager().getFragments();
+            FragmentTransaction trans = fatherFragment.getChildFragmentManager().beginTransaction();
+            if (fragments != null && fragments.size() > 0) {
+                for (Fragment fragment : fragments) {
+                    if (fragment == null) {
+                        continue;
+                    }
+                    if (cls.isInstance(fragment)) {
+                        baseFragment = (BaseFragment) fragment;
+
+                        trans.attach(baseFragment);
+                    } else {
+                        trans.detach(fragment);
+                    }
+                }
+            }
+            if (baseFragment == null) {
+
+                try {
+                    baseFragment = cls.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                if (baseFragment != null) {
+                    trans.add(android.R.id.tabcontent, baseFragment, page.tag);
+                }
+            }
+            trans.commitAllowingStateLoss();
+        }
+        return baseFragment;
+    }
 }

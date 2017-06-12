@@ -115,6 +115,10 @@ public class Api implements IApi {
 
     }
 
+    public Type getType() {
+        return mType;
+    }
+
     public static Api GET(String path) {
         Api api = new Api();
         api.path = path;

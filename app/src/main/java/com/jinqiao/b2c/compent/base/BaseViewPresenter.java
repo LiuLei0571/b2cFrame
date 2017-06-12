@@ -22,6 +22,7 @@ public abstract class BaseViewPresenter<T extends IView> extends BaseSimplePrese
     BaseActivity mBaseActivity;
     protected T mView;
 
+
     public T getView() {
         return mView;
     }

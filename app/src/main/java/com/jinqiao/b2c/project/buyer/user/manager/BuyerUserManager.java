@@ -22,6 +22,6 @@ public class BuyerUserManager extends BaseManager {
         parameter.put("loginName", name);
         parameter.put("password", Md5Encrypt.md5(password));
         parameter.put("type", type);
-        return execute(Apis.buerLogin, parameter);
+        return execute(Apis.buyerLogin, parameter);
     }
 }

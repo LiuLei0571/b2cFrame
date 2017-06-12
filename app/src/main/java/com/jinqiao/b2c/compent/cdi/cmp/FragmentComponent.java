@@ -3,11 +3,13 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import com.jinqiao.b2c.compent.cdi.annotation.FragmentScope;
 import com.jinqiao.b2c.compent.web.view.fragment.WebViewFragment;
+import com.jinqiao.b2c.project.buyer.home.fragment.BuyerGoodCollectionFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCarFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeClassifyFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeIndexFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeMineFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
+import com.jinqiao.b2c.project.buyer.home.fragment.BuyerShopCollectionFragment;
 
 import dagger.Subcomponent;
 
@@ -30,4 +32,8 @@ import dagger.Subcomponent;
     void plus(BuyerHomeCollectionFragment buyerHomeCollectionFragment);
 
     void plus(BuyerHomeMineFragment buyerHomeMineFragment);
+
+    void plus(BuyerGoodCollectionFragment buyerGoodCollectionFragment);
+
+   void plus(BuyerShopCollectionFragment buyerShopCollectionFragment);
 }

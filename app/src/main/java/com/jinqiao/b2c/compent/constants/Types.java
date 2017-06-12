@@ -16,4 +16,5 @@ import java.util.List;
 public interface Types {
     Type home = new TypeReference<List<ModelPage>>() {
     }.getType();
+
 }

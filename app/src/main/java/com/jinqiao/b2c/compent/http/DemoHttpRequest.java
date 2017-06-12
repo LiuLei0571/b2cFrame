@@ -43,7 +43,9 @@ public class DemoHttpRequest implements IRequest {
     }
 
     public DemoHttpRequest setParams(Object params) {
-        this.params = params;
+        if (params != null) {
+            this.params = params;
+        }
         return this;
     }
 
