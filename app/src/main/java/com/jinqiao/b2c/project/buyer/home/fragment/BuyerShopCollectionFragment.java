@@ -7,6 +7,7 @@ import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.http.Api;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShop;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -38,7 +39,10 @@ public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteS
     }
 
     @Override
-    public Map<String, Object> getParams() {
-        return null;
+    public Map<String, Object> getParams(int page) {
+        Map<String,Object> params=new HashMap<>();
+        params.put("pageNum",page+"");
+
+        return params;
     }
 }

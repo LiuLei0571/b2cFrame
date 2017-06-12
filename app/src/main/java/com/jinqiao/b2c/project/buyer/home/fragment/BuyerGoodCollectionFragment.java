@@ -8,6 +8,7 @@ import com.jinqiao.b2c.compent.http.Api;
 import com.jinqiao.b2c.project.buyer.home.adapter.ShopCollectionAdapter;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteGoods;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -31,12 +32,12 @@ public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteG
             mBaseAdapter.addAll(data.getFavoriteSampleList());
 
         }
-        hasNext=data.isHasNext();
+        hasNext = data.isHasNext();
     }
 
     @Override
     public BaseAdapter getAdapter() {
-        return mBaseAdapter=new ShopCollectionAdapter(getContext()) {
+        return mBaseAdapter = new ShopCollectionAdapter(getContext()) {
             @Override
             public void onClick(int position) {
 
@@ -50,7 +51,10 @@ public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteG
     }
 
     @Override
-    public Map<String, Object> getParams() {
-        return null;
+    public Map<String, Object> getParams(int page) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("pageNum", page + "");
+        return params;
     }
+
 }

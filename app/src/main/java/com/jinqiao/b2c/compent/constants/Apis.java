@@ -18,9 +18,9 @@ import com.jinqiao.b2c.project.common.manager.bean.TranslatesResult;
 public interface Apis {
     //buyer
     Api home = Api.Post("banner/homePage.htm", Types.home).setLogin(false);
-    Api translates = Api.Post("common/listTranslates.htm", TranslatesResult.class);
-    Api homeClassifty = Api.GET("category/getCategoryList.htm", CategoryFirstListResult.class);
-    Api buyerLogin = Api.Post("user/login.htm", BuyerUser.class);
+    Api translates = Api.Post("common/listTranslates.htm", TranslatesResult.class).setLogin(false);
+    Api homeClassifty = Api.GET("category/getCategoryList.htm", CategoryFirstListResult.class).setLogin(false);
+    Api buyerLogin = Api.Post("user/login.htm", BuyerUser.class).setLogin(false);
     Api buyerShopCollection = Api.Post("user/favoriteShopList.htm", FavoriteShop.class);
     Api buyerGoodCollection = Api.Post("user/favoriteSampleList", FavoriteGoods.class);
 }

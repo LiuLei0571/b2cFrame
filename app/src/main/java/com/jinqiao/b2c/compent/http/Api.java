@@ -27,7 +27,7 @@ public class Api implements IApi {
     private IHost mIHost = Hosts.defaults;
     private boolean enableCache = true;
     private String url;
-    private boolean isLogin;
+    private boolean isLogin=true;
 
     public boolean isLogin() {
         return isLogin;

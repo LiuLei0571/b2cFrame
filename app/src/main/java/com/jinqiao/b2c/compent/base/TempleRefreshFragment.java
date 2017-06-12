@@ -78,7 +78,7 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
             }
             mPage = mBaseAdapter.getCount();
         }
-        mPresenter.apiCall(getApi(), getParams(), new ApiTask<T>() {
+        mPresenter.apiCall(getApi(), getParams(1), new ApiTask<T>() {
             @Override
             public void onSuccess(IResult<T> result) {
                 super.onSuccess(result);
@@ -115,5 +115,5 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
 
     public abstract Api getApi();
 
-    public abstract Map<String, Object> getParams();
+    public abstract Map<String, Object> getParams(int page);
 }
