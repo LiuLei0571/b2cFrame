@@ -22,5 +22,5 @@ public interface Apis {
     Api homeClassifty = Api.GET("category/getCategoryList.htm", CategoryFirstListResult.class).setLogin(false);
     Api buyerLogin = Api.Post("user/login.htm", BuyerUser.class).setLogin(false);
     Api buyerShopCollection = Api.Post("user/favoriteShopList.htm", FavoriteShop.class);
-    Api buyerGoodCollection = Api.Post("user/favoriteSampleList", FavoriteGoods.class);
+    Api buyerGoodCollection = Api.Post("user/favoriteSampleList.htm", FavoriteGoods.class);
 }

@@ -90,11 +90,11 @@ public abstract class TempleActivity extends BaseActivity {
     }
 
     protected void doMainMethod() {
-        if (UserHelper.getUserId() > 0) {
+        if (UserHelper.getType()==1 ) {
             /**
              * 获取卖家商家信息的注册步揍，没有注册完，就重新填写
              */
-            if (UserHelper.getUserFromLocal().getStep() != Extras.SELLERSTEPTHIRD &&UserHelper.getType()==1) {
+            if (UserHelper.getUserFromLocal().getStep() != Extras.SELLERSTEPTHIRD ) {
                 Intent intent = new Intent(this,SellerHomeActivity.class);
                 intent.putExtra("type", Extras.LAUNCH);
                 startActivity(intent);
