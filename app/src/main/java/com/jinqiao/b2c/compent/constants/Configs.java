@@ -49,32 +49,8 @@ public interface Configs {
     String DOMAIN ="android.jinqiao.com";
 
 
-    interface LIVES{
-        String INFO = "livesInfo";
-    }
-    interface BUYER {
-        String INFO = "buyerInfo";
+    interface USER{
+        String INFO = "userInfo";
     }
 
-    interface SELLER {
-        String INFO = "sellerInfo";
-    }
-
-    interface COURIER {
-        String INFO = "courier";
-    }
-
-    interface EXPRESS {
-        String INFO = "express";
-    }
-
-    interface ORDER {
-        String TYPE = "staff_order_type";
-    }
-    interface RELEASE{
-        interface PRODUCT{
-            String FROMTYPE="choose";
-            String Bucket="multi";
-        }
-    }
 }

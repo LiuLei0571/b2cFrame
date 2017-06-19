@@ -90,22 +90,22 @@ public abstract class TempleActivity extends BaseActivity {
     }
 
     protected void doMainMethod() {
-        if (UserHelper.getSellerFromLocal().getUserId() > 0) {
+        if (UserHelper.getUserId() > 0) {
             /**
              * 获取卖家商家信息的注册步揍，没有注册完，就重新填写
              */
-            if (UserHelper.getSellerStep() != Extras.SELLERSTEPTHIRD) {
-                Intent intent = new Intent(this, Extras.class);
+            if (UserHelper.getUserFromLocal().getStep() != Extras.SELLERSTEPTHIRD &&UserHelper.getType()==1) {
+                Intent intent = new Intent(this,SellerHomeActivity.class);
                 intent.putExtra("type", Extras.LAUNCH);
                 startActivity(intent);
             } else {
                 //卖家首页
                 startActivity(new Intent(getApplication(), SellerHomeActivity.class));
             }
-        } else if (UserHelper.getExpressType() == 2) {
+        } else if (UserHelper.getType() == 2) {
             //物流首页
             startActivity(new Intent(getApplication(), LogisticsHomeActivity.class));
-        } else if (UserHelper.getExpressType() == 3) {
+        } else if (UserHelper.getType() == 3) {
             //快递小哥首页
             startActivity(new Intent(getApplicationContext(), ExpressHomeActivity.class));
         } else {

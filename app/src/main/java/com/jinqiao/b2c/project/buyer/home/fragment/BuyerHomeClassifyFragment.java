@@ -77,38 +77,38 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     public List<TransFirstCategory> getData() {// 由于分类使用的是二级扩展目录，而传回的是三级目录，所以将三级目录转换为二级目录进行显示，同时将目录的值也做复制
         TransCategory transCategory = new TransCategory();
         for (int i = 0; i < categoryList.size(); i++) {
-            TransFirstCategory temp_first = new TransFirstCategory();
-            temp_first.setId(categoryList.get(i).getId());
-            temp_first.setName(categoryList.get(i).getName());
-            temp_first.setIdPath(categoryList.get(i).getIdPath());
-            temp_first.setCategoryLevel(categoryList.get(i).getCategoryLevel());
+            TransFirstCategory tempFirstData = new TransFirstCategory();
+            tempFirstData.setId(categoryList.get(i).getId());
+            tempFirstData.setName(categoryList.get(i).getName());
+            tempFirstData.setIdPath(categoryList.get(i).getIdPath());
+            tempFirstData.setCategoryLevel(categoryList.get(i).getCategoryLevel());
             for (int j = 0; j < categoryList.get(i).getSecondCategoryList()
                     .size(); j++) {
-                TransSecondCategory temp_second = new TransSecondCategory();
-                temp_second.setId(categoryList.get(i).getSecondCategoryList()
+                TransSecondCategory tempSecondData = new TransSecondCategory();
+                tempSecondData.setId(categoryList.get(i).getSecondCategoryList()
                         .get(j).getId());
-                temp_second.setName(categoryList.get(i)
+                tempSecondData.setName(categoryList.get(i)
                         .getSecondCategoryList().get(j).getName());
-                temp_second.setCategoryLevel(categoryList.get(i)
+                tempSecondData.setCategoryLevel(categoryList.get(i)
                         .getSecondCategoryList().get(j).getCategoryLevel());
-                temp_first.getSecondCategoryList().add(temp_second);
+                tempFirstData.getSecondCategoryList().add(tempSecondData);
                 for (int k = 0; k < categoryList.get(i)
                         .getSecondCategoryList().get(j).getThirdCategoryList()
                         .size(); k++) {
-                    TransSecondCategory temp_second_ = new TransSecondCategory();
-                    temp_second_.setId(categoryList.get(i)
+                    TransSecondCategory tempThridData = new TransSecondCategory();
+                    tempThridData.setId(categoryList.get(i)
                             .getSecondCategoryList().get(j)
                             .getThirdCategoryList().get(k).getId());
-                    temp_second_.setName(categoryList.get(i)
+                    tempThridData.setName(categoryList.get(i)
                             .getSecondCategoryList().get(j)
                             .getThirdCategoryList().get(k).getName());
-                    temp_second_.setCategoryLevel(categoryList.get(i)
+                    tempThridData.setCategoryLevel(categoryList.get(i)
                             .getSecondCategoryList().get(j)
                             .getThirdCategoryList().get(k).getCategoryLevel());
-                    temp_first.getSecondCategoryList().add(temp_second_);
+                    tempFirstData.getSecondCategoryList().add(tempThridData);
                 }
             }
-            transCategory.getFirstCategoryList().add(temp_first);
+            transCategory.getFirstCategoryList().add(tempFirstData);
         }
         return transCategory.getFirstCategoryList();
     }

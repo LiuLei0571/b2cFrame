@@ -10,6 +10,7 @@ import com.jinqiao.b2c.common.utils.lang.Strings;
 import com.jinqiao.b2c.compent.constants.Configs;
 import com.jinqiao.b2c.compent.constants.ParamBuilders;
 import com.jinqiao.b2c.compent.helper.SPHelper;
+import com.jinqiao.b2c.compent.helper.UserHelper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -112,19 +113,19 @@ public class DemoHttpRequest implements IRequest {
             header.put("X-TimeStamp", "" + ts);
             header.put("X-UserType", SPHelper.getInt(Configs.USER_TYPE.TYPE) + "");
         } else {
-            buf.append("userId=").append("-1");
+            buf.append("userId=").append(UserHelper.getUserId());
             buf.append("&appName=").append(Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
-            buf.append("&token=").append("");
+            buf.append("&token=").append(UserHelper.getUsertoken());
             buf.append("&ts=").append(ts);
             String sign = Md5Encrypt.md5(buf.toString());
-            header.put("X-UserId", "-1");
+            header.put("X-UserId", UserHelper.getUserId() + "");
             header.put("X-Sign", sign);
-            header.put("X-AppName", SPHelper.getString(Configs.APPNAME));
+            header.put("X-AppName", Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
             header.put("X-TimeStamp", "" + ts);
             header.put("X-UserType", SPHelper.getInt(Configs.USER_TYPE.TYPE) + "");
         }
 //        httpGet.addHeader("X-Locale", SPHelper.getString(Configs.LANGUAGE));
-        header.put("X-Locale", "CN");
+        header.put("X-Locale", "default");
         return header;
     }
 

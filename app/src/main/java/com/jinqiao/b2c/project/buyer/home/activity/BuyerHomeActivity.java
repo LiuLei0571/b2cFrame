@@ -92,7 +92,7 @@ public class BuyerHomeActivity extends TempleActivity {
                 presenter.onTabClick(1);
                 break;
             case R.id.tab_car:
-                if (UserHelper.isBuyerLogin()) {
+                if (UserHelper.isUserLogin()) {
                     presenter.onTabClick(2);
                 } else {
                     intent = new Intent(this, SelectLoginActivity.class);
@@ -100,7 +100,7 @@ public class BuyerHomeActivity extends TempleActivity {
                 }
                 break;
             case R.id.tab_collection:
-                if (UserHelper.isBuyerLogin()) {
+                if (UserHelper.isUserLogin()) {
                     presenter.onTabClick(3);
                 } else {
                     intent = new Intent(this, SelectLoginActivity.class);
@@ -108,7 +108,7 @@ public class BuyerHomeActivity extends TempleActivity {
                 }
                 break;
             case R.id.tab_mine:
-                if (UserHelper.isBuyerLogin()) {
+                if (UserHelper.isUserLogin()) {
                     presenter.onTabClick(4);
                 } else {
                     intent = new Intent(this, SelectLoginActivity.class);

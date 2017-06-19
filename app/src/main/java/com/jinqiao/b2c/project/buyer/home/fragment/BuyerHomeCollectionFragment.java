@@ -31,6 +31,9 @@ public class BuyerHomeCollectionFragment extends BaseFragment {
     Tab mTabGood;
     @Inject
     HomeCollectionPresenter mPresenter;
+//    @Nullable
+//    @Bind(R.id.header_)
+//    HeadBar mHeadBar;
 
     @Override
     public void doInject(FragmentComponent component) {
@@ -45,7 +48,9 @@ public class BuyerHomeCollectionFragment extends BaseFragment {
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-        mPresenter.onTabClick(0);
+//        mHeadBar.setTitle("我的收藏");
+//        mHeadBar.setBackVisable(false);
+//        mPresenter.onTabClick(0);
     }
 
     @OnClick({R.id.tab_shop, R.id.tab_good})

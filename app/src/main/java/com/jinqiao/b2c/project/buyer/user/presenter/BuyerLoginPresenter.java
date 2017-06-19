@@ -51,7 +51,7 @@ public class BuyerLoginPresenter extends BasePresenter<BuyerLoginActivity> {
             public void onSuccess(IResult<BuyerUser> result) {
                 super.onSuccess(result);
                 if (result.data() != null) {
-                    SPHelper.putBean(Configs.BUYER.INFO, result.data());
+                    SPHelper.putBean(Configs.USER.INFO, result.data());
                     SysHelper.goBuyerHome(getBaseActivity(), index,"buyer");
                 }
             }
