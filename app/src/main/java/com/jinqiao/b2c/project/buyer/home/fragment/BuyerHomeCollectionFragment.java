@@ -59,16 +59,16 @@ public class BuyerHomeCollectionFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tab_shop:
-                mPresenter.onTabClick(1);
+                mPresenter.onTabClick(0);
                 break;
             case R.id.tab_good:
-                mPresenter.onTabClick(0);
+                mPresenter.onTabClick(1);
                 break;
         }
     }
 
     public void setTabItem(int index) {
-        mTabGood.setTabItem(index == 0);
-        mTabShop.setTabItem(index == 1);
+        mTabShop.setTabItem(index == 0);
+        mTabGood.setTabItem(index == 1);
     }
 }
