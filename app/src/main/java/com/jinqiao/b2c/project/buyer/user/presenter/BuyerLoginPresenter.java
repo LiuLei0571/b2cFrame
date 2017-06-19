@@ -3,6 +3,7 @@ package com.jinqiao.b2c.project.buyer.user.presenter;
 import android.os.Bundle;
 
 import com.jinqiao.b2c.common.http.IResult;
+import com.jinqiao.b2c.common.utils.DateUtil;
 import com.jinqiao.b2c.compent.base.BasePresenter;
 import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.compent.constants.Configs;
@@ -41,6 +42,7 @@ public class BuyerLoginPresenter extends BasePresenter<BuyerLoginActivity> {
     }
 
     public void login(String name, String password, String type) {
+        SPHelper.putString(Configs.APPNAME, Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
         submitTask(new ApiTask<BuyerUser>(getBaseActivity()) {
             @Override
             public IResult onBackGround() throws Exception {

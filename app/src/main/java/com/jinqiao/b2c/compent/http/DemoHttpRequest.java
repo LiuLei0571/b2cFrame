@@ -1,10 +1,11 @@
 package com.jinqiao.b2c.compent.http;
 
 
+import android.util.Log;
+
 import com.jinqiao.b2c.common.http.IApi;
 import com.jinqiao.b2c.common.http.IRequest;
 import com.jinqiao.b2c.common.http.ParamType;
-import com.jinqiao.b2c.common.utils.DateUtil;
 import com.jinqiao.b2c.common.utils.encrypt.Md5Encrypt;
 import com.jinqiao.b2c.common.utils.lang.Strings;
 import com.jinqiao.b2c.compent.constants.Configs;
@@ -108,24 +109,25 @@ public class DemoHttpRequest implements IRequest {
             buf.append("&ts=").append(ts);
             String sign = Md5Encrypt.md5(buf.toString());
             header.put("X-Sign", sign);
-            header.put("X-AppName", Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
+            header.put("X-AppName", SPHelper.getString(Configs.APPNAME,"android.jinqiao.com"));
             header.put("X-UserId", "-1");
-            header.put("X-TimeStamp", "" + ts);
             header.put("X-UserType", SPHelper.getInt(Configs.USER_TYPE.TYPE) + "");
         } else {
             buf.append("userId=").append(UserHelper.getUserId());
-            buf.append("&appName=").append(Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
+            buf.append("&appName=").append(SPHelper.getString(Configs.APPNAME));
             buf.append("&token=").append(UserHelper.getUsertoken());
             buf.append("&ts=").append(ts);
+            Log.d("appName",SPHelper.getString(Configs.APPNAME));
+            Log.d("token",UserHelper.getUsertoken());
             String sign = Md5Encrypt.md5(buf.toString());
             header.put("X-UserId", UserHelper.getUserId() + "");
             header.put("X-Sign", sign);
-            header.put("X-AppName", Configs.DOMAIN + "-" + DateUtil.getTimeStamp());
-            header.put("X-TimeStamp", "" + ts);
+            header.put("X-AppName",SPHelper.getString(Configs.APPNAME));
             header.put("X-UserType", SPHelper.getInt(Configs.USER_TYPE.TYPE) + "");
         }
 //        httpGet.addHeader("X-Locale", SPHelper.getString(Configs.LANGUAGE));
         header.put("X-Locale", "default");
+        header.put("X-TimeStamp", "" + ts);
         return header;
     }
 
