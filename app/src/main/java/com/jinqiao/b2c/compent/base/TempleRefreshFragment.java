@@ -32,10 +32,10 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
     @Bind(R.id.refresh)
     RefreshLayout mRefresh;
     @Bind(R.id.tv_nodata)
-    TextView mTvNodata;
+    TextView mTvNoData;
     @Bind(R.id.empty)
     RelativeLayout mEmpty;
-   protected Boolean hasNext;
+    protected boolean hasNext;
     protected BaseAdapter mBaseAdapter;
     @Inject
     SimplePresenter mPresenter;
@@ -64,6 +64,7 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
         mRefresh.setColorSchemeResources(R.color.red, R.color.orange, R.color.blue);
         mCourierList.setAdapter(getAdapter());
         mBaseAdapter = getAdapter();
+        initData(true);
     }
 
 
@@ -82,19 +83,12 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
             @Override
             public void onSuccess(IResult<T> result) {
                 super.onSuccess(result);
-                if (refresh) {
-                    mRefresh.setRefreshing(false);
-                }
-                mRefresh.setLoading(false);
                 if (mBaseAdapter.isEmpty()) {
                     mEmpty.setVisibility(View.VISIBLE);
                 } else {
                     mEmpty.setVisibility(View.GONE);
                 }
                 successResult(result.data());
-//                mAdapter.setData(mOrderLists);
-//                hasNext = hasNests;
-//                mListCount.allCount(mOrderLists.size());
 
             }
 

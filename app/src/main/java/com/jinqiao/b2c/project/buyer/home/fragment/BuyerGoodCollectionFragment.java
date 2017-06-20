@@ -30,7 +30,6 @@ public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteG
     protected void successResult(FavoriteGoods data) {
         if (data.getFavoriteSampleList() != null) {
             mBaseAdapter.addAll(data.getFavoriteSampleList());
-
         }
         hasNext = data.isHasNext();
     }

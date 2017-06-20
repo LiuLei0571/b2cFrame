@@ -5,6 +5,7 @@ import com.jinqiao.b2c.compent.base.TempleRefreshFragment;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.http.Api;
+import com.jinqiao.b2c.project.buyer.home.adapter.ShopCollectionAdapter;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShop;
 
 import java.util.HashMap;
@@ -17,7 +18,7 @@ import java.util.Map;
  */
 
 
-public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteShop>{
+public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteShop> {
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -25,12 +26,20 @@ public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteS
 
     @Override
     protected void successResult(FavoriteShop data) {
-
+        if (data.getFavoriteShopList()!= null) {
+            mBaseAdapter.addAll(data.getFavoriteShopList());
+        }
+        hasNext = data.isHasNext();
     }
 
     @Override
     public BaseAdapter getAdapter() {
-        return null;
+        return mBaseAdapter = new ShopCollectionAdapter(getContext()) {
+            @Override
+            public void onClick(int position) {
+
+            }
+        };
     }
 
     @Override
@@ -40,8 +49,8 @@ public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteS
 
     @Override
     public Map<String, Object> getParams(int page) {
-        Map<String,Object> params=new HashMap<>();
-        params.put("pageNum",page+"");
+        Map<String, Object> params = new HashMap<>();
+        params.put("pageNum", page + "");
 
         return params;
     }
