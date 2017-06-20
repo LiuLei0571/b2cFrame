@@ -150,6 +150,15 @@ public class Api implements IApi {
         api.mIParamBuilder = ParamBuilders.normal;
         return api;
     }
+    public static Api Post(String path) {
+        Api api = new Api();
+        api.path = path;
+        api.mRequestMethod = RequestMethod.Post;
+        api.mContentType = ContentType.APP_JSON;
+        api.mParamType = ParamType.json;
+        api.mIParamBuilder = ParamBuilders.normal;
+        return api;
+    }
 
     public Api PostJson(String path, Type type) {
         Api api = new Api();

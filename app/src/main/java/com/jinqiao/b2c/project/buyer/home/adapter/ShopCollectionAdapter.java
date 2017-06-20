@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,35 +26,39 @@ public abstract class ShopCollectionAdapter extends BaseAdapter<FavoriteShopDeta
     public void renderView(ViewHolderFactory viewHolderFactory, final int position) {
 
         final FavoriteShopDetail mData = getItem(position);
-
-        ImageView mIvShop = viewHolderFactory.findViewById(R.id.iv_shop_pic);
-        TextView mTvName = viewHolderFactory.findViewById(R.id.tv_shop_name);
-        TextView mTvCancel = viewHolderFactory.findViewById(R.id.tv_cancel_shop_collection);
-
-        mTvCancel.setText(mTranslatesString.getNotice_cancelfavorite());
-        ImageHelper.display(mIvShop, Configs.BASE_PIC_URL+mData.getPicPath());
-        mTvName.setText(mData.getTargetName());
-
-        mTvCancel.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ShopCollectionAdapter.this.onClick(position);
+        if (mData != null) {
+            ImageView mIvShop = viewHolderFactory.findViewById(R.id.iv_shop_pic);
+            TextView mTvName = viewHolderFactory.findViewById(R.id.tv_shop_name);
+            TextView mTvCancel = viewHolderFactory.findViewById(R.id.tv_cancel_shop_collection);
+            TextView mTvPrice = viewHolderFactory.findViewById(R.id.tv_price);
+            mTvCancel.setText(mTranslatesString.getNotice_cancelfavorite());
+            ImageHelper.display(mIvShop, Configs.BASE_PIC_URL + mData.getPicPath());
+            mTvName.setText(mData.getTargetName());
+            if (mData.getSamplePrice() > 0.0) {
+                mTvPrice.setText(mData.getSamplePrice() + "");
             }
-        });
+            mTvCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onClicks(mData);
+                }
+            });
 
-        mIvShop.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i_to_shop = new Intent(getContext(), ShopHomesActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putInt("shopId", mData.getTargetId());
-                i_to_shop.putExtras(bundle);
-                getContext().startActivity(i_to_shop);
-            }
-        });
+            mIvShop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i_to_shop = new Intent(getContext(), ShopHomesActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("shopId", mData.getTargetId());
+                    i_to_shop.putExtras(bundle);
+                    getContext().startActivity(i_to_shop);
+                }
+            });
+        }
+
 
     }
 
-    public abstract void onClick(int position);
+    public abstract void onClicks(FavoriteShopDetail mData);
 
 }

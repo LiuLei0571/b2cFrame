@@ -7,9 +7,13 @@ import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.http.Api;
 import com.jinqiao.b2c.project.buyer.home.adapter.ShopCollectionAdapter;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteGoods;
+import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShopDetail;
+import com.jinqiao.b2c.project.buyer.home.presenter.CollectionPresenter;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.inject.Inject;
 
 /**
  * 用途：
@@ -19,7 +23,8 @@ import java.util.Map;
 
 
 public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteGoods> {
-
+    @Inject
+    CollectionPresenter mPresenter;
 
     @Override
     public void doInject(FragmentComponent component) {
@@ -37,9 +42,10 @@ public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteG
     @Override
     public BaseAdapter getAdapter() {
         return mBaseAdapter = new ShopCollectionAdapter(getContext()) {
-            @Override
-            public void onClick(int position) {
 
+            @Override
+            public void onClicks(FavoriteShopDetail mData) {
+                mPresenter.getDeletCollectGood(mData.getTargetId());
             }
         };
     }

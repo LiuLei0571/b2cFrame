@@ -7,9 +7,13 @@ import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.http.Api;
 import com.jinqiao.b2c.project.buyer.home.adapter.ShopCollectionAdapter;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShop;
+import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShopDetail;
+import com.jinqiao.b2c.project.buyer.home.presenter.CollectionPresenter;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.inject.Inject;
 
 /**
  * 用途：
@@ -19,6 +23,9 @@ import java.util.Map;
 
 
 public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteShop> {
+    @Inject
+    CollectionPresenter mPresenter;
+
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -26,7 +33,7 @@ public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteS
 
     @Override
     protected void successResult(FavoriteShop data) {
-        if (data.getFavoriteShopList()!= null) {
+        if (data.getFavoriteShopList() != null) {
             mBaseAdapter.addAll(data.getFavoriteShopList());
         }
         hasNext = data.isHasNext();
@@ -35,9 +42,10 @@ public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteS
     @Override
     public BaseAdapter getAdapter() {
         return mBaseAdapter = new ShopCollectionAdapter(getContext()) {
-            @Override
-            public void onClick(int position) {
 
+            @Override
+            public void onClicks(FavoriteShopDetail mData) {
+                mPresenter.getDeletCollectShop(mData.getTargetId());
             }
         };
     }

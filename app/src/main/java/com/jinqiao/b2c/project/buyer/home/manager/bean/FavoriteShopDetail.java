@@ -8,8 +8,17 @@ public class FavoriteShopDetail implements Serializable {
 	private int targetId;
 	private String picPath;
 	private String shopIntro;
+	private double samplePrice;
 	private String shopAddress;
 	private int id;
+
+	public double getSamplePrice() {
+		return samplePrice;
+	}
+
+	public void setSamplePrice(double samplePrice) {
+		this.samplePrice = samplePrice;
+	}
 
 	public String getTargetName() {
 		return targetName;

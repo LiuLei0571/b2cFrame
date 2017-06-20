@@ -11,7 +11,6 @@
     <color name="color_btn_major">#FFD72D</color>
     <color name="blue">#0000FF</color><!--蓝色 -->
     <color name="orange">#FFA500</color><!--橙色 -->
-    <color name="red">#FF0000</color><!--红色 -->
 
     <!--重要按钮色块按下颜色-->
     <color name="color_btn_major_deep">#EFC71B</color>

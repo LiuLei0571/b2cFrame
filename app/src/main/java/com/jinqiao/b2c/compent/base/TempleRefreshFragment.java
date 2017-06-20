@@ -64,13 +64,12 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
         mRefresh.setColorSchemeResources(R.color.red, R.color.orange, R.color.blue);
         mBaseAdapter = getAdapter();
         mCourierList.setAdapter(mBaseAdapter);
-        initData(true);
+        refreshData();
     }
 
 
     private void initData(final Boolean refresh) {
         int mPage = 0;
-
 
         if (!refresh) {
             if (!hasNext) {
@@ -78,18 +77,19 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
                 return;
             }
             mPage = mBaseAdapter.getCount();
+        } else {
+            mBaseAdapter.clear();
         }
         mPresenter.apiCall(getApi(), getParams(1), new ApiTask<T>() {
             @Override
             public void onSuccess(IResult<T> result) {
                 super.onSuccess(result);
-                if (mBaseAdapter.isEmpty()) {
+                successResult(result.data());
+                if (mBaseAdapter.getCount() == 0) {
                     mEmpty.setVisibility(View.VISIBLE);
                 } else {
                     mEmpty.setVisibility(View.GONE);
                 }
-                successResult(result.data());
-
             }
 
             @Override
@@ -101,6 +101,10 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
                 mRefresh.setLoading(false);
             }
         });
+    }
+
+    public void refreshData() {
+        initData(true);
     }
 
     protected abstract void successResult(T data);

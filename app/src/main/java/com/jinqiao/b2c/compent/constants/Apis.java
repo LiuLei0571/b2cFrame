@@ -23,4 +23,7 @@ public interface Apis {
     Api buyerLogin = Api.Post("user/login.htm", BuyerUser.class).setLogin(false);
     Api buyerShopCollection = Api.Post("user/favoriteShopList.htm", FavoriteShop.class);
     Api buyerGoodCollection = Api.Post("user/favoriteSampleList.htm", FavoriteGoods.class);
+    Api buyerDeleteGoodFavorite=Api.Post("user/deleteFavorite.htm");
+    Api buyerDeleteShopFavorite=Api.Post("user/deleteFavorite.htm");
+
 }
