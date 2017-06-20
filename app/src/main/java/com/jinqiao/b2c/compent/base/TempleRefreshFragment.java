@@ -62,8 +62,8 @@ public abstract class TempleRefreshFragment<T> extends TempleFragment {
             }
         });
         mRefresh.setColorSchemeResources(R.color.red, R.color.orange, R.color.blue);
-        mCourierList.setAdapter(getAdapter());
         mBaseAdapter = getAdapter();
+        mCourierList.setAdapter(mBaseAdapter);
         initData(true);
     }
 

@@ -26,15 +26,15 @@ public abstract class ShopCollectionAdapter extends BaseAdapter<FavoriteShopDeta
     @Override
     public void renderView(ViewHolderFactory viewHolderFactory, final int position) {
 
-        final FavoriteShopDetail item_shop = getItem(position);
+        final FavoriteShopDetail mData = getItem(position);
 
-        ImageView mIvshop = viewHolderFactory.findViewById(R.id.iv_shop_pic);
+        ImageView mIvShop = viewHolderFactory.findViewById(R.id.iv_shop_pic);
         TextView mTvName = viewHolderFactory.findViewById(R.id.tv_shop_name);
         TextView mTvCancel = viewHolderFactory.findViewById(R.id.tv_cancel_shop_collection);
 
         mTvCancel.setText(mTranslatesString.getNotice_cancelfavorite());
-        ImageHelper.display(mIvshop, Configs.BASE_PIC_URL);
-        mTvName.setText(item_shop.getTargetName());
+        ImageHelper.display(mIvShop, Configs.BASE_PIC_URL+mData.getPicPath());
+        mTvName.setText(mData.getTargetName());
 
         mTvCancel.setOnClickListener(new OnClickListener() {
             @Override
@@ -43,12 +43,12 @@ public abstract class ShopCollectionAdapter extends BaseAdapter<FavoriteShopDeta
             }
         });
 
-        mIvshop.setOnClickListener(new OnClickListener() {
+        mIvShop.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i_to_shop = new Intent(getContext(), ShopHomesActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putInt("shopId", item_shop.getTargetId());
+                bundle.putInt("shopId", mData.getTargetId());
                 i_to_shop.putExtras(bundle);
                 getContext().startActivity(i_to_shop);
             }
