@@ -46,9 +46,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:defaultDes="@drawable/shopping_unclick"
+                app:defaultDes="@drawable/ic_shopping_unclick"
                 app:defaultTitle="购物"
-                app:selectDes="@drawable/shopping_click" />
+                app:selectDes="@drawable/ic_shopping_click" />
 
             <com.jinqiao.b2c.compent.ui.widget.Tab
                 android:id="@+id/tab_collection"
@@ -64,9 +64,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:defaultDes="@drawable/mine_unclick"
+                app:defaultDes="@drawable/ic_mine_unclick"
                 app:defaultTitle="我的"
-                app:selectDes="@drawable/mine_click" />
+                app:selectDes="@drawable/ic_mine_click" />
         </LinearLayout>
     </FrameLayout>
 
