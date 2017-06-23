@@ -45,7 +45,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/item_selector"
                 android:gravity="center_vertical"
-                android:textColor="@color/color_text_major"
+                android:textColor="@color/white"
                 android:visibility="gone"/>
 
         </LinearLayout>

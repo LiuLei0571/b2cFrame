@@ -29,6 +29,7 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity implements IView, ILoading {
     protected PresenterConnector mPresenterConnector;
     protected ActivityComponent mActivityComponent;
+    private boolean isAnimation = true;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,19 +61,19 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);
-        overrideOpenAnime();
+        overrideOpenAnim();
     }
 
     @Override
     public void startActivity(Intent intent, @Nullable Bundle options) {
         super.startActivity(intent, options);
-        overrideOpenAnime();
+        overrideOpenAnim();
     }
 
     @Override
     public void startActivityForResult(Intent intent, int requestCode) {
         super.startActivityForResult(intent, requestCode);
-        overrideOpenAnime();
+        overrideOpenAnim();
     }
 
     @Override
@@ -90,8 +91,9 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
             mPresenterConnector.onPause();
         }
     }
-    protected FragmentManager getSupportsFragmentManager(){
-        return   getSupportFragmentManager();
+
+    protected FragmentManager getSupportsFragmentManager() {
+        return getSupportFragmentManager();
     }
 
     @Override
@@ -131,6 +133,18 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        overrideOpenAnim();
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
+        super.startActivityForResult(intent, requestCode, options);
+        overrideOpenAnim();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         EventHelper.unRegister(this);
@@ -167,13 +181,12 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     public void finish() {
         super.finish();
         ActivityHelper.destroy(this);
-        overrideCloseAnime();
+        overrideCloseAnim();
     }
 
-    protected boolean animation = false;
 
     public void setTransitionAniAble(boolean isAni) {
-        animation = isAni;
+        isAnimation = isAni;
     }
 
     @Override
@@ -183,17 +196,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         }
     }
 
-    protected void overrideOpenAnime() {
-        if (animation) {
-            overridePendingTransition(R.anim.in_from_right, R.anim.in_from_left);
-        }
-    }
-
-    protected void overrideCloseAnime() {
-        if (animation) {
-            overridePendingTransition(R.anim.in_from_left, R.anim.in_from_right);
-        }
-    }
 
     @Override
     public void showLoading() {
@@ -202,7 +204,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
 
     @Override
     public void showLoading(String content) {
-        LoadingHelper.showLoading(getBaseActivity(),content);
+        LoadingHelper.showLoading(getBaseActivity(), content);
 
     }
 
@@ -210,8 +212,10 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     public void dismissLoading() {
         LoadingHelper.dismiss();
     }
+
     public void onEvent(EmptyEvent event) {
     }
+
     protected abstract int getRootViewId();
 
     /**
@@ -227,5 +231,21 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     @Override
     public String groupName() {
         return getLocalClassName() + this.toString();
+    }
+
+    protected void overrideOpenAnim() {
+        if (isAnimation) {
+            overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
+        } else {
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
+    }
+
+    protected void overrideCloseAnim() {
+        if (isAnimation) {
+            overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
+        } else {
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
     }
 }
