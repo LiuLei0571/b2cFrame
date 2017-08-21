@@ -16,6 +16,7 @@
     <color name="color_btn_major_deep">#EFC71B</color>
     <color name="gray">#bbbbbb</color>
     <color name="hand">#44B0A0</color>
+    <color name="hand_high">#288B7C</color>
     <!--用于全站分割线颜色-->
     <color name="color_line">#E4E4E4</color>
     <color name="color_btn_cancel">#E3E3E3</color>
