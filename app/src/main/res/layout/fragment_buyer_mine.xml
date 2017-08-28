@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <include
-        layout="@layout/toobar"/>
-
     <RelativeLayout
         android:id="@+id/ryt_user"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@color/white">
+        android:layout_height="160dp"
+        android:background="@color/btn_background">
 
         <ImageView
             android:id="@+id/iv_head"
@@ -29,4 +27,11 @@
             android:layout_centerInParent="true"
             android:text="lenny"/>
     </RelativeLayout>
+
+    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+        android:id="@+id/lyt_all_order"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:leftIcon="@drawable/ic_uls_order"
+        app:leftMsg="账户安全"/>
 </LinearLayout>

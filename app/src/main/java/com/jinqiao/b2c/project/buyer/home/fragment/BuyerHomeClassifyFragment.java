@@ -55,6 +55,8 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
         super.afterViewBind(saveInstanceState);
         setTitle(mTranslatesString.getCommon_sampleclassify());
         setBackVisible(false);
+        adapter = new ClassifyExpandListAdapterNew(getContext());
+        mElvClassify.setAdapter(adapter);
         mPresenter.apiCall(Apis.homeClassifty, new ApiCallback<CategoryFirstListResult>() {
             @Override
             public void onSuccess(IResult<CategoryFirstListResult> result) {
@@ -69,9 +71,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             public void onFailure(IResult<String> result) {
             }
         });
-        adapter = new ClassifyExpandListAdapterNew(getContext());
-        mElvClassify.setAdapter(adapter);
-
+        adapter.notifyDataSetInvalidated();
     }
 
     public List<TransFirstCategory> getData() {// 由于分类使用的是二级扩展目录，而传回的是三级目录，所以将三级目录转换为二级目录进行显示，同时将目录的值也做复制

@@ -7,8 +7,8 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:background="@null"
         android:clickable="false"
         android:scaleType="fitCenter" />

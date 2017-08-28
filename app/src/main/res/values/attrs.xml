@@ -32,4 +32,9 @@
         <attr name="BottomRightRadius" format="float"/>
         <attr name="parameter" format="float"/>
     </declare-styleable>
+    <declare-styleable name="Setting">
+        <attr name="leftIcon" format="reference"/>
+        <attr name="leftMsg" format="string"/>
+        <attr name="rightMsg" format="string"/>
+    </declare-styleable>
 </resources>
