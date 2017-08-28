@@ -60,7 +60,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             public void onSuccess(IResult<CategoryFirstListResult> result) {
                 super.onSuccess(result);
                 if (result.data() != null) {
-                    categoryList = result.data().getFirstCategory();
+                    categoryList = result.data().getSubCategoryList();
                     adapter.addAll(getData());
                 }
             }
@@ -82,29 +82,29 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
             tempFirstData.setName(categoryList.get(i).getName());
             tempFirstData.setIdPath(categoryList.get(i).getIdPath());
             tempFirstData.setCategoryLevel(categoryList.get(i).getCategoryLevel());
-            for (int j = 0; j < categoryList.get(i).getSecondCategoryList()
+            for (int j = 0; j < categoryList.get(i).getSubCategoryList()
                     .size(); j++) {
                 TransSecondCategory tempSecondData = new TransSecondCategory();
-                tempSecondData.setId(categoryList.get(i).getSecondCategoryList()
+                tempSecondData.setId(categoryList.get(i).getSubCategoryList()
                         .get(j).getId());
                 tempSecondData.setName(categoryList.get(i)
-                        .getSecondCategoryList().get(j).getName());
+                        .getSubCategoryList().get(j).getName());
                 tempSecondData.setCategoryLevel(categoryList.get(i)
-                        .getSecondCategoryList().get(j).getCategoryLevel());
+                        .getSubCategoryList().get(j).getCategoryLevel());
                 tempFirstData.getSecondCategoryList().add(tempSecondData);
                 for (int k = 0; k < categoryList.get(i)
-                        .getSecondCategoryList().get(j).getThirdCategoryList()
+                        .getSubCategoryList().get(j).getSubCategoryList()
                         .size(); k++) {
                     TransSecondCategory tempThridData = new TransSecondCategory();
                     tempThridData.setId(categoryList.get(i)
-                            .getSecondCategoryList().get(j)
-                            .getThirdCategoryList().get(k).getId());
+                            .getSubCategoryList().get(j)
+                            .getSubCategoryList().get(k).getId());
                     tempThridData.setName(categoryList.get(i)
-                            .getSecondCategoryList().get(j)
-                            .getThirdCategoryList().get(k).getName());
+                            .getSubCategoryList().get(j)
+                            .getSubCategoryList().get(k).getName());
                     tempThridData.setCategoryLevel(categoryList.get(i)
-                            .getSecondCategoryList().get(j)
-                            .getThirdCategoryList().get(k).getCategoryLevel());
+                            .getSubCategoryList().get(j)
+                            .getSubCategoryList().get(k).getCategoryLevel());
                     tempFirstData.getSecondCategoryList().add(tempThridData);
                 }
             }

@@ -9,7 +9,7 @@
         android:id="@+id/tv_classify_item"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/height_135"
-        android:layout_marginLeft="@dimen/margin_father_left_larger"
+        android:layout_marginLeft="30dp"
         android:gravity="center_vertical"
         android:textColor="@color/color_text_major"
         android:textSize="@dimen/size_minor_large"/>

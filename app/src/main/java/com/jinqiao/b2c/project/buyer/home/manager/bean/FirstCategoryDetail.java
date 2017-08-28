@@ -8,7 +8,7 @@ public class FirstCategoryDetail {
 	private String name;
 	private String idPath;
 	private int categoryLevel;
-	private ArrayList<SecondCategoryDetail> secondCategoryList=new ArrayList<SecondCategoryDetail>();
+	private ArrayList<SecondCategoryDetail> subCategoryList=new ArrayList<SecondCategoryDetail>();
 
 	public int getId() {
 		return id;
@@ -42,11 +42,11 @@ public class FirstCategoryDetail {
 		this.categoryLevel = categoryLevel;
 	}
 
-	public ArrayList<SecondCategoryDetail> getSecondCategoryList() {
-		return secondCategoryList;
+	public ArrayList<SecondCategoryDetail> getSubCategoryList() {
+		return subCategoryList;
 	}
 
-	public void setSecondCategoryList(ArrayList<SecondCategoryDetail> secondCategoryList) {
-		this.secondCategoryList = secondCategoryList;
+	public void setSubCategoryList(ArrayList<SecondCategoryDetail> subCategoryList) {
+		this.subCategoryList = subCategoryList;
 	}
 }

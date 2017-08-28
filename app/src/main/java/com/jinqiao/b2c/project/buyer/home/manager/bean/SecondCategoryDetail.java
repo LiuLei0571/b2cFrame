@@ -6,7 +6,7 @@ public class SecondCategoryDetail {
 	private int id;
 	private String name;
 	private int categoryLevel;
-	private ArrayList<ThirdCategoryDetail> thirdCategoryList=new ArrayList<ThirdCategoryDetail>();
+	private ArrayList<ThirdCategoryDetail> subCategoryList=new ArrayList<ThirdCategoryDetail>();
 	public int getId() {
 		return id;
 	}
@@ -16,8 +16,13 @@ public class SecondCategoryDetail {
 	public int getCategoryLevel() {
 		return categoryLevel;
 	}
-	public ArrayList<ThirdCategoryDetail> getThirdCategoryList() {
-		return thirdCategoryList;
+
+	public ArrayList<ThirdCategoryDetail> getSubCategoryList() {
+		return subCategoryList;
+	}
+
+	public void setSubCategoryList(ArrayList<ThirdCategoryDetail> subCategoryList) {
+		this.subCategoryList = subCategoryList;
 	}
 
 	public void setId(int id) {
@@ -32,7 +37,5 @@ public class SecondCategoryDetail {
 		this.categoryLevel = categoryLevel;
 	}
 
-	public void setThirdCategoryList(ArrayList<ThirdCategoryDetail> thirdCategoryList) {
-		this.thirdCategoryList = thirdCategoryList;
-	}
+
 }

@@ -14,10 +14,7 @@ import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransFirstCategory;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransSecondCategory;
 
-import java.util.List;
-
 public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFirstCategory, TransSecondCategory> {
-    private List<TransFirstCategory> firstCategoryList;
 
     public ClassifyExpandListAdapterNew(Context context) {
         super(context, R.layout.classify_gourp_item, R.layout.classify_second_item);
@@ -45,7 +42,7 @@ public class ClassifyExpandListAdapterNew extends BaseExpandableAdapter<TransFir
                 TextView mTvItem = viewHolder.findViewById(R.id.tv_classify_item);
                 if (mSecondCategory.getCategoryLevel() == 2) {
                     LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) mTvItem.getLayoutParams();
-                    layoutParams.setMarginStart(UIHelper.dip2px(getContext(), 15));
+                    layoutParams.setMarginStart(UIHelper.dip2px(getContext(), 25));
                 }
                 mTvItem.setText(mSecondCategory.getName());
                 mTvItem.setOnClickListener(new View.OnClickListener() {
