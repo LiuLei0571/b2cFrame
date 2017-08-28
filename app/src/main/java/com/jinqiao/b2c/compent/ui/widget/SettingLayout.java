@@ -38,6 +38,11 @@ public class SettingLayout extends BaseLinearLayout {
 
     public void setHasArrow(boolean hasArrow) {
         this.hasArrow = hasArrow;
+        if (hasArrow) {
+            mIvRight.setVisibility(VISIBLE);
+        } else {
+            mIvRight.setVisibility(GONE);
+        }
     }
 
     public void setItemClick(OnItemClick itemClick) {
@@ -76,11 +81,7 @@ public class SettingLayout extends BaseLinearLayout {
         super.afterViewBind(view);
         mTvLeftMsg.setText(Util.cutNull(mLeftMsg));
         mIvLeft.setImageDrawable(mLeftDrawable);
-        if (hasArrow) {
-            mIvRight.setVisibility(VISIBLE);
-        } else {
-            mIvRight.setVisibility(GONE);
-        }
+
     }
 
     @OnClick(R.id.tv_left_msg)

@@ -48,6 +48,18 @@ public class BuyerHomeMineFragment extends BaseFragment {
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
         mLytAllOrder.setHasArrow(true);
+        mLytAllOrder.setItemClick(new SettingLayout.OnItemClick() {
+            @Override
+            public void onCLick() {
+
+            }
+        });
     }
 
+    public SettingLayout.OnItemClick getClick = new SettingLayout.OnItemClick() {
+        @Override
+        public void onCLick() {
+
+        }
+    };
 }

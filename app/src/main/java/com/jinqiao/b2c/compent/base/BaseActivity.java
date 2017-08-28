@@ -3,11 +3,14 @@ package com.jinqiao.b2c.compent.base;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.jaeger.library.StatusBarUtil;
 import com.jinqiao.b2c.R;
@@ -52,7 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         bindView(view);
         afterViewBind(savedInstanceState);
         mPresenterConnector.bindPresenter(savedInstanceState, getIntent().getExtras());
-
+        setWindowStatusBarColor(this,R.color.btn_background);
     }
 
     @Override
@@ -92,6 +95,10 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         if (mPresenterConnector != null) {
             mPresenterConnector.onPause();
         }
+    }
+
+    public void setAnimation(boolean animation) {
+        isAnimation = animation;
     }
 
     protected FragmentManager getSupportsFragmentManager() {
@@ -187,10 +194,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     }
 
 
-    public void setTransitionAniAble(boolean isAni) {
-        isAnimation = isAni;
-    }
-
     @Override
     public void savePresenter(BasePresenter presenter) {
         if (mPresenterConnector != null) {
@@ -248,6 +251,20 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
             overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
         } else {
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
+    }
+    public static void setWindowStatusBarColor(Activity activity, int colorResId) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = activity.getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(activity.getResources().getColor(colorResId));
+
+                //底部导航栏
+                //window.setNavigationBarColor(activity.getResources().getColor(colorResId));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

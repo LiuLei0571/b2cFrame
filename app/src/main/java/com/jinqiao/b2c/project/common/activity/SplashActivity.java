@@ -1,6 +1,7 @@
 package com.jinqiao.b2c.project.common.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -49,6 +50,12 @@ public class SplashActivity extends TempleActivity {
     }
 
     @Override
+    public void beforeViewBind(View rootView) {
+        super.beforeViewBind(rootView);
+        setAnimation(false);
+    }
+
+    @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
         AnimationSet set = new AnimationSet(false);
@@ -77,7 +84,7 @@ public class SplashActivity extends TempleActivity {
 
                 }
             }
-        },2000);
+        }, 2000);
     }
 
     private void initData() {
