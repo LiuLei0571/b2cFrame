@@ -43,6 +43,18 @@ public class UIHelper {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
+
+    /**
+     * px转dp
+     * @param pxVal
+     * @return
+     */
+    public float px2dp(float pxVal) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (pxVal / scale);
+    }
+
+
     public static int getColor(String color) {
         if (TextUtils.isEmpty(color) || !checkColor(color)) {
             return 0;

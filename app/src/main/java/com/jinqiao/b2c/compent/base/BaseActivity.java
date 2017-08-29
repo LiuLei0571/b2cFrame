@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jaeger.library.StatusBarUtil;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.statusbar.StatusBarCompat;
 import com.jinqiao.b2c.compent.cdi.CDI;
@@ -52,16 +51,15 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         View view = getLayoutInflater().inflate(getRootViewId(), null, false);
         beforeViewBind(view);
         setContentView(view);
-        StatusBarUtil.setColor(this, R.color.hand_high);
+//        StatusBarUtil.setColor(this, R.color.hand_high);
         bindView(view);
         afterViewBind(savedInstanceState);
         mPresenterConnector.bindPresenter(savedInstanceState, getIntent().getExtras());
-        setStatusColor(R.color.statusbar);
+        setStatusColor(R.color.hand);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    public void setStatusColor(int statusbar) {
-        StatusBarCompat.setWindowStatusBarColor(this, statusbar);
+    public void setStatusColor(int statusbars) {
+        StatusBarCompat.setStatusBarColor(this, statusbars);
 
     }
 
