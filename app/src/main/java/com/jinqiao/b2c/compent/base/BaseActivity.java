@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 import com.jaeger.library.StatusBarUtil;
 import com.jinqiao.b2c.R;
+import com.jinqiao.b2c.common.statusbar.StatusBarCompat;
 import com.jinqiao.b2c.compent.cdi.CDI;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.event.EmptyEvent;
@@ -35,6 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     protected ActivityComponent mActivityComponent;
     private boolean isAnimation = true;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +52,17 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         View view = getLayoutInflater().inflate(getRootViewId(), null, false);
         beforeViewBind(view);
         setContentView(view);
-        StatusBarUtil.setColor(this,R.color.hand_high);
+        StatusBarUtil.setColor(this, R.color.hand_high);
         bindView(view);
         afterViewBind(savedInstanceState);
         mPresenterConnector.bindPresenter(savedInstanceState, getIntent().getExtras());
-        setWindowStatusBarColor(this,R.color.btn_background);
+        setStatusColor(R.color.statusbar);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void setStatusColor(int statusbar) {
+        StatusBarCompat.setWindowStatusBarColor(this, statusbar);
+
     }
 
     @Override
@@ -253,18 +260,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
-    public static void setWindowStatusBarColor(Activity activity, int colorResId) {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = activity.getWindow();
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(activity.getResources().getColor(colorResId));
 
-                //底部导航栏
-                //window.setNavigationBarColor(activity.getResources().getColor(colorResId));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 }

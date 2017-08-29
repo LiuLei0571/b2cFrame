@@ -19,6 +19,6 @@ public class BuyerHomeCarFragment extends BaseFragment {
 
     @Override
     protected int getRootViewId() {
-        return R.layout.fragment_buyer_index;
+        return R.layout.fragment_buyer_car;
     }
 }
