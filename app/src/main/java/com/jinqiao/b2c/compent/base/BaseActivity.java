@@ -51,11 +51,10 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         View view = getLayoutInflater().inflate(getRootViewId(), null, false);
         beforeViewBind(view);
         setContentView(view);
-//        StatusBarUtil.setColor(this, R.color.hand_high);
         bindView(view);
         afterViewBind(savedInstanceState);
         mPresenterConnector.bindPresenter(savedInstanceState, getIntent().getExtras());
-        setStatusColor(R.color.hand);
+        setStatusColor(R.color.white);
     }
 
     public void setStatusColor(int statusbars) {

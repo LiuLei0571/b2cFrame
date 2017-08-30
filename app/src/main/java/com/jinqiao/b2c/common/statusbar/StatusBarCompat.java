@@ -4,10 +4,16 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Environment;
 import android.support.annotation.ColorInt;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * 用途：
@@ -17,12 +23,12 @@ import android.view.Window;
 
 
 public class StatusBarCompat {
-    static IStatusBar IMPL;
+    static final IStatusBar IMPL;
 
     static {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             IMPL = new StatusBarMImpl();
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !isEMUI() ) {
             IMPL = new StatusBarLollipopImpl();
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             IMPL = new StatusBarKitkatImpl();
@@ -45,7 +51,29 @@ public class StatusBarCompat {
             mChildView.setFitsSystemWindows(fitSystemWindows);
         }
     }
-
+    private static boolean isEMUI() {
+        File file = new File(Environment.getRootDirectory(), "build.prop");
+        if (file.exists()) {
+            Properties properties = new Properties();
+            FileInputStream fis = null;
+            try {
+                fis = new FileInputStream(file);
+                properties.load(fis);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (fis != null) {
+                    try {
+                        fis.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return properties.containsKey("ro.build.hw_emui_api_level");
+        }
+        return false;
+    }
     public static void setStatusBarColor(Activity activity, @ColorInt int color) {
         boolean isLightColor = toGrey(color) > 225;
         //默认全部为深色状态栏lightStatusBar=true
@@ -76,7 +104,7 @@ public class StatusBarCompat {
 
     public static void setStatusBarColor(Window window, @ColorInt int color, boolean lightStatusBar) {
         IMPL.setStatusBarColor(window, color);
-        LightStatusBarCompat.setLighStatusBar(window, true);
+        LightStatusBarCompat.setLighStatusBar(window, lightStatusBar);
     }
 
 

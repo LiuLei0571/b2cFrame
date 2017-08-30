@@ -14,7 +14,7 @@ import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 public class SearchActivity extends TempleActivity {
     @Override
     protected int getRootViewId() {
-        return R.layout.activity_buyer_main;
+        return R.layout.activity_buyer_serach_home;
     }
 
     @Override

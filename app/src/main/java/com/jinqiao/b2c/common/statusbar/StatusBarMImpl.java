@@ -2,6 +2,7 @@ package com.jinqiao.b2c.common.statusbar;
 
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -13,7 +14,7 @@ import android.view.WindowManager;
 
 
 public class StatusBarMImpl implements IStatusBar {
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @TargetApi(Build.VERSION_CODES.M)
     @Override
     public void setStatusBarColor(Window window, int color) {
         //取消设置透明状态栏，使ContentView内容不再覆盖状态栏
@@ -21,6 +22,9 @@ public class StatusBarMImpl implements IStatusBar {
         //需要设置这个flag才能调用setStatusBarColor来设置状态颜色
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(color);
-
+        View view=window.findViewById(android.R.id.content);
+        if (view != null) {
+            view.setForeground(null);
+        }
     }
 }

@@ -108,13 +108,7 @@ public class BuyerHomeActivity extends TempleActivity {
                 }
                 break;
             case R.id.tab_mine:
-                if (UserHelper.isUserLogin()) {
                     presenter.onTabClick(4);
-                } else {
-                    intent = new Intent(this, SelectLoginActivity.class);
-                    intent.putExtra(Extras.HOME.KEY,4);
-
-                }
                 break;
         }
         if (intent != null) {
