@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.common.helper.StatusBarHelper;
 import com.jinqiao.b2c.common.http.IResult;
-import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
 import com.jinqiao.b2c.common.utils.lang.Strings;
 import com.jinqiao.b2c.compent.base.BaseFragment;
 import com.jinqiao.b2c.compent.base.SimplePresenter;
@@ -58,6 +57,7 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     final List<ITemplateModel> list = new ArrayList<>();
     @Inject
     SimplePresenter mPresenter;
+    Toolbar mToolbar;
 
     @Override
     public void doInject(FragmentComponent component) {
@@ -72,6 +72,8 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     @Override
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
+        mToolbar = (Toolbar) rootView.findViewById(R.id.index_b2c_tool_bar);
+
     }
 
 
@@ -140,7 +142,9 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        StatusBarHelper.initStatusBar(getBaseActivity(), StatusBarState.NO_VIEW);
+        super.initImmersionBar();
+        mImmersionBar.titleBar(mToolbar).init();
+//        StatusBarHelper.initStatusBar(getBaseActivity(), StatusBarState.NO_VIEW);
         mTranslatesString = SPHelper.getBean("translate", MobileStaticTextCode.class);
         mSearch.setText(mTranslatesString.getCommon_searchsampleshop());
         tv_home_setting.setText(mTranslatesString.getConmon_yuyanqiehuan());

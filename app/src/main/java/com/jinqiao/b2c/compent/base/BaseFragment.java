@@ -52,7 +52,7 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     }
    public void initImmersionBar(){
        mImmersionBar=ImmersionBar.with(this);
-       mImmersionBar.keyboardEnable(true).init();
+       mImmersionBar.keyboardEnable(true);
    }
     @Nullable
     @Override

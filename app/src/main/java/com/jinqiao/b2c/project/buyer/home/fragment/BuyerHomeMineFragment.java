@@ -32,6 +32,7 @@ public class BuyerHomeMineFragment extends BaseFragment {
     @Bind(R.id.lyt_all_order)
     SettingLayout mLytAllOrder;
     Toolbar mToolbar;
+
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -45,15 +46,7 @@ public class BuyerHomeMineFragment extends BaseFragment {
     @Override
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
-        mToolbar= (Toolbar) rootView.findViewById(R.id.mine_b2c_tool_bar);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        super.initImmersionBar();
-        mImmersionBar.titleBar(mToolbar).init();
-
+        mToolbar = (Toolbar) rootView.findViewById(R.id.mine_b2c_tool_bar);
     }
 
     @Override
@@ -66,6 +59,13 @@ public class BuyerHomeMineFragment extends BaseFragment {
 
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        super.initImmersionBar();
+        mImmersionBar.titleBar(mToolbar).init();
     }
 
     public SettingLayout.OnItemClick getClick = new SettingLayout.OnItemClick() {
