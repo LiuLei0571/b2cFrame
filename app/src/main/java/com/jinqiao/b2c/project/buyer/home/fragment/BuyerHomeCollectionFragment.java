@@ -1,6 +1,7 @@
 package com.jinqiao.b2c.project.buyer.home.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -31,6 +32,7 @@ public class BuyerHomeCollectionFragment extends BaseFragment {
     Tab mTabGood;
     @Inject
     HomeCollectionPresenter mPresenter;
+    @Nullable
 
 
     @Override

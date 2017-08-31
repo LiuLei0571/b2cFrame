@@ -5,9 +5,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.jinqiao.b2c.R;
+import com.jinqiao.b2c.common.helper.StatusBarHelper;
 import com.jinqiao.b2c.common.helper.ThreadHelper;
 import com.jinqiao.b2c.common.http.IResult;
-import com.jinqiao.b2c.common.statusBarNew.ImmersionBar;
+import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
 import com.jinqiao.b2c.compent.base.SimplePresenter;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
@@ -54,8 +55,7 @@ public class SplashActivity extends TempleActivity {
 
     @Override
     public void intStatusBar() {
-        ImmersionBar.with(this).init();
-
+        StatusBarHelper.initStatusBar(this, StatusBarState.FULLSCREEN);
     }
 
     @Override

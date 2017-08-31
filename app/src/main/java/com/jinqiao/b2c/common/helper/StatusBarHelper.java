@@ -1,6 +1,9 @@
 package com.jinqiao.b2c.common.helper;
 
+import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.statusBarNew.B2cStatusBar;
@@ -47,5 +50,16 @@ public class StatusBarHelper {
                 break;
         }
         builder.applyToSystem();
+    }
+    public static void refreshTopViewColor(@NonNull AppCompatActivity mActivity, @IdRes int viewId, String Color) {
+        View view = mActivity.findViewById(viewId);
+        if (view != null) {
+            view.setBackgroundColor(UIHelper.getColor(Color));
+        }
+    }
+    public static void refreshTopViewColor(View view, String Color) {
+        if (view != null) {
+            view.setBackgroundColor(UIHelper.getColor(Color));
+        }
     }
 }

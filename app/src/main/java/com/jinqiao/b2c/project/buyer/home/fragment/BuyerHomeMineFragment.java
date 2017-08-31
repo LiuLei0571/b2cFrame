@@ -40,6 +40,7 @@ public class BuyerHomeMineFragment extends BaseFragment {
         return R.layout.fragment_buyer_mine;
     }
 
+
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
