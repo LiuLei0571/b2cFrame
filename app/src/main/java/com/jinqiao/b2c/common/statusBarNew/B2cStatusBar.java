@@ -2,6 +2,7 @@ package com.jinqiao.b2c.common.statusBarNew;
 
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -34,6 +35,16 @@ public class B2cStatusBar {
         int toolBarId;
 
         AppCompatActivity activity;
+        Fragment mFragment;
+
+        public Builder(Fragment fragment) {
+            mFragment = fragment;
+            immersionBar = ImmersionBar.with(mFragment)
+                    .navigationBarAlpha(1.0f).navigationBarColor(R.color.black)
+                    .navigationBarWithKitkatEnable(false).fitsSystemWindows(fitsSystemWindows)
+                    .statusBarDarkFont(true);
+        }
+
         private ImmersionBar immersionBar;
         private Builder(@NonNull AppCompatActivity activity) {
             this.activity = activity;

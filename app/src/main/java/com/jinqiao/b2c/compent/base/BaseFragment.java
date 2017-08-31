@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jinqiao.b2c.common.statusBarNew.ImmersionBar;
 import com.jinqiao.b2c.compent.cdi.CDI;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.event.EmptyEvent;
@@ -35,7 +36,7 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     private View mView;
     protected MobileStaticTextCode mTranslatesString;
     protected OptionList mTranslatesList;
-
+    protected ImmersionBar mImmersionBar;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +50,10 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
         }
         EventHelper.register(this);
     }
-
+   public void initImmersionBar(){
+       mImmersionBar=ImmersionBar.with(this);
+       mImmersionBar.keyboardEnable(true).init();
+   }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -106,6 +110,9 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
         if (mPresenterConnector != null) {
             mPresenterConnector.destory();
             mPresenterConnector = null;
+        }
+        if (mImmersionBar != null) {
+            mImmersionBar.destroy();
         }
         unBindView();
         if (mView != null) {

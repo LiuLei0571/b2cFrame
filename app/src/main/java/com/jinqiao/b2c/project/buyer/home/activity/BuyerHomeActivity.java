@@ -6,8 +6,6 @@ import android.view.KeyEvent;
 import android.view.View;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.common.helper.StatusBarHelper;
-import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.constants.Extras;
@@ -55,7 +53,7 @@ public class BuyerHomeActivity extends TempleActivity {
     }
     @Override
     public void intStatusBar() {
-        StatusBarHelper.initStatusBar(this, StatusBarState.NO_VIEW);
+//        StatusBarHelper.initStatusBar(this, StatusBarState.NO_VIEW);
 
     }
     @Override
