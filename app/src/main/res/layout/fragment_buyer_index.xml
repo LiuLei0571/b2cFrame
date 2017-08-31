@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/tv_data"
+    <LinearLayout
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <RelativeLayout
-        android:id="@+id/pop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/tv_home_setting"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/hand"
         android:orientation="horizontal">
 
-        <include
-            android:id="@+id/title_bar"
-            layout="@layout/activity_home_header_top"/>
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bg_home_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/gray"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/iv_lanuage"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/item_selector"
+            android:src="@drawable/ic_lanuage" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_home_setting"
@@ -31,6 +44,11 @@
         android:layout_alignTop="@+id/pop"
         android:layout_marginRight="15dp"
         android:gravity="center_vertical"
-        android:textSize="12sp"
-        android:visibility="gone"/>
-</RelativeLayout>
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

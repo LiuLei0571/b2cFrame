@@ -53,8 +53,8 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-        setTitle(mTranslatesString.getCommon_sampleclassify());
-        setBackVisible(false);
+//        setTitle(mTranslatesString.getCommon_sampleclassify());
+//        setBackVisible(false);
         adapter = new ClassifyExpandListAdapterNew(getContext());
         mElvClassify.setAdapter(adapter);
         mPresenter.apiCall(Apis.homeClassifty, new ApiCallback<CategoryFirstListResult>() {

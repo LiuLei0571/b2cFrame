@@ -30,17 +30,16 @@ import butterknife.Bind;
 
 public abstract class TempleActivity extends BaseActivity {
     @Nullable
-    @Bind(R.id.header_)
-    HeadBar mHeadBar;
+
     protected MobileStaticTextCode mTranslatesString;
     protected OptionList mTranslatesList;
-
     @Override
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
         mTranslatesString =  TranslateHelper.getMobileText();
         mTranslatesList =  TranslateHelper.getMobileList();
     }
+
 
     @Override
     public void bindView(View view) {

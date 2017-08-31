@@ -1,8 +1,9 @@
 package com.jinqiao.b2c.compent.ui;
 
-import android.content.Context;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +13,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.compent.base.BaseLinearLayout;
 import com.jinqiao.b2c.compent.helper.UIHelper;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 
 /**
  * 用途：
@@ -25,16 +28,13 @@ import butterknife.OnClick;
  */
 
 
-public class HeadBar extends BaseLinearLayout {
-    @Bind(R.id.toolbar_back)
+public class HeadBar   {
+    private Toolbar mToolbar;
+
     ImageButton mToolbarBack;
-    @Bind(R.id.toolbar_title)
     TextView mToolbarTitle;
-    @Bind(R.id.toolbar_right_text)
     TextView mToolbarRightText;
-    @Bind(R.id.toolbar_right)
     LinearLayout mRight;
-    @Bind(R.id.rlyt_toolbar)
     RelativeLayout mRlytToolbar;
     @Bind(R.id.line)
     View mLine;
@@ -44,28 +44,20 @@ public class HeadBar extends BaseLinearLayout {
         mOnBackClick = onBackClick;
     }
 
-    public HeadBar(Context context) {
-        this(context, null);
-        init(context, null);
-    }
-
-    public HeadBar(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init(context, attrs);
-    }
-
-    @Override
-    public int getRootLayoutId() {
-        return R.layout.item_widget_headbar;
-    }
 
     public interface OnBackClick {
         void onBackClick();
     }
 
-    @Override
-    public void init(Context context, AttributeSet mAttributeSet) {
-        super.init(context, mAttributeSet);
+    public HeadBar(AppCompatActivity appCompatActivity, Toolbar toolbar) {
+        appCompatActivity.setSupportActionBar(toolbar);
+
+        ActionBar actionBar=appCompatActivity.getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowTitleEnabled(false);
+        }
+        mToolbar=toolbar;
+        init();
     }
 
     @OnClick(R.id.toolbar_back)
@@ -74,6 +66,14 @@ public class HeadBar extends BaseLinearLayout {
             mOnBackClick.onBackClick();
 
         }
+    }
+    private void init(){
+        mToolbarBack= (ImageButton) mToolbar.findViewById(R.id.toolbar_back);
+        mToolbarTitle= (TextView) mToolbar.findViewById(R.id.toolbar_title);
+        mToolbarRightText= (TextView) mToolbar.findViewById(R.id.toolbar_right_text);
+        mRight= (LinearLayout) mToolbar.findViewById(R.id.toolbar_right);
+        mRlytToolbar= (RelativeLayout) mToolbar.findViewById(R.id.rlyt_toolbar);
+        mLine=mToolbar.findViewById(R.id.line);
     }
 
     public void setTitle(String name) {
@@ -92,14 +92,14 @@ public class HeadBar extends BaseLinearLayout {
         }
     }
 
-    public ImageButton addImage(int drawable, OnClickListener listener) {
+    public ImageButton addImage(int drawable, View.OnClickListener listener) {
         ImageButton imageView = null;
         if (mRight != null) {
-            imageView = new ImageButton(getContext());
+            imageView = new ImageButton(mToolbar.getContext());
             imageView.setImageResource(drawable);
             imageView.setOnClickListener(listener);
             imageView.setBackgroundResource(R.drawable.item_selector);
-            imageView.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             imageView.setPadding(getPx(10), 0, getPx(10), 0);
             mRight.addView(imageView);
         }
@@ -107,26 +107,26 @@ public class HeadBar extends BaseLinearLayout {
     }
 
 
-    public TextView addText(int text, OnClickListener listener) {
+    public TextView addText(int text, View.OnClickListener listener) {
         return addText(UIHelper.getString(text), listener);
     }
 
 
     private int getPx(int dp) {
-        float mDensity = getResources().getDisplayMetrics().density;
+        float mDensity =mToolbar. getResources().getDisplayMetrics().density;
         return (int) (mDensity * dp);
     }
 
-    public TextView addText(String text, OnClickListener listener) {
+    public TextView addText(String text, View.OnClickListener listener) {
         TextView textView = null;
         if (mRight != null) {
-            textView = new TextView(getContext());
-            textView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+            textView = new TextView(mToolbar.getContext());
+            textView.setLayoutParams(new LinearLayoutCompat.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
             textView.setMinWidth(getPx(44));
             textView.setPadding(getPx(15), 0, getPx(15), 0);
             textView.setGravity(Gravity.CENTER);
             textView.setText(text);
-            textView.setTextColor(getResources().getColor(R.color.color_text_major));
+            textView.setTextColor(mToolbar.getResources().getColor(R.color.color_text_major));
             textView.setOnClickListener(listener);
             textView.setBackgroundResource(R.drawable.item_selector);
             mRight.addView(textView);

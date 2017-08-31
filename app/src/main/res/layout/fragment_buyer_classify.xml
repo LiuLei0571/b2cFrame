@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/toobar"/>
 
     <ExpandableListView
         android:id="@+id/elv_classify"

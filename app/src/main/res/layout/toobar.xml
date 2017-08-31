@@ -2,12 +2,13 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <com.jinqiao.b2c.compent.ui.HeadBar
-        android:id="@id/header_"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/hand"/>
+    android:layout_height="wrap_content">
+    <!--
+        <com.aiyoumi.lib.ui.AymHeadBar
+            android:id="@id/header_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>-->
+    <include
+        layout="@layout/toobar_new"/>
 </FrameLayout>

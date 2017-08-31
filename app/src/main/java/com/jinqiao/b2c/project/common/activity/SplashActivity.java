@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.helper.ThreadHelper;
 import com.jinqiao.b2c.common.http.IResult;
+import com.jinqiao.b2c.common.statusBarNew.ImmersionBar;
 import com.jinqiao.b2c.compent.base.SimplePresenter;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
@@ -49,6 +50,12 @@ public class SplashActivity extends TempleActivity {
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
         setAnimation(false);
+    }
+
+    @Override
+    public void intStatusBar() {
+        ImmersionBar.with(this).init();
+
     }
 
     @Override

@@ -11,4 +11,8 @@
     <item type="id" name="auto_focus"/>
     <item type="id" name="launch_product_query"/>
     <item name="deletess" type="id"></item>
+    <item name="header_" type="id"/>
+    <item name="b2c_tool_bar" type="id"/>
+    <item name="aym_status_view" type="id"/>
+
 </resources>

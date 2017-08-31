@@ -22,9 +22,6 @@ import butterknife.Bind;
  */
 
 public abstract class TempleFragment extends BaseFragment {
-    @Nullable
-    @Bind(R.id.header_)
-    HeadBar mHeadBar;
     protected MobileStaticTextCode mTranslatesString;
     protected OptionList mTranslatesList;
 
@@ -33,53 +30,6 @@ public abstract class TempleFragment extends BaseFragment {
         super.beforeViewBind(rootView);
         mTranslatesString =  TranslateHelper.getMobileText();
         mTranslatesList =  TranslateHelper.getMobileList();
-    }
-
-    @Override
-    public void bindView(View view) {
-        super.bindView(view);
-        if (mHeadBar != null) {
-            mHeadBar.setTitle("...");
-            mHeadBar.setOnBackClick(new HeadBar.OnBackClick() {
-                @Override
-                public void onBackClick() {
-                    onToolbarBackPress();
-                }
-            });
-        }
-    }
-
-    public void setTitle(String title) {
-        if (mHeadBar != null) {
-            mHeadBar.setTitle(title);
-
-        }
-    }
-
-    public void setTitle(int titleId) {
-        if (mHeadBar != null) {
-            mHeadBar.setTitle(titleId);
-
-        }
-    }
-
-    public void setBackVisible(boolean show) {
-        if (mHeadBar != null) {
-            mHeadBar.setBackVisable(show);
-        }
-
-    }
-
-    public void addText(String title, View.OnClickListener mListener) {
-        if (mHeadBar != null) {
-            mHeadBar.addText(title, mListener);
-        }
-    }
-
-    public void addImage(int drawableId, View.OnClickListener mListenter) {
-        if (mHeadBar != null) {
-            mHeadBar.addImage(drawableId, mListenter);
-        }
     }
 
 

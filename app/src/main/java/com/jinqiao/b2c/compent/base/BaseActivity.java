@@ -9,10 +9,12 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.common.statusbar.StatusBarCompat;
+import com.jinqiao.b2c.common.helper.StatusBarHelper;
+import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
 import com.jinqiao.b2c.compent.cdi.CDI;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.event.EmptyEvent;
@@ -20,6 +22,7 @@ import com.jinqiao.b2c.compent.helper.ActivityHelper;
 import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
+import com.jinqiao.b2c.compent.ui.HeadBar;
 
 import butterknife.ButterKnife;
 
@@ -33,6 +36,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     protected PresenterConnector mPresenterConnector;
     protected ActivityComponent mActivityComponent;
     private boolean isAnimation = true;
+    protected Toolbar mToolBar;
+    protected HeadBar mHeadBar;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -54,12 +59,13 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
         bindView(view);
         afterViewBind(savedInstanceState);
         mPresenterConnector.bindPresenter(savedInstanceState, getIntent().getExtras());
-        setStatusColor(R.color.white);
+        intStatusBar();
+
     }
 
-    public void setStatusColor(int statusbars) {
-        StatusBarCompat.setStatusBarColor(this, statusbars);
+    public void intStatusBar() {
 
+        StatusBarHelper.initStatusBar(this, StatusBarState.TOOLBAR_VIEW, R.id.b2c_tool_bar);
     }
 
     @Override
@@ -111,7 +117,11 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
 
     @Override
     public void beforeViewBind(View rootView) {
+        mToolBar = (Toolbar) rootView.findViewById(R.id.b2c_tool_bar);
+        if (mToolBar != null) {
+            mHeadBar = new HeadBar(this, mToolBar);
 
+        }
     }
 
     @Override

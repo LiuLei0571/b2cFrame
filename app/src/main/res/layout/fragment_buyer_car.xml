@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
+<include
+    layout="@layout/toobar"/>
     <TextView
         android:id="@+id/tv_home_setting"
         android:layout_width="wrap_content"
@@ -15,4 +16,4 @@
         android:gravity="center_vertical"
         android:text="购物车"
         android:textSize="12sp"/>
-</RelativeLayout>
+</LinearLayout>
