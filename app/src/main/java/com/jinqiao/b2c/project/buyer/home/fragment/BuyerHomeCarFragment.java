@@ -30,7 +30,7 @@ public class BuyerHomeCarFragment extends BaseFragment {
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
         mToolbar = (Toolbar) rootView.findViewById(R.id.mine_b2c_tool_bar);
-
+        mToolbar.setTitle("购物车");
     }
 
     @Override

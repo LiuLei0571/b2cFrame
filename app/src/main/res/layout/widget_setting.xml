@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/margin_father_left_normal"
-                android:paddingRight="@dimen/margin_father_right_normal">
-
+                android:orientation="vertical"
+                >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_father_left_normal"
+        android:paddingRight="@dimen/margin_father_right_normal">
     <ImageView
         android:id="@+id/iv_left"
         android:layout_width="15dp"
@@ -31,4 +34,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:src="@drawable/ic_arrow_right"/>
-</RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

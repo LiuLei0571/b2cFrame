@@ -14,7 +14,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:background="@color/white"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true">
 
         <LinearLayout
@@ -50,14 +50,6 @@
                 app:defaultTitle="购物"
                 app:selectDes="@drawable/ic_shopping_click" />
 
-            <com.jinqiao.b2c.compent.ui.widget.Tab
-                android:id="@+id/tab_collection"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:defaultDes="@drawable/collection_unclick_"
-                app:defaultTitle="收藏"
-                app:selectDes="@drawable/collection_click" />
 
             <com.jinqiao.b2c.compent.ui.widget.Tab
                 android:id="@+id/tab_mine"

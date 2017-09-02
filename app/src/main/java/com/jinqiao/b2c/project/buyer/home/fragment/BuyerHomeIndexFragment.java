@@ -143,7 +143,7 @@ public class BuyerHomeIndexFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         super.initImmersionBar();
-        mImmersionBar.titleBar(mToolbar).init();
+        mImmersionBar.titleBar(mToolbar).statusBarDarkFont(true,0.2f).init();
 //        StatusBarHelper.initStatusBar(getBaseActivity(), StatusBarState.NO_VIEW);
         mTranslatesString = SPHelper.getBean("translate", MobileStaticTextCode.class);
         mSearch.setText(mTranslatesString.getCommon_searchsampleshop());

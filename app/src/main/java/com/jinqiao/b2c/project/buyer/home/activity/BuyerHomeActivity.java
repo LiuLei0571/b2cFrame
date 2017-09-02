@@ -30,8 +30,6 @@ public class BuyerHomeActivity extends TempleActivity {
     Tab mTabClassify;
     @Bind(R.id.tab_car)
     Tab mTabCar;
-    @Bind(R.id.tab_collection)
-    Tab mTabCollection;
     @Bind(R.id.tab_mine)
     Tab mTabMine;
 
@@ -68,7 +66,6 @@ public class BuyerHomeActivity extends TempleActivity {
             mTabHome.setTitle(mTranslatesString.getCommon_home());
             mTabClassify.setTitle(mTranslatesString.getCommon_classify());
             mTabCar.setTitle(mTranslatesString.getCommon_shoppingcart());
-            mTabCollection.setTitle(mTranslatesString.getCommon_favorites());
             mTabMine.setTitle(mTranslatesString.getCommon_mine());
         }
     }
@@ -85,7 +82,7 @@ public class BuyerHomeActivity extends TempleActivity {
         }
     }
 
-    @OnClick({R.id.tab_home, R.id.tab_classify, R.id.tab_car, R.id.tab_collection, R.id.tab_mine})
+    @OnClick({R.id.tab_home, R.id.tab_classify, R.id.tab_car, R.id.tab_mine})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -103,14 +100,6 @@ public class BuyerHomeActivity extends TempleActivity {
                     intent.putExtra(Extras.HOME.KEY,2);
                 }
                 break;
-            case R.id.tab_collection:
-                if (UserHelper.isUserLogin()) {
-                    presenter.onTabClick(3);
-                } else {
-                    intent = new Intent(this, SelectLoginActivity.class);
-                    intent.putExtra(Extras.HOME.KEY,3);
-                }
-                break;
             case R.id.tab_mine:
                     presenter.onTabClick(4);
                 break;
@@ -124,7 +113,6 @@ public class BuyerHomeActivity extends TempleActivity {
         mTabHome.setTabItem(index == 0);
         mTabClassify.setTabItem(index == 1);
         mTabCar.setTabItem(index == 2);
-        mTabCollection.setTabItem(index == 3);
         mTabMine.setTabItem(index == 4);
     }
 

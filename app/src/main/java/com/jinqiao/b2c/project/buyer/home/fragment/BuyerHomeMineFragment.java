@@ -29,8 +29,7 @@ public class BuyerHomeMineFragment extends BaseFragment {
     TextView mTvName;
     @Bind(R.id.ryt_user)
     RelativeLayout mRytUser;
-    @Bind(R.id.lyt_all_order)
-    SettingLayout mLytAllOrder;
+
     Toolbar mToolbar;
 
     @Override
@@ -52,13 +51,7 @@ public class BuyerHomeMineFragment extends BaseFragment {
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-        mLytAllOrder.setHasArrow(true);
-        mLytAllOrder.setItemClick(new SettingLayout.OnItemClick() {
-            @Override
-            public void onCLick() {
 
-            }
-        });
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.jinqiao.b2c.project.buyer.home.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.jinqiao.b2c.R;
@@ -39,6 +41,7 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     @Inject
     SimplePresenter mPresenter;
     ClassifyExpandListAdapterNew adapter;
+    Toolbar mToolbar;
 
     @Override
     public void doInject(FragmentComponent component) {
@@ -51,10 +54,23 @@ public class BuyerHomeClassifyFragment extends TempleFragment {
     }
 
     @Override
+    public void beforeViewBind(View rootView) {
+        super.beforeViewBind(rootView);
+        mToolbar = (Toolbar) rootView.findViewById(R.id.mine_b2c_tool_bar);
+        mToolbar.setTitle("分类");
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        super.initImmersionBar();
+        mImmersionBar.titleBar(mToolbar).statusBarDarkFont(true,0.2f).init();
+    }
+
+    @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-//        setTitle(mTranslatesString.getCommon_sampleclassify());
-//        setBackVisible(false);
         adapter = new ClassifyExpandListAdapterNew(getContext());
         mElvClassify.setAdapter(adapter);
         mPresenter.apiCall(Apis.homeClassifty, new ApiCallback<CategoryFirstListResult>() {
