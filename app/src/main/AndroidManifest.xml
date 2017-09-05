@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jinqiao.b2c">
+          package="com.jinqiao.b2c">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:name=".project.App"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".project.common.activity.SplashActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".compent.web.view.activity.WebViewActivity" />
-        <activity android:name=".project.logistics.home.activity.LogisticsHomeActivity" />
-        <activity android:name=".project.seller.home.activity.SellerHomeActivity" />
+        <activity android:name=".compent.web.view.activity.WebViewActivity"/>
+        <activity android:name=".project.logistics.home.activity.LogisticsHomeActivity"/>
+        <activity android:name=".project.seller.home.activity.SellerHomeActivity"/>
         <activity
             android:name=".project.buyer.home.activity.BuyerHomeActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".project.buyer.goods.GoodsDetailActivity" />
-        <activity android:name=".project.buyer.goods.ShopHomesActivity" />
-        <activity android:name=".project.buyer.goods.GoodsListActivity" />
-        <activity android:name=".project.logistics.LivesCommuntiyHomeActivity" />
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".project.buyer.goods.GoodsDetailActivity"/>
+        <activity android:name=".project.buyer.goods.ShopHomesActivity"/>
+        <activity android:name=".project.buyer.goods.GoodsListActivity"/>
+        <activity android:name=".project.logistics.LivesCommuntiyHomeActivity"/>
         <activity android:name=".project.common.activity.SelectLoginActivity"/>
         <activity android:name=".project.logistics.user.CompanyLoginActivity"/>
         <activity android:name=".project.express.user.activity.ExpressLoginActivity"/>
@@ -43,6 +44,7 @@
         <activity android:name=".project.buyer.user.activity.ForgetPswActivity"/>
         <activity android:name=".project.buyer.home.activity.SearchActivity"/>
         <activity android:name=".project.buyer.login.activity.LoginActivity"/>
+        <activity android:name=".project.buyer.collection.MyCollectionActivity"/>
     </application>
 
 </manifest>

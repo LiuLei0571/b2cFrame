@@ -10,7 +10,6 @@ import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.constants.Extras;
 import com.jinqiao.b2c.compent.ui.widget.CustomButton;
-import com.jinqiao.b2c.project.buyer.user.activity.BuyerLoginActivity;
 import com.jinqiao.b2c.project.logistics.user.CompanyLoginActivity;
 import com.jinqiao.b2c.project.seller.user.SellerLoginActivity;
 
@@ -69,8 +68,6 @@ public class SelectLoginActivity extends TempleActivity {
         Intent intent = null;
         switch (view.getId()) {
             case R.id.btn_buyer:
-                intent = new Intent(getActivity(), BuyerLoginActivity.class);
-                intent.putExtra(Extras.HOME.KEY, index);
                 break;
             case R.id.btn_seller:
                 intent = new Intent(getActivity(), SellerLoginActivity.class);

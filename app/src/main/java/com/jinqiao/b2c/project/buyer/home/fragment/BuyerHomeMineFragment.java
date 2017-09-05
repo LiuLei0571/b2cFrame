@@ -1,5 +1,6 @@
 package com.jinqiao.b2c.project.buyer.home.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.helper.LoginHelper;
 import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.SettingLayout;
+import com.jinqiao.b2c.project.buyer.collection.MyCollectionActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -99,6 +101,7 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     }
 
     private void doClick(int view) {
+        Intent intent = null;
         if (!UserHelper.isUserLogin()) {
             LoginHelper.startLogin(this, null, view, null);
         } else {
@@ -126,8 +129,10 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
                 case R.id.lyt_buyer_account_pay:
                     break;
                 case R.id.lyt_buyer_account_collection:
+                    intent = new Intent(getBaseActivity(), MyCollectionActivity.class);
                     break;
             }
+            getBaseActivity().startActivity(intent);
         }
     }
 

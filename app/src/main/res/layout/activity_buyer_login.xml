@@ -10,11 +10,18 @@
         android:id="@+id/mine_b2c_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="@color/white"
         android:minHeight="44dp"
         android:orientation="vertical"
         app:contentInsetEnd="0dp"
-        app:contentInsetStart="0dp"/>
+        app:contentInsetStart="0dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_close_web"/>
+    </android.support.v7.widget.Toolbar>
 
     <ImageView
         android:layout_width="@dimen/head_image"
@@ -77,7 +84,6 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:paddingLeft="10dp"
-                android:paddingRight="50dp"
                 android:textColorHint="#d1d1d1d1"/>
         </RelativeLayout>
 
@@ -126,8 +132,8 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginRight="10dp"
-            android:visibility="gone"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/tv_express_forget"
@@ -137,10 +143,32 @@
                 android:textColor="@color/color_input_hint"/>
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="角色选择"
+                android:textColor="@color/color_text_small"/>
+
+            <TextView
+                android:id="@+id/tv_user_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="买家"
+                android:textColor="@color/color_text_small"/>
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/face_book_login"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:background="@drawable/facebook"/>
     </LinearLayout>

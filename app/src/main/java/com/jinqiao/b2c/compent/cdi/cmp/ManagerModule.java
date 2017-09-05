@@ -2,6 +2,7 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 
 import com.jinqiao.b2c.project.buyer.home.manager.HomeManager;
+import com.jinqiao.b2c.project.buyer.login.module.manager.UserManager;
 import com.jinqiao.b2c.project.buyer.user.manager.BuyerUserManager;
 
 import javax.inject.Singleton;
@@ -26,5 +27,10 @@ public class ManagerModule {
     @Singleton
     protected BuyerUserManager provideBuyerUserManager() {
         return new BuyerUserManager();
+    }
+    @Provides
+    @Singleton
+    protected UserManager provideUserManager(){
+        return new UserManager();
     }
 }

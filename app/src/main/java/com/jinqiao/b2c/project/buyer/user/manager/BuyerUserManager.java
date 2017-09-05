@@ -4,7 +4,7 @@ import com.jinqiao.b2c.common.http.IResult;
 import com.jinqiao.b2c.common.utils.encrypt.Md5Encrypt;
 import com.jinqiao.b2c.compent.base.BaseManager;
 import com.jinqiao.b2c.compent.constants.Apis;
-import com.jinqiao.b2c.project.buyer.user.manager.module.BuyerUser;
+import com.jinqiao.b2c.project.buyer.login.module.manager.BuyerUser;
 
 import java.util.Map;
 

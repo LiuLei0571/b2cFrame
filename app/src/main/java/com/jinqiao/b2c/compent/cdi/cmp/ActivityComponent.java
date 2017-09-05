@@ -3,6 +3,7 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import com.jinqiao.b2c.compent.cdi.annotation.ActivityScope;
 import com.jinqiao.b2c.compent.web.view.activity.WebViewActivity;
+import com.jinqiao.b2c.project.buyer.collection.MyCollectionActivity;
 import com.jinqiao.b2c.project.buyer.goods.GoodsDetailActivity;
 import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
@@ -55,7 +56,6 @@ public interface ActivityComponent {
 
     void plus(LivesCommuntiyHomeActivity livesCommuntiyHomeActivity);
 
-    void plus(com.jinqiao.b2c.project.buyer.user.activity.BuyerLoginActivity loginActivity);
 
     void plus(SelectLoginActivity sellectLoginActivity);
 
@@ -70,4 +70,6 @@ public interface ActivityComponent {
     void plus(ForgetPswActivity forgetPswActivity);
 
     void plus(LoginActivity bueyerLoginActivity);
+
+    void plus(MyCollectionActivity myCollectionActivity);
 }

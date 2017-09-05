@@ -17,7 +17,8 @@ public interface Configs {
     String BASE_URL = Variants.BASE_URL;
     String EXPRESS_URL = Variants.BASE_URL_EXPRESS;
     String IMAGE_URL = Variants.BASE_PIC_URL;
-    String BASE_PIC_URL=Variants.BASE_PIC_URL;
+    String BASE_PIC_URL = Variants.BASE_PIC_URL;
+
     interface USER_TYPE {
         String TYPE = "userType";
         int BUYER = 0;
@@ -46,11 +47,18 @@ public interface Configs {
     String LANGUAGE = "language";
     int MAX_IMAGE_SIZE = 6;
     String APPNAME = "appName";
-    String DOMAIN ="android.jinqiao.com";
+    String DOMAIN = "android.jinqiao.com";
 
 
-    interface USER{
+    interface USER {
         String INFO = "userInfo";
+
+        interface TYPE {
+            int BUYER = 0;
+            int SELLER = 1;
+            int LOGISTIC = 2;
+            int EXPRESS = 3;
+        }
     }
 
 }
