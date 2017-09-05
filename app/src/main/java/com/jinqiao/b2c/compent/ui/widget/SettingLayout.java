@@ -14,7 +14,6 @@ import com.jinqiao.b2c.compent.base.BaseLinearLayout;
 import com.jinqiao.b2c.compent.helper.Util;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
 /**
  * 用途：
@@ -82,11 +81,6 @@ public class SettingLayout extends BaseLinearLayout {
         mTvLeftMsg.setText(Util.cutNull(mLeftMsg));
         mIvLeft.setImageDrawable(mLeftDrawable);
 
-    }
-
-    @OnClick(R.id.tv_left_msg)
-    public void onViewClicked() {
-        itemClick.onCLick();
     }
 
     public interface OnItemClick {

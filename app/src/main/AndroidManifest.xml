@@ -42,6 +42,7 @@
         <activity android:name=".project.buyer.user.activity.RegisterActivity"/>
         <activity android:name=".project.buyer.user.activity.ForgetPswActivity"/>
         <activity android:name=".project.buyer.home.activity.SearchActivity"/>
+        <activity android:name=".project.buyer.login.activity.LoginActivity"/>
     </application>
 
 </manifest>

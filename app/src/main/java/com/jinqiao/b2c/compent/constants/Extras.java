@@ -25,7 +25,7 @@ public interface Extras {
      */
     int LAUNCH = 1;
     int REGISTER = 1;
-    int LOGIN = 2;
+    int LOGINER = 2;
     int UPDATE = 3;
     /**
      * 卖家类型：
@@ -48,4 +48,22 @@ public interface Extras {
         HomeCommand COLLECTION= HomeCommand.buyercollection();
         HomeCommand MINE= HomeCommand.mine();
     }
+
+    /**
+     * 登录
+     */
+    interface LOGIN {
+        interface key {
+            String CONTROL = "control";
+            String RESULT = "result";
+        }
+    }
+    /**
+     * 结果
+     */
+    String RESULT = "result";
+    /**
+     * 操作id
+     */
+    String ACTION_ID = "actionId";
 }
