@@ -51,10 +51,17 @@
         <item name="android:windowEnterAnimation">@anim/popup_center_enter</item>
         <item name="android:windowExitAnimation">@anim/popup_center_exit</item>
     </style>
-
+    <style name="PopupDrawerAnim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_right_exit</item>
+    </style>
     <style name="PopupBottomAnim" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/popup_bottom_enter</item>
         <item name="android:windowExitAnimation">@anim/popup_bottom_exit</item>
+    </style>
+    <style name="PopupNoAnim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
 
     <style name="EditText" parent="@android:style/Widget.EditText">
@@ -74,4 +81,5 @@
         <item name="android:textColor">@color/color_text_major</item>
         <item name="android:textSize">@dimen/size_normal_large</item>
     </style>
+
 </resources>

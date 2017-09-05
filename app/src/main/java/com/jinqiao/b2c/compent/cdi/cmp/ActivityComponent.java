@@ -10,8 +10,8 @@ import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.SearchActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
-import com.jinqiao.b2c.project.buyer.user.activity.ForgetPswActivity;
-import com.jinqiao.b2c.project.buyer.user.activity.RegisterActivity;
+import com.jinqiao.b2c.project.buyer.login.activity.ForgetPasswordActivity;
+import com.jinqiao.b2c.project.buyer.login.activity.RegisterActivity;
 import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
@@ -67,7 +67,7 @@ public interface ActivityComponent {
 
     void plus(RegisterActivity registerActivity);
 
-    void plus(ForgetPswActivity forgetPswActivity);
+    void plus(ForgetPasswordActivity forgetPasswordActivity);
 
     void plus(LoginActivity bueyerLoginActivity);
 

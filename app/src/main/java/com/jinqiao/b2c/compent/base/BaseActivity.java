@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.helper.StatusBarHelper;
-import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
+import com.jinqiao.b2c.common.statusBar.StatusBarState;
 import com.jinqiao.b2c.compent.cdi.CDI;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.event.EmptyEvent;

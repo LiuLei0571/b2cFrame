@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.common.statusBarNew.B2cStatusBar;
-import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
+import com.jinqiao.b2c.common.statusBar.B2cStatusBar;
+import com.jinqiao.b2c.common.statusBar.StatusBarState;
 import com.jinqiao.b2c.compent.helper.UIHelper;
 
 /**

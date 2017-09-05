@@ -8,7 +8,7 @@ import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.helper.StatusBarHelper;
 import com.jinqiao.b2c.common.helper.ThreadHelper;
 import com.jinqiao.b2c.common.http.IResult;
-import com.jinqiao.b2c.common.statusBarNew.StatusBarState;
+import com.jinqiao.b2c.common.statusBar.StatusBarState;
 import com.jinqiao.b2c.compent.base.SimplePresenter;
 import com.jinqiao.b2c.compent.base.TempleActivity;
 import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;

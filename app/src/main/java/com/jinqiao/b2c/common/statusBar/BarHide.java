@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.common.statusBarNew;
+package com.jinqiao.b2c.common.statusBar;
 
 /**
  * Created by geyifeng on 2017/4/25.

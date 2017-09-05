@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jinqiao.b2c.common.statusBarNew.ImmersionBar;
+import com.jinqiao.b2c.common.statusBar.ImmersionBar;
 import com.jinqiao.b2c.compent.cdi.CDI;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.event.EmptyEvent;

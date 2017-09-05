@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.common.statusBarNew;
+package com.jinqiao.b2c.common.statusBar;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

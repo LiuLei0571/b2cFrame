@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.project.buyer.user.activity;
+package com.jinqiao.b2c.project.buyer.login.activity;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.TempleActivity;
