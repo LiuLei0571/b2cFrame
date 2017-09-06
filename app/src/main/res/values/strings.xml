@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">B2C商城</string>
+    <string name="common_sms_get_code">获取验证码</string>
+    <string name="common_sms_re_get_code">重新发送</string>
+    <string name="common_sms_send_out">收不到验证码?</string>
+    <string name="common_sms_send_wait">%1$s秒后重试</string>
 </resources>

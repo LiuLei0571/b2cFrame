@@ -5,7 +5,7 @@ import com.jinqiao.b2c.compent.http.Api;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.CategoryFirstListResult;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteGoods;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShop;
-import com.jinqiao.b2c.project.buyer.login.module.manager.BuyerUser;
+import com.jinqiao.b2c.project.buyer.login.module.BuyerUser;
 import com.jinqiao.b2c.project.common.manager.bean.TranslatesResult;
 
 /**
@@ -23,6 +23,7 @@ public interface Apis {
     Api buyerLogin = Api.Post("user/login.htm", BuyerUser.class).setLogin(false);
     Api buyerShopCollection = Api.Post("user/favoriteShopList.htm", FavoriteShop.class);
     Api buyerGoodCollection = Api.Post("user/favoriteSampleList.htm", FavoriteGoods.class);
-    Api buyerDeleteGoodFavorite=Api.Post("user/deleteFavorite.htm");
-    Api buyerDeleteShopFavorite=Api.Post("user/deleteFavorite.htm");
+    Api buyerDeleteGoodFavorite = Api.Post("user/deleteFavorite.htm");
+    Api buyerDeleteShopFavorite = Api.Post("user/deleteFavorite.htm");
+    Api getEmail = Api.Post("user/send-email-code.htm").setLogin(false);
 }

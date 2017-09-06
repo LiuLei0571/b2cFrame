@@ -86,7 +86,7 @@ public class CustomButton extends AppCompatTextView {
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.BtnButton);
         isRipple = typedArray.getBoolean(R.styleable.BtnButton_ripple, true);
         parameter = typedArray.getFloat(R.styleable.BtnButton_parameter, 0.2f);
-        radius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_radius, 0);
+        radius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_radius, 5);
         topLeftRadius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_TopLeftRadius, 0);
         topRightRadius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_TopRightRadius, 0);
         bottomLeftRadius = typedArray.getDimensionPixelOffset(R.styleable.BtnButton_BottomLeftRadius, 0);

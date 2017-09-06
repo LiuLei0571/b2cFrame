@@ -36,7 +36,7 @@
             android:ellipsize="middle"
             android:gravity="center"
             android:maxLines="1"
-            android:textColor="@color/white"
+            android:textColor="@color/color_text_major"
             android:textSize="@dimen/size_major_middle"/>
 
         <LinearLayout
@@ -59,9 +59,4 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/divider_light"/>
 </android.support.v7.widget.Toolbar>

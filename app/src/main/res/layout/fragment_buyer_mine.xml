@@ -50,6 +50,7 @@
                 android:id="@+id/iv_head"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_mine_head"/>
@@ -98,8 +99,10 @@
             android:layout_centerVertical="true"
             android:src="@drawable/ic_arrow_right"/>
     </RelativeLayout>
+
     <include
         layout="@layout/item_line"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -223,8 +226,10 @@
                 android:textSize="@dimen/size_minor"/>
         </LinearLayout>
     </LinearLayout>
+
     <include
         layout="@layout/item_area"/>
+
     <com.jinqiao.b2c.compent.ui.widget.SettingLayout
         android:id="@+id/lyt_buyer_account_security"
         android:layout_width="match_parent"

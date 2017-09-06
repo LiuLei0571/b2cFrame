@@ -69,4 +69,8 @@ public class BaseSimplePresenter {
     public String getString(int strId, Object fromObj) {
         return ContextHelper.getContext().getString(strId, fromObj);
     }
+
+    public String getString(int strId) {
+        return ContextHelper.getContext().getString(strId);
+    }
 }

@@ -33,6 +33,7 @@ public abstract class TempleActivity extends BaseActivity {
 
     protected MobileStaticTextCode mTranslatesString;
     protected OptionList mTranslatesList;
+    private View mLine;
     @Override
     public void beforeViewBind(View rootView) {
         super.beforeViewBind(rootView);
@@ -40,6 +41,11 @@ public abstract class TempleActivity extends BaseActivity {
         mTranslatesList =  TranslateHelper.getMobileList();
     }
 
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(view);
+        mLine=findViewId(R.id.line);
+    }
 
     @Override
     public void bindView(View view) {

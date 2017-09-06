@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.helper.UIHelper;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 import static android.view.View.GONE;
@@ -36,8 +35,8 @@ public class HeadBar   {
     TextView mToolbarRightText;
     LinearLayout mRight;
     RelativeLayout mRlytToolbar;
-    @Bind(R.id.line)
-    View mLine;
+//    @Bind(R.id.line)
+//    View mLine;
     private OnBackClick mOnBackClick;
 
     public void setOnBackClick(OnBackClick onBackClick) {
@@ -73,7 +72,7 @@ public class HeadBar   {
         mToolbarRightText= (TextView) mToolbar.findViewById(R.id.toolbar_right_text);
         mRight= (LinearLayout) mToolbar.findViewById(R.id.toolbar_right);
         mRlytToolbar= (RelativeLayout) mToolbar.findViewById(R.id.rlyt_toolbar);
-        mLine=mToolbar.findViewById(R.id.line);
+//        mLine=mToolbar.findViewById(R.id.line);
     }
 
     public void setTitle(String name) {

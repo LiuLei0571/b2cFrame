@@ -150,7 +150,6 @@ public class LoginActivity extends TempleActivity {
                                 mRlyExpress.setVisibility(View.VISIBLE);
                                 mRlyBuyer.setVisibility(View.GONE);
                                 break;
-
                         }
 
                     }
@@ -165,5 +164,10 @@ public class LoginActivity extends TempleActivity {
         if (intent != null) {
             startActivityForResult(intent, mPostion);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

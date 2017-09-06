@@ -37,4 +37,7 @@
         <attr name="leftMsg" format="string"/>
         <attr name="rightMsg" format="string"/>
     </declare-styleable>
+    <declare-styleable name="SendSmsSimpleButton">
+        <attr name="hasLine" format="boolean" />
+    </declare-styleable>
 </resources>

@@ -27,4 +27,6 @@
     <color name="color_item">#F7F7F7</color>
     <color name="color_white">#ffffff</color>
     <color name="main_blue">#3499DB</color>
+    <color name="gray_little">#40b4b4b4</color>
+
 </resources>

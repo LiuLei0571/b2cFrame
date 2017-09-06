@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.project.buyer.login.module.manager;
+package com.jinqiao.b2c.project.buyer.login.module;
 
 
 public class BuyerUser {

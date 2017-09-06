@@ -99,8 +99,7 @@
             android:layout_marginTop="25dp"
             android:text="登 录"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/size_minor_large"
-            app:radius="50dp"/>
+            android:textSize="@dimen/size_minor_large" />
 
         <RelativeLayout
             android:id="@+id/rly_buyer"

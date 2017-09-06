@@ -8,7 +8,7 @@ import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.compent.helper.ToastHelper;
 import com.jinqiao.b2c.compent.thread.ApiTask;
 import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
-import com.jinqiao.b2c.project.buyer.login.module.manager.BuyerUser;
+import com.jinqiao.b2c.project.buyer.login.module.BuyerUser;
 import com.jinqiao.b2c.project.buyer.login.module.manager.UserManager;
 
 import javax.inject.Inject;

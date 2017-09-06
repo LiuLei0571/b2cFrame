@@ -7,6 +7,7 @@ import com.jinqiao.b2c.compent.base.BaseManager;
 import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.constants.Configs;
 import com.jinqiao.b2c.compent.helper.SPHelper;
+import com.jinqiao.b2c.project.buyer.login.module.BuyerUser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,6 +32,13 @@ public class UserManager extends BaseManager {
             e.printStackTrace();
         }
         return execute(Apis.buyerLogin, parameters);
+    }
+
+    public IResult<String> getEmail(String email, String type) {
+        Map<String, Object> parameters = getHashMap();
+        parameters.put("email", email);
+        parameters.put("type", type + "");
+        return execute(Apis.getEmail, parameters);
     }
 
     public void updateLoginTime() {
