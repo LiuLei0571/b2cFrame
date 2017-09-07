@@ -14,7 +14,7 @@ public final class ThreadHelper {
     public final static Handler MAIN = new Handler(Looper.getMainLooper());
 
     public static boolean isMainThread() {
-        return Looper.getMainLooper() == Looper.getMainLooper();
+        return Looper.myLooper() == Looper.getMainLooper();
     }
 
     public static void postMain(Runnable runnable) {

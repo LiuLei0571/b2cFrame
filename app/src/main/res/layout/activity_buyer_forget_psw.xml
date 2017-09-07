@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
 
     <include
@@ -15,7 +15,8 @@
         android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:hint="用户名"
-        android:paddingLeft="@dimen/size_normal"/>
+        android:paddingLeft="@dimen/size_normal"
+        android:singleLine="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +31,8 @@
             android:layout_weight="3"
             android:background="@color/white"
             android:hint="邮箱"
-            android:paddingLeft="@dimen/size_normal"/>
+            android:paddingLeft="@dimen/size_normal"
+            android:singleLine="true"/>
 
         <com.jinqiao.b2c.compent.ui.widget.SendSmsSimpleButton
             android:id="@+id/btn_send"
@@ -48,7 +50,8 @@
         android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:hint="验证码"
-        android:paddingLeft="@dimen/size_normal"/>
+        android:paddingLeft="@dimen/size_normal"
+        android:singleLine="true"/>
 
     <com.jinqiao.b2c.compent.ui.widget.EditTextWithDelete
         android:id="@+id/et_password"
@@ -66,7 +69,8 @@
         android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:hint="确认密码"
-        android:paddingLeft="@dimen/size_normal"/>
+        android:paddingLeft="@dimen/size_normal"
+        android:singleLine="true"/>
 
     <com.jinqiao.b2c.compent.ui.widget.CustomButton
         android:id="@+id/btn_submit"
@@ -74,7 +78,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="@dimen/size_normal"
         android:layout_marginRight="@dimen/size_normal"
+        android:singleLine="true"
         android:text="确认"
-        app:radius="5.5dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:radius="5.5dp"/>
 </LinearLayout>
