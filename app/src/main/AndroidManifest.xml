@@ -44,7 +44,7 @@
         <activity android:name=".project.buyer.login.activity.ForgetPasswordActivity"/>
         <activity android:name=".project.buyer.home.activity.SearchActivity"/>
         <activity android:name=".project.buyer.login.activity.LoginActivity"/>
-        <activity android:name=".project.buyer.collection.MyCollectionActivity"/>
+        <activity android:name=".project.buyer.collection.activity.MyCollectionActivity"/>
     </application>
 
 </manifest>

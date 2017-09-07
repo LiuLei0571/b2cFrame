@@ -6,7 +6,6 @@ import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCarFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeClassifyFragment;
-import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeIndexFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeMineFragment;
 
@@ -23,7 +22,6 @@ public class HomePresenter extends BasePresenter<BuyerHomeActivity> {
             new HomePage("商城", BuyerHomeIndexFragment.class),
             new HomePage("分类", BuyerHomeClassifyFragment.class),
             new HomePage("购物车", BuyerHomeCarFragment.class),
-            new HomePage("收藏", BuyerHomeCollectionFragment.class),
             new HomePage("我的", BuyerHomeMineFragment.class)
     };
 

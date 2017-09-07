@@ -20,6 +20,7 @@ import com.jinqiao.b2c.compent.helper.ActivityHelper;
 import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
+import com.jinqiao.b2c.compent.helper.LoginHelper;
 import com.jinqiao.b2c.compent.ui.HeadBar;
 
 import butterknife.ButterKnife;
@@ -192,9 +193,18 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (mPresenterConnector != null) {
-            mPresenterConnector.onActivityForResult(requestCode, resultCode, data);
+        LoginHelper.LoginListener listener = null;
+
+        if (this instanceof LoginHelper.LoginListener) {
+            listener= (LoginHelper.LoginListener) this;
         }
+      boolean isAct=  LoginHelper.doResult(requestCode,resultCode,data,listener);
+        if (!isAct) {
+            if (mPresenterConnector != null) {
+                mPresenterConnector.onActivityForResult(requestCode, resultCode, data);
+            }
+        }
+
     }
 
     @Override

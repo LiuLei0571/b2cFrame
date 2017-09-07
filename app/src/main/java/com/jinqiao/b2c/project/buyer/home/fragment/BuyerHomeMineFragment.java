@@ -10,12 +10,15 @@ import android.widget.TextView;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.BaseFragment;
-import com.jinqiao.b2c.compent.base.LoginControl;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.helper.LoginHelper;
 import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.SettingLayout;
-import com.jinqiao.b2c.project.buyer.collection.MyCollectionActivity;
+import com.jinqiao.b2c.project.buyer.collection.activity.MyCollectionActivity;
+import com.jinqiao.b2c.project.buyer.home.presenter.HomeMinePresenter;
+import com.jinqiao.b2c.project.buyer.user.UserInfo;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,6 +37,8 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     Toolbar mToolbar;
     @Bind(R.id.toolbar_right)
     ImageView mToolbarRight;
+    @Bind(R.id.lyt_user)
+    LinearLayout mLytUser;
     @Bind(R.id.iv_head)
     ImageView mIvHead;
     @Bind(R.id.tv_name)
@@ -59,6 +64,9 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     @Bind(R.id.lyt_buyer_account_collection)
     SettingLayout mLytBuyerAccountCollection;
 
+    @Inject
+    HomeMinePresenter mHomePresenter;
+
     @Override
     public void doInject(FragmentComponent component) {
         component.plus(this);
@@ -78,7 +86,7 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-
+        mHomePresenter.getUserInfo();
     }
 
     @Override
@@ -86,6 +94,10 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
         super.onResume();
         super.initImmersionBar();
         mImmersionBar.titleBar(mToolbar).init();
+    }
+
+    public void initData(UserInfo mData) {
+        mTvName.setText(mData.getLoginName());
     }
 
     @Override
@@ -137,7 +149,7 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     }
 
     @Override
-    public void onLoginSuccess(LoginControl user, int actionId, Object passThough) {
+    public void onLoginSuccess(int actionId, Object passThough) {
         doClick(actionId);
     }
 

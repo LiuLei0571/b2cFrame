@@ -99,6 +99,7 @@ public class ForgetPasswordActivity extends TempleActivity implements AutoCodePr
             case R.id.btn_send:
                 break;
             case R.id.btn_submit:
+                finish();
                 break;
         }
     }

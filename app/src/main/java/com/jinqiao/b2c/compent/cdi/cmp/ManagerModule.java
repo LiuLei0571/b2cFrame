@@ -1,7 +1,7 @@
 package com.jinqiao.b2c.compent.cdi.cmp;
 
 
-import com.jinqiao.b2c.project.buyer.home.manager.HomeManager;
+import com.jinqiao.b2c.project.buyer.collection.module.MyCollectionManager;
 import com.jinqiao.b2c.project.buyer.login.module.manager.UserManager;
 
 import javax.inject.Singleton;
@@ -18,8 +18,8 @@ import dagger.Provides;
 public class ManagerModule {
     @Provides
     @Singleton
-    protected HomeManager provideManager() {
-        return new HomeManager();
+    protected MyCollectionManager provideManager() {
+        return new MyCollectionManager();
     }
     @Provides
     @Singleton

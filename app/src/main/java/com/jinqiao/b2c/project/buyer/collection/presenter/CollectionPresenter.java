@@ -1,11 +1,11 @@
-package com.jinqiao.b2c.project.buyer.home.presenter;
+package com.jinqiao.b2c.project.buyer.collection.presenter;
 
 import com.jinqiao.b2c.common.http.IResult;
 import com.jinqiao.b2c.compent.base.BasePresenter;
 import com.jinqiao.b2c.compent.base.IView;
 import com.jinqiao.b2c.compent.base.TempleRefreshFragment;
 import com.jinqiao.b2c.compent.thread.ApiTask;
-import com.jinqiao.b2c.project.buyer.home.manager.HomeManager;
+import com.jinqiao.b2c.project.buyer.collection.module.MyCollectionManager;
 
 import javax.inject.Inject;
 
@@ -18,7 +18,7 @@ import javax.inject.Inject;
 
 public class CollectionPresenter extends BasePresenter<TempleRefreshFragment> {
     @Inject
-    HomeManager mManager;
+    MyCollectionManager mManager;
 
     @Inject
     public CollectionPresenter(IView iView) {

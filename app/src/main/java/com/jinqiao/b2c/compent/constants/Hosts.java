@@ -17,6 +17,12 @@ public interface Hosts {
             return Configs.BASE_URL;
         }
     };
+    IHost ios = new IHost() {
+        @Override
+        public String getHost() {
+            return Configs.BASE_IOS;
+        }
+    };
     IHost express = new IHost() {
         @Override
         public String getHost() {

@@ -15,6 +15,7 @@
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
 
+
         <RelativeLayout
             android:id="@+id/rlyt_toolbar"
             android:layout_width="match_parent"
@@ -34,244 +35,254 @@
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:id="@+id/ryt_user"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@color/btn_background">
-
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_head"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_mine_head"/>
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_head"
-                android:layout_centerInParent="true"
-                android:text="点击登录"/>
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
-        android:paddingLeft="@dimen/margin_father_left_normal"
-        android:paddingRight="@dimen/margin_father_right_normal">
-
-        <ImageView
-            android:id="@+id/iv_left"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_uls_order"/>
-
-        <TextView
-            android:id="@+id/tv_left_msg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@+id/iv_left"
-            android:gravity="center_vertical"
-            android:text="所有订单"
-            android:textColor="@color/color_text_major"
-            android:textSize="@dimen/size_normal_large"/>
-
-        <ImageView
-            android:id="@+id/iv_right"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_right"/>
-    </RelativeLayout>
-
-    <include
-        layout="@layout/item_line"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/waite_send"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_white"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/ryt_user"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/btn_background">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/order_one"/>
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/lyt_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="待发货"
-                android:textColor="@color/color_text_major"
-                android:textSize="@dimen/size_minor"/>
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/lyt_waite_receipt"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_white"
-            android:gravity="center"
-            android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_mine_head"/>
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/order_shree"/>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_head"
+                    android:layout_centerInParent="true"
+                    android:text="点击登录"/>
+            </LinearLayout>
+        </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="待收货"
-                android:textColor="@color/color_text_major"
-                android:textSize="@dimen/size_minor"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lyt_"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_white"
-            android:gravity="center"
-            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_father_left_normal"
+            android:paddingRight="@dimen/margin_father_right_normal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/order_two"/>
+                android:id="@+id/iv_left"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_uls_order"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="已签收"
+                android:id="@+id/tv_left_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/iv_left"
+                android:gravity="center_vertical"
+                android:text="所有订单"
                 android:textColor="@color/color_text_major"
-
-                android:textSize="@dimen/size_minor"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lyt_refuse"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_white"
-            android:gravity="center"
-            android:orientation="vertical">
+                android:textSize="@dimen/size_normal_large"/>
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/order_shree"/>
+                android:id="@+id/iv_right"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right"/>
+        </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="拒收"
-                android:textColor="@color/color_text_major"
-
-                android:textSize="@dimen/size_minor"/>
-        </LinearLayout>
+        <include
+            layout="@layout/item_line"/>
 
         <LinearLayout
-            android:id="@+id/lyt_return"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/color_white"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/order_two"/>
+            <LinearLayout
+                android:id="@+id/waite_send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="退货"
-                android:textColor="@color/color_text_major"
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/order_one"/>
 
-                android:textSize="@dimen/size_minor"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="待发货"
+                    android:textColor="@color/color_text_major"
+                    android:textSize="@dimen/size_minor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_waite_receipt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/order_shree"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="待收货"
+                    android:textColor="@color/color_text_major"
+                    android:textSize="@dimen/size_minor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/order_two"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="已签收"
+                    android:textColor="@color/color_text_major"
+
+                    android:textSize="@dimen/size_minor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_refuse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/order_shree"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="拒收"
+                    android:textColor="@color/color_text_major"
+
+                    android:textSize="@dimen/size_minor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_return"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/order_two"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="退货"
+                    android:textColor="@color/color_text_major"
+
+                    android:textSize="@dimen/size_minor"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <include
-        layout="@layout/item_area"/>
+        <include
+            layout="@layout/item_area"/>
 
-    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
-        android:id="@+id/lyt_buyer_account_security"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftIcon="@drawable/ic_uls_safe"
-        app:leftMsg="账户安全"/>
+        <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+            android:id="@+id/lyt_buyer_account_security"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftIcon="@drawable/ic_uls_safe"
+            app:leftMsg="账户安全"/>
 
-    <include
-        layout="@layout/item_line"/>
+        <include
+            layout="@layout/item_line"/>
 
-    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
-        android:id="@+id/lyt_buyer_account_address"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftIcon="@drawable/ic_uls_location"
-        app:leftMsg="收货地址"/>
+        <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+            android:id="@+id/lyt_buyer_account_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftIcon="@drawable/ic_uls_location"
+            app:leftMsg="收货地址"/>
 
-    <include
-        layout="@layout/item_line"/>
+        <include
+            layout="@layout/item_line"/>
 
-    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
-        android:id="@+id/lyt_buyer_account_coupon"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftIcon="@drawable/ic_uls_coupon"
-        app:leftMsg="我的优惠券"/>
+        <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+            android:id="@+id/lyt_buyer_account_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftIcon="@drawable/ic_uls_coupon"
+            app:leftMsg="我的优惠券"/>
 
-    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
-        android:id="@+id/lyt_buyer_account_pay"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftIcon="@drawable/ic_uls_cash"
-        app:leftMsg="支付账号"/>
+        <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+            android:id="@+id/lyt_buyer_account_pay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftIcon="@drawable/ic_uls_cash"
+            app:leftMsg="支付账号"/>
 
-    <include
-        layout="@layout/item_line"/>
+        <include
+            layout="@layout/item_line"/>
 
-    <com.jinqiao.b2c.compent.ui.widget.SettingLayout
-        android:id="@+id/lyt_buyer_account_collection"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:leftIcon="@drawable/ic_uls_order"
-        app:leftMsg="我的收藏"/>
-
+        <com.jinqiao.b2c.compent.ui.widget.SettingLayout
+            android:id="@+id/lyt_buyer_account_collection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:leftIcon="@drawable/ic_uls_order"
+            android:layout_marginBottom="20dp"
+            app:leftMsg="我的收藏"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -1,10 +1,10 @@
-package com.jinqiao.b2c.project.buyer.home.presenter;
+package com.jinqiao.b2c.project.buyer.collection.presenter;
 
 import com.jinqiao.b2c.compent.base.BasePresenter;
 import com.jinqiao.b2c.compent.base.IView;
-import com.jinqiao.b2c.project.buyer.home.fragment.BuyerGoodCollectionFragment;
-import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
-import com.jinqiao.b2c.project.buyer.home.fragment.BuyerShopCollectionFragment;
+import com.jinqiao.b2c.project.buyer.collection.activity.MyCollectionActivity;
+import com.jinqiao.b2c.project.buyer.collection.fragment.BuyerGoodCollectionFragment;
+import com.jinqiao.b2c.project.buyer.collection.fragment.BuyerShopCollectionFragment;
 
 import javax.inject.Inject;
 
@@ -15,19 +15,19 @@ import javax.inject.Inject;
  */
 
 
-public class HomeCollectionPresenter extends BasePresenter<BuyerHomeCollectionFragment> {
+public class MyCollectionPresenter extends BasePresenter<MyCollectionActivity> {
     private static HomePage[] pages = new HomePage[]{
             new HomePage("店铺", BuyerShopCollectionFragment.class),
             new HomePage("商品", BuyerGoodCollectionFragment.class)
     };
 
     @Inject
-    public HomeCollectionPresenter(IView iView) {
+    public MyCollectionPresenter(IView iView) {
         super(iView);
     }
 
     public void onTabClick(int position) {
-        setCurrentChildTab(position, pages,getView());
+        setCurrentTab(position, pages);
         getView().setTabItem(position);
 
     }

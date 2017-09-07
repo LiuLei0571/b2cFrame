@@ -27,7 +27,7 @@ import static android.view.View.VISIBLE;
  */
 
 
-public class HeadBar   {
+public class HeadBar {
     private Toolbar mToolbar;
 
     ImageButton mToolbarBack;
@@ -35,9 +35,8 @@ public class HeadBar   {
     TextView mToolbarRightText;
     LinearLayout mRight;
     RelativeLayout mRlytToolbar;
-//    @Bind(R.id.line)
-//    View mLine;
     private OnBackClick mOnBackClick;
+    AppCompatActivity appCompatActivity;
 
     public void setOnBackClick(OnBackClick onBackClick) {
         mOnBackClick = onBackClick;
@@ -50,12 +49,12 @@ public class HeadBar   {
 
     public HeadBar(AppCompatActivity appCompatActivity, Toolbar toolbar) {
         appCompatActivity.setSupportActionBar(toolbar);
-
-        ActionBar actionBar=appCompatActivity.getSupportActionBar();
+        this.appCompatActivity = appCompatActivity;
+        ActionBar actionBar = appCompatActivity.getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(false);
         }
-        mToolbar=toolbar;
+        mToolbar = toolbar;
         init();
     }
 
@@ -66,13 +65,20 @@ public class HeadBar   {
 
         }
     }
-    private void init(){
-        mToolbarBack= (ImageButton) mToolbar.findViewById(R.id.toolbar_back);
-        mToolbarTitle= (TextView) mToolbar.findViewById(R.id.toolbar_title);
-        mToolbarRightText= (TextView) mToolbar.findViewById(R.id.toolbar_right_text);
-        mRight= (LinearLayout) mToolbar.findViewById(R.id.toolbar_right);
-        mRlytToolbar= (RelativeLayout) mToolbar.findViewById(R.id.rlyt_toolbar);
+
+    private void init() {
+        mToolbarBack = (ImageButton) mToolbar.findViewById(R.id.toolbar_back);
+        mToolbarTitle = (TextView) mToolbar.findViewById(R.id.toolbar_title);
+        mToolbarRightText = (TextView) mToolbar.findViewById(R.id.toolbar_right_text);
+        mRight = (LinearLayout) mToolbar.findViewById(R.id.toolbar_right);
+        mRlytToolbar = (RelativeLayout) mToolbar.findViewById(R.id.rlyt_toolbar);
 //        mLine=mToolbar.findViewById(R.id.line);
+        mToolbarBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appCompatActivity.finish();
+            }
+        });
     }
 
     public void setTitle(String name) {
@@ -112,7 +118,7 @@ public class HeadBar   {
 
 
     private int getPx(int dp) {
-        float mDensity =mToolbar. getResources().getDisplayMetrics().density;
+        float mDensity = mToolbar.getResources().getDisplayMetrics().density;
         return (int) (mDensity * dp);
     }
 

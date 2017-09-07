@@ -1,14 +1,14 @@
-package com.jinqiao.b2c.project.buyer.home.fragment;
+package com.jinqiao.b2c.project.buyer.collection.fragment;
 
 import com.jinqiao.b2c.compent.base.BaseAdapter;
 import com.jinqiao.b2c.compent.base.TempleRefreshFragment;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.http.Api;
-import com.jinqiao.b2c.project.buyer.home.adapter.ShopCollectionAdapter;
-import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteGoods;
-import com.jinqiao.b2c.project.buyer.home.manager.bean.FavoriteShopDetail;
-import com.jinqiao.b2c.project.buyer.home.presenter.CollectionPresenter;
+import com.jinqiao.b2c.project.buyer.collection.adapter.MyCollectionAdapter;
+import com.jinqiao.b2c.project.buyer.collection.module.manager.FavoriteShop;
+import com.jinqiao.b2c.project.buyer.collection.module.manager.FavoriteShopDetail;
+import com.jinqiao.b2c.project.buyer.collection.presenter.CollectionPresenter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ import javax.inject.Inject;
  */
 
 
-public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteGoods> {
+public class BuyerShopCollectionFragment extends TempleRefreshFragment<FavoriteShop> {
     @Inject
     CollectionPresenter mPresenter;
 
@@ -32,34 +32,34 @@ public class BuyerGoodCollectionFragment extends TempleRefreshFragment<FavoriteG
     }
 
     @Override
-    protected void successResult(FavoriteGoods data) {
-        if (data.getFavoriteSampleList() != null) {
-            mBaseAdapter.addAll(data.getFavoriteSampleList());
+    protected void successResult(FavoriteShop data) {
+        if (data.getFavoriteShopList() != null) {
+            mBaseAdapter.addAll(data.getFavoriteShopList());
         }
         hasNext = data.isHasNext();
     }
 
     @Override
     public BaseAdapter getAdapter() {
-        return mBaseAdapter = new ShopCollectionAdapter(getContext()) {
+        return mBaseAdapter = new MyCollectionAdapter(getContext()) {
 
             @Override
             public void onClicks(FavoriteShopDetail mData) {
-                mPresenter.getDeletCollectGood(mData.getTargetId());
+                mPresenter.getDeletCollectShop(mData.getTargetId());
             }
         };
     }
 
     @Override
     public Api getApi() {
-        return Apis.buyerGoodCollection;
+        return Apis.buyerShopCollection;
     }
 
     @Override
     public Map<String, Object> getParams(int page) {
         Map<String, Object> params = new HashMap<>();
         params.put("pageNum", page + "");
+
         return params;
     }
-
 }

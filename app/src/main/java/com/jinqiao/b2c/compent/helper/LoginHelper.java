@@ -1,5 +1,6 @@
 package com.jinqiao.b2c.compent.helper;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.SparseArray;
 
@@ -59,8 +60,30 @@ public class LoginHelper {
         startLogin(iAct, null, EMPTY_ACT, loginListener);
     }
 
+    public static <T> boolean doResult(int requestCode, int resultCode, Intent data,
+                                       LoginListener<T> loginListener) {
+        if (requestCode == REQUEST_CODE) {
+            int actId = data != null ? data.getIntExtra(Extras.ACTION_ID, EMPTY_ACT) : EMPTY_ACT;
+            T passThough = readPassThough(actId);
+            if (loginListener == null) {
+                if (passThough != null && passThough instanceof LoginListener) {
+                    loginListener = (LoginListener<T>) passThough;
+                }
+            }
+            if (loginListener != null) {
+                if (resultCode == Activity.RESULT_OK && data != null) {
+                    loginListener.onLoginSuccess(actId, passThough);
+                    return true;
+                }
+                loginListener.onLoginFail(actId, passThough);
+            }
+            return true;
+        }
+        return false;
+    }
+
     public interface LoginListener<T> {
-        void onLoginSuccess(LoginControl user, int actionId, T passThough);
+        void onLoginSuccess(int actionId, T passThough);
 
         void onLoginFail(int actionId, Object passThough);
     }

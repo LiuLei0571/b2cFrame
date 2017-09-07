@@ -14,7 +14,7 @@ import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.thread.ApiCallback;
 import com.jinqiao.b2c.project.buyer.home.adapter.ClassifyExpandListAdapterNew;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.CategoryFirstListResult;
-import com.jinqiao.b2c.project.buyer.home.manager.bean.FirstCategoryDetail;
+import com.jinqiao.b2c.project.buyer.collection.module.manager.FirstCategoryDetail;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransCategory;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransFirstCategory;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.TransSecondCategory;

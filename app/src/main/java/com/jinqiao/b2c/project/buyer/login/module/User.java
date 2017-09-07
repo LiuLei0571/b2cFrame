@@ -1,7 +1,7 @@
 package com.jinqiao.b2c.project.buyer.login.module;
 
 
-public class BuyerUser {
+public class User {
     private String loginName;
     private int userType;
     private int userId;

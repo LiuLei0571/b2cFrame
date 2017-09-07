@@ -17,6 +17,7 @@ import com.jinqiao.b2c.compent.event.EmptyEvent;
 import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
+import com.jinqiao.b2c.compent.helper.LoginHelper;
 import com.jinqiao.b2c.compent.helper.TranslateHelper;
 import com.jinqiao.b2c.project.common.manager.bean.MobileStaticTextCode;
 import com.jinqiao.b2c.project.common.manager.bean.OptionList;
@@ -50,10 +51,12 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
         }
         EventHelper.register(this);
     }
-   public void initImmersionBar(){
-       mImmersionBar=ImmersionBar.with(this);
-       mImmersionBar.keyboardEnable(true);
-   }
+
+    public void initImmersionBar() {
+        mImmersionBar = ImmersionBar.with(this);
+        mImmersionBar.keyboardEnable(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -216,8 +219,16 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (mPresenterConnector != null) {
-            mPresenterConnector.onActivityForResult(requestCode, resultCode, data);
+        LoginHelper.LoginListener listener = null;
+        if (this instanceof LoginHelper.LoginListener) {
+            listener = (LoginHelper.LoginListener) this;
+        }
+        boolean isAct = LoginHelper.doResult(requestCode, resultCode, data, listener);
+        if (!isAct) {
+
+            if (mPresenterConnector != null) {
+                mPresenterConnector.onActivityForResult(requestCode, resultCode, data);
+            }
         }
     }
 

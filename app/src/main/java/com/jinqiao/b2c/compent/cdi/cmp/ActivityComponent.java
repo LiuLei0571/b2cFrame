@@ -3,7 +3,7 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import com.jinqiao.b2c.compent.cdi.annotation.ActivityScope;
 import com.jinqiao.b2c.compent.web.view.activity.WebViewActivity;
-import com.jinqiao.b2c.project.buyer.collection.MyCollectionActivity;
+import com.jinqiao.b2c.project.buyer.collection.activity.MyCollectionActivity;
 import com.jinqiao.b2c.project.buyer.goods.GoodsDetailActivity;
 import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
@@ -12,7 +12,6 @@ import com.jinqiao.b2c.project.buyer.home.activity.SearchActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.ForgetPasswordActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.RegisterActivity;
-import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
 import com.jinqiao.b2c.project.express.user.activity.ExpressLoginActivity;
@@ -55,9 +54,6 @@ public interface ActivityComponent {
     void plus(SearchActivity searchActivity);
 
     void plus(LivesCommuntiyHomeActivity livesCommuntiyHomeActivity);
-
-
-    void plus(SelectLoginActivity sellectLoginActivity);
 
     void plus(CompanyLoginActivity companyLoginActivity);
 

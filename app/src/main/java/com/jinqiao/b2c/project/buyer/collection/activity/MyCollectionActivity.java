@@ -1,13 +1,12 @@
-package com.jinqiao.b2c.project.buyer.home.fragment;
+package com.jinqiao.b2c.project.buyer.collection.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.FrameLayout;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.compent.base.BaseFragment;
-import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
+import com.jinqiao.b2c.compent.base.TempleActivity;
+import com.jinqiao.b2c.compent.cdi.cmp.ActivityComponent;
 import com.jinqiao.b2c.compent.ui.widget.Tab;
 import com.jinqiao.b2c.project.buyer.collection.presenter.MyCollectionPresenter;
 
@@ -18,12 +17,12 @@ import butterknife.OnClick;
 
 /**
  * 用途：
- * 作者：Created by liulei on 17/5/11.
+ * 作者：Created by liulei on 17/9/5.
  * 邮箱：liulei2@aixuedai.com
  */
 
 
-public class BuyerHomeCollectionFragment extends BaseFragment {
+public class MyCollectionActivity extends TempleActivity {
     @Bind(android.R.id.tabcontent)
     FrameLayout mTabcontent;
     @Bind(R.id.tab_shop)
@@ -32,21 +31,24 @@ public class BuyerHomeCollectionFragment extends BaseFragment {
     Tab mTabGood;
     @Inject
     MyCollectionPresenter mPresenter;
-    @Nullable
-
-    public void doInject(FragmentComponent component) {
-        component.plus(this);
-    }
 
     @Override
     protected int getRootViewId() {
-        return R.layout.fragment_buyer_collection;
+        return R.layout.activity_buyer_my_collection;
     }
+
+    @Override
+    protected void doInject(ActivityComponent activityComponent) {
+        activityComponent.plus(this);
+    }
+
 
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
+        setTitle("我的收藏");
         mPresenter.onTabClick(0);
+
     }
 
     @OnClick({R.id.tab_shop, R.id.tab_good})

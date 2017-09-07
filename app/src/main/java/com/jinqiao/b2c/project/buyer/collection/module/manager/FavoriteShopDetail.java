@@ -1,4 +1,4 @@
-package com.jinqiao.b2c.project.buyer.home.manager.bean;
+package com.jinqiao.b2c.project.buyer.collection.module.manager;
 
 
 import java.io.Serializable;

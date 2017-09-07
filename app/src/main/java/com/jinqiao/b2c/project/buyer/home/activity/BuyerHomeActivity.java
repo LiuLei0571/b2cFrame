@@ -14,7 +14,7 @@ import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.Tab;
 import com.jinqiao.b2c.project.buyer.home.manager.bean.HomeCommand;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomePresenter;
-import com.jinqiao.b2c.project.common.activity.SelectLoginActivity;
+import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
 
 import javax.inject.Inject;
 
@@ -96,12 +96,12 @@ public class BuyerHomeActivity extends TempleActivity {
                 if (UserHelper.isUserLogin()) {
                     presenter.onTabClick(2);
                 } else {
-                    intent = new Intent(this, SelectLoginActivity.class);
+                    intent = new Intent(this, LoginActivity.class);
                     intent.putExtra(Extras.HOME.KEY,2);
                 }
                 break;
             case R.id.tab_mine:
-                    presenter.onTabClick(4);
+                    presenter.onTabClick(3);
                 break;
         }
         if (intent != null) {
@@ -113,7 +113,7 @@ public class BuyerHomeActivity extends TempleActivity {
         mTabHome.setTabItem(index == 0);
         mTabClassify.setTabItem(index == 1);
         mTabCar.setTabItem(index == 2);
-        mTabMine.setTabItem(index == 4);
+        mTabMine.setTabItem(index == 3);
     }
 
     @Override

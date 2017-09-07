@@ -1,6 +1,8 @@
 package com.jinqiao.b2c.project.buyer.home.manager.bean;
 
 
+import com.jinqiao.b2c.project.buyer.collection.module.manager.FirstCategoryDetail;
+
 import java.util.ArrayList;
 
 public class CategoryFirstListResult {
