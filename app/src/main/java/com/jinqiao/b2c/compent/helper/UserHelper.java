@@ -3,7 +3,7 @@ package com.jinqiao.b2c.compent.helper;
 import android.text.TextUtils;
 
 import com.jinqiao.b2c.compent.constants.Configs;
-import com.jinqiao.b2c.project.common.manager.UserType;
+import com.jinqiao.b2c.project.buyer.login.module.User;
 
 /**
  * 用途：
@@ -13,7 +13,7 @@ import com.jinqiao.b2c.project.common.manager.UserType;
 
 
 public class UserHelper {
-    public static UserType sEmptyUserType = new UserType();
+    public static User sEmptyUserType = new User();
 
     public static void clearUserLocalAll() {
         SPHelper.remove(Configs.USER_TYPE.TYPE);
@@ -32,13 +32,13 @@ public class UserHelper {
 
 
     public static int getType() {
-        int UserType = SPHelper.getInt(Configs.USER_TYPE.TYPE);
-        return UserType;
+        int user = SPHelper.getInt(Configs.USER_TYPE.TYPE);
+        return user;
     }
 
 
-    public static UserType getUserFromLocal() {
-        UserType UserType = SPHelper.getBean(Configs.USER.INFO, UserType.class);
+    public static User getUserFromLocal() {
+        User UserType = SPHelper.getBean(Configs.USER.INFO, User.class);
         if (UserType != null) {
             return UserType;
         }
@@ -46,13 +46,13 @@ public class UserHelper {
     }
 
     public static boolean isUserLogin() {
-        UserType UserType = getUserFromLocal();
+        User UserType = getUserFromLocal();
 
         return !((UserType == sEmptyUserType) || TextUtils.isEmpty(UserType.getToken()));
     }
 
     public static String getUsertoken() {
-        UserType user = getUserFromLocal();
+        User user = getUserFromLocal();
         if (user == sEmptyUserType) {
             return "";
         } else {
@@ -61,7 +61,7 @@ public class UserHelper {
     }
 
     public static String getUserName() {
-        UserType user = getUserFromLocal();
+        User user = getUserFromLocal();
         if (user == sEmptyUserType) {
             return "";
         } else {
@@ -70,7 +70,7 @@ public class UserHelper {
     }
 
     public static int getUserId() {
-        UserType user = getUserFromLocal();
+        User user = getUserFromLocal();
         if (user == sEmptyUserType) {
             return -1;
         } else {
@@ -78,8 +78,8 @@ public class UserHelper {
         }
     }
 
-    public static void saveUserUpdateInfoLocal(UserType UserType) {
-        UserType oldUserType = getUserFromLocal();
+    public static void saveUserUpdateInfoLocal(User UserType) {
+        User oldUserType = getUserFromLocal();
         if (oldUserType != null) {
             UserType.setUserId(oldUserType.getUserId());
             UserType.setLoginName(oldUserType.getLoginName());
@@ -87,7 +87,7 @@ public class UserHelper {
         }
     }
 
-    public static void saveUserReplaceInfoLocal(UserType UserType) {
-        SPHelper.putBean(Configs.USER.INFO, UserType.class);
+    public static void saveUserReplaceInfoLocal(User UserType) {
+        SPHelper.putBean(Configs.USER.INFO, User.class);
     }
 }
