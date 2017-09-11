@@ -155,7 +155,7 @@ public class AppModule {
     @Singleton
     protected OkHttpClient provideOkHttpClient3(CookiesManager cookiesManager) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .connectTimeout(60, TimeUnit.SECONDS)
+                .connectTimeout(40, TimeUnit.SECONDS)
                 .readTimeout(300, TimeUnit.SECONDS)
                 .writeTimeout(300, TimeUnit.SECONDS)
                 .cookieJar(cookiesManager);

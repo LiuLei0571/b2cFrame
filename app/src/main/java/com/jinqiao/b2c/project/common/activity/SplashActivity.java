@@ -6,7 +6,6 @@ import android.widget.ImageView;
 
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.common.helper.StatusBarHelper;
-import com.jinqiao.b2c.common.helper.ThreadHelper;
 import com.jinqiao.b2c.common.http.IResult;
 import com.jinqiao.b2c.common.statusBar.StatusBarState;
 import com.jinqiao.b2c.compent.base.SimplePresenter;
@@ -76,19 +75,16 @@ public class SplashActivity extends TempleActivity {
 //        set.addAnimation(scale);
 //        set.addAnimation(alpha);
 //        mImageSplash.setAnimation(set);
-        ThreadHelper.postMainDelay(new Runnable() {
-            @Override
-            public void run() {
-                if (!DeviceHelper.getNetworkState() && mTranslatesString != null && mTranslatesList != null) {
-                    doMainMethod();
-                    finish();
-                } else {
-                    initData();
+        if (!DeviceHelper.getNetworkState() && mTranslatesString != null && mTranslatesList != null) {
+            doMainMethod();
+            finish();
+        } else {
+            initData();
 
-                }
-            }
-        }, 2000);
-    }
+        }
+
+
+}
 
     private void initData() {
         mPresenter.apiCall(translates, new ApiCallback<TranslatesResult>() {
@@ -103,14 +99,13 @@ public class SplashActivity extends TempleActivity {
                     if (translates.getOptionList() != null) {
                         SPHelper.putBean("options", translates.getOptionList());
                     }
-                    doMainMethod();
                 }
             }
 
             @Override
             public void onAfterCall() {
                 super.onAfterCall();
-                finish();
+                doMainMethod();
             }
         });
     }
