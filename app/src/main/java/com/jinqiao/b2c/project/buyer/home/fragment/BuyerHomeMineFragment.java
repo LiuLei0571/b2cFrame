@@ -43,6 +43,8 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     ImageView mIvHead;
     @Bind(R.id.tv_name)
     TextView mTvName;
+    @Bind(R.id.tv_left_msg)
+    TextView mTvAllOrder;
     @Bind(R.id.waite_send)
     LinearLayout mWaiteSend;
     @Bind(R.id.lyt_waite_receipt)
@@ -106,7 +108,7 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
         ButterKnife.unbind(this);
     }
 
-    @OnClick({R.id.toolbar_right, R.id.tv_name, R.id.waite_send, R.id.lyt_waite_receipt, R.id.lyt_, R.id.lyt_refuse, R.id.lyt_return, R.id.lyt_buyer_account_security, R.id.lyt_buyer_account_address, R.id.lyt_buyer_account_coupon, R.id.lyt_buyer_account_pay, R.id.lyt_buyer_account_collection})
+    @OnClick({R.id.tv_left_msg, R.id.lyt_user, R.id.toolbar_right, R.id.tv_name, R.id.waite_send, R.id.lyt_waite_receipt, R.id.lyt_, R.id.lyt_refuse, R.id.lyt_return, R.id.lyt_buyer_account_security, R.id.lyt_buyer_account_address, R.id.lyt_buyer_account_coupon, R.id.lyt_buyer_account_pay, R.id.lyt_buyer_account_collection})
     public void onViewClicked(View view) {
         doClick(view.getId());
 
@@ -121,6 +123,10 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
                 case R.id.toolbar_right:
                     break;
                 case R.id.tv_name:
+                    break;
+                case R.id.tv_left_msg:
+                    break;
+                case R.id.lyt_user:
                     break;
                 case R.id.waite_send:
                     break;
