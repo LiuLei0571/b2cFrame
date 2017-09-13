@@ -30,5 +30,5 @@ public interface Apis {
     Api getEmail = Api.Post("user/send-email-code.htm").setLogin(false);
     Api getUserInfo = Api.Post("user/getUserInfo.htm",UserInfo.class).setIHost(Hosts.ios);
     Api buyerOrder=Api.Post("trade/buyer/orderList.htm",MyOrderResult.class);
-    Api buyerRemindOrder=Api.Post("trade/buyer/remindSellerToShip.htm");
+    Api buyerRemindOrder=Api.Post("trade/buyer/remindSellerToShip.htm",MyOrderResult.class);
 }

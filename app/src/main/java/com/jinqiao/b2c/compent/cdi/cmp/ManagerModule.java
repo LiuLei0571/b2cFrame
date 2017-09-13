@@ -3,6 +3,7 @@ package com.jinqiao.b2c.compent.cdi.cmp;
 
 import com.jinqiao.b2c.project.buyer.collection.module.MyCollectionManager;
 import com.jinqiao.b2c.project.buyer.login.module.manager.UserManager;
+import com.jinqiao.b2c.project.buyer.orders.module.OrderManager;
 
 import javax.inject.Singleton;
 
@@ -21,9 +22,16 @@ public class ManagerModule {
     protected MyCollectionManager provideManager() {
         return new MyCollectionManager();
     }
+
     @Provides
     @Singleton
-    protected UserManager provideUserManager(){
+    protected UserManager provideUserManager() {
         return new UserManager();
+    }
+
+    @Provides
+    @Singleton
+    protected OrderManager provideOrderManager() {
+        return new OrderManager();
     }
 }

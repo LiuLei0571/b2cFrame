@@ -3,29 +3,28 @@ package com.jinqiao.b2c.project.buyer.orders.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jinqiao.b2c.R;
-import com.jinqiao.b2c.common.http.IResult;
-import com.jinqiao.b2c.compent.base.SimplePresenter;
 import com.jinqiao.b2c.compent.base.TempleFragment;
-import com.jinqiao.b2c.compent.constants.Apis;
-import com.jinqiao.b2c.compent.thread.ApiTask;
 import com.jinqiao.b2c.compent.ui.widget.RefreshLayout;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderDetailActivity;
 import com.jinqiao.b2c.project.buyer.orders.activity.OrderEvaluateActivity;
 import com.jinqiao.b2c.project.buyer.orders.activity.OrderLogisticsActivity;
 import com.jinqiao.b2c.project.buyer.orders.activity.OrderReturnActivity;
 import com.jinqiao.b2c.project.buyer.orders.adapter.AllOrderAdapter;
 import com.jinqiao.b2c.project.buyer.orders.module.BuyerOrderList;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.jinqiao.b2c.project.buyer.orders.module.MyOrderResult;
+import com.jinqiao.b2c.project.buyer.orders.presenter.OrderPresenter;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
+
+import static com.jinqiao.b2c.R.id.refresh;
 
 /**
  * 用途：
@@ -34,11 +33,11 @@ import butterknife.Bind;
  */
 
 
-public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
+public abstract class OrderTempleRefreshFragment<T> extends TempleFragment implements AdapterView.OnItemClickListener {
 
     @Bind(R.id.courier_list)
     ListView mCourierList;
-    @Bind(R.id.refresh)
+    @Bind(refresh)
     RefreshLayout mRefresh;
     @Bind(R.id.tv_nodata)
     TextView mTvNoData;
@@ -46,9 +45,10 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
     RelativeLayout mEmpty;
     protected boolean hasNext;
     protected AllOrderAdapter mBaseAdapter;
-    @Inject
-    SimplePresenter mPresenter;
     Intent mIntent = null;
+    private int mPage;
+    @Inject
+    OrderPresenter mOrderPresenter;
 
     @Override
     protected int getRootViewId() {
@@ -62,13 +62,14 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
             @Override
             public void onLoadMore() {
                 if (hasNext) {
-                    initData(false);
+                    initData(null, false);
+                    mOrderPresenter.getOrderList(0, getType(), true);
                 }
             }
 
             @Override
             public void onRefresh() {
-                initData(true);
+                mOrderPresenter.getOrderList(mPage, getType(), false);
             }
         });
         mRefresh.setColorSchemeResources(R.color.red, R.color.orange, R.color.blue);
@@ -88,7 +89,6 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
              */
             @Override
             public void cancel(BuyerOrderList order) {
-
             }
 
             /*
@@ -124,12 +124,11 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
             }
         };
         mCourierList.setAdapter(mBaseAdapter);
-        refreshData();
+        mOrderPresenter.getOrderList(0, getType(), true);
     }
 
 
-    private void initData(final Boolean refresh) {
-        int mPage = 0;
+    public void initData(MyOrderResult data, final Boolean refresh) {
 
         if (!refresh) {
             if (!hasNext) {
@@ -140,36 +139,32 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
         } else {
             mBaseAdapter.clear();
         }
-        Map<String, Object> parameter = new HashMap<>();
-        parameter.put("startRow", mPage);
-        parameter.put("orderStatus", getType());
-        mPresenter.apiCall(Apis.buyerOrder, parameter, new ApiTask<T>() {
-            @Override
-            public void onSuccess(IResult<T> result) {
-                super.onSuccess(result);
-                if (mBaseAdapter.getCount() == 0) {
-                    mEmpty.setVisibility(View.VISIBLE);
-                } else {
-                    mEmpty.setVisibility(View.GONE);
-                }
-            }
+        if (mBaseAdapter.getCount() == 0) {
+            mEmpty.setVisibility(View.VISIBLE);
+        } else {
+            mEmpty.setVisibility(View.GONE);
+        }
+        hasNext=data.isHasNext();
+        mBaseAdapter.setData(data.getRows());
 
-            @Override
-            public void onAfterCall() {
-                super.onAfterCall();
-                if (refresh) {
-                    mRefresh.setRefreshing(false);
-                }
-                mRefresh.setLoading(false);
-            }
-        });
+
     }
 
-    public void refreshData() {
-        initData(true);
+    public void refreshData(boolean refresh) {
+        if (refresh) {
+            mRefresh.setRefreshing(false);
+        }
+        mRefresh.setLoading(false);
     }
 
 
     public abstract String getType();
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        BuyerOrderList orderList = (BuyerOrderList) (parent.getItemAtPosition(position));
+        Intent intent = new Intent(getBaseActivity(), OrderDetailActivity.class);
+        intent.putExtra("orderId", orderList.getOrderId());
+        startActivity(intent);
+    }
 }
