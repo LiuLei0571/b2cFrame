@@ -16,6 +16,7 @@ import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.SettingLayout;
 import com.jinqiao.b2c.project.buyer.collection.activity.MyCollectionActivity;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomeMinePresenter;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderActivity;
 import com.jinqiao.b2c.project.buyer.user.UserInfo;
 
 import javax.inject.Inject;
@@ -125,18 +126,24 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
                 case R.id.tv_name:
                     break;
                 case R.id.tv_left_msg:
+                    goOrderType(1);
                     break;
                 case R.id.lyt_user:
                     break;
                 case R.id.waite_send:
+                    goOrderType(2);
                     break;
                 case R.id.lyt_waite_receipt:
+                    goOrderType(3);
                     break;
                 case R.id.lyt_:
+                    goOrderType(4);
                     break;
                 case R.id.lyt_refuse:
+                    goOrderType(5);
                     break;
                 case R.id.lyt_return:
+                    goOrderType(6);
                     break;
                 case R.id.lyt_buyer_account_security:
                     break;
@@ -162,5 +169,10 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
     @Override
     public void onLoginFail(int actionId, Object passThough) {
 
+    }
+    private void goOrderType(int type){
+        Intent intent=new Intent(getBaseActivity(), OrderActivity.class);
+        intent.putExtra("type",type);
+        getBaseActivity().startActivity(intent);
     }
 }

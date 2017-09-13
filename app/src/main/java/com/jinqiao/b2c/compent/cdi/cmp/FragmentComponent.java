@@ -10,6 +10,12 @@ import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeIndexFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeMineFragment;
 import com.jinqiao.b2c.project.buyer.home.fragment.BuyerHomeCollectionFragment;
 import com.jinqiao.b2c.project.buyer.collection.fragment.BuyerShopCollectionFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderAllFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderReceivedFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderRejectFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderReturnFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderWaitReceiptFragment;
+import com.jinqiao.b2c.project.buyer.orders.fragment.OrderWaitSendFragment;
 
 import dagger.Subcomponent;
 
@@ -36,4 +42,16 @@ import dagger.Subcomponent;
     void plus(BuyerGoodCollectionFragment buyerGoodCollectionFragment);
 
    void plus(BuyerShopCollectionFragment buyerShopCollectionFragment);
+
+    void plus(OrderAllFragment orderAllFragment);
+
+    void plus(OrderWaitSendFragment orderWaitSendFragment);
+
+    void plus(OrderWaitReceiptFragment orderWaitReceiptFragment);
+
+    void plus(OrderReturnFragment orderReturnFragment);
+
+    void plus(OrderRejectFragment orderRejectFragment);
+
+    void plus(OrderReceivedFragment orderReceivedFragment);
 }
