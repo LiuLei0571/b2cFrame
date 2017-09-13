@@ -13,6 +13,9 @@ import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.ForgetPasswordActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.RegisterActivity;
 import com.jinqiao.b2c.project.buyer.orders.activity.OrderActivity;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderEvaluateActivity;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderLogisticsActivity;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderReturnActivity;
 import com.jinqiao.b2c.project.buyer.user.UserInfoActivity;
 import com.jinqiao.b2c.project.common.activity.SplashActivity;
 import com.jinqiao.b2c.project.express.home.activity.ExpressHomeActivity;
@@ -74,4 +77,10 @@ public interface ActivityComponent {
     void plus(OrderActivity orderActivity);
 
     void plus(UserInfoActivity userInfoActivity);
+
+    void plus(OrderReturnActivity orderReturnActivity);
+
+    void plus(OrderLogisticsActivity orderLogisticsActivity);
+
+    void plus(OrderEvaluateActivity orderEvaluateActivity);
 }

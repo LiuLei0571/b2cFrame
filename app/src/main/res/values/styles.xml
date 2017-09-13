@@ -81,5 +81,15 @@
         <item name="android:textColor">@color/color_text_major</item>
         <item name="android:textSize">@dimen/size_normal_large</item>
     </style>
-
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:listViewStyle">@style/List</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="List" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:divider">@null</item>
+    </style>
 </resources>

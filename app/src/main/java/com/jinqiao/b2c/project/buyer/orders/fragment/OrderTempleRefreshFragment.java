@@ -1,5 +1,6 @@
 package com.jinqiao.b2c.project.buyer.orders.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -13,6 +14,9 @@ import com.jinqiao.b2c.compent.base.TempleFragment;
 import com.jinqiao.b2c.compent.constants.Apis;
 import com.jinqiao.b2c.compent.thread.ApiTask;
 import com.jinqiao.b2c.compent.ui.widget.RefreshLayout;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderEvaluateActivity;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderLogisticsActivity;
+import com.jinqiao.b2c.project.buyer.orders.activity.OrderReturnActivity;
 import com.jinqiao.b2c.project.buyer.orders.adapter.AllOrderAdapter;
 import com.jinqiao.b2c.project.buyer.orders.module.BuyerOrderList;
 
@@ -44,6 +48,7 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
     protected AllOrderAdapter mBaseAdapter;
     @Inject
     SimplePresenter mPresenter;
+    Intent mIntent = null;
 
     @Override
     protected int getRootViewId() {
@@ -68,29 +73,54 @@ public abstract class OrderTempleRefreshFragment<T> extends TempleFragment {
         });
         mRefresh.setColorSchemeResources(R.color.red, R.color.orange, R.color.blue);
         mBaseAdapter = new AllOrderAdapter(getContext()) {
+            /**
+             * 提醒发货
+             * @param order
+             */
             @Override
             public void remind(BuyerOrderList order) {
 
             }
 
+            /**
+             * 取消订单
+             * @param order
+             */
             @Override
             public void cancel(BuyerOrderList order) {
 
             }
 
+            /*
+             * 查看物流
+             */
             @Override
             public void seeExp(BuyerOrderList order) {
-
+                mIntent = new Intent(getBaseActivity(), OrderLogisticsActivity.class);
+                mIntent.putExtra("orderId", order.getOrderId());
+                getBaseActivity().startActivity(mIntent);
             }
 
+            /*
+             * 申请退货
+             */
             @Override
             public void returnGood(BuyerOrderList order) {
+                mIntent = new Intent(getBaseActivity(), OrderReturnActivity.class);
+                mIntent.putExtra("order", order);
+                getBaseActivity().startActivity(mIntent);
 
             }
 
+            /**
+             * 订单评价
+             * @param order
+             */
             @Override
             public void evaluate(BuyerOrderList order) {
-
+                mIntent = new Intent(getBaseActivity(), OrderEvaluateActivity.class);
+                mIntent.putExtra("object", order);
+                getBaseActivity().startActivity(mIntent);
             }
         };
         mCourierList.setAdapter(mBaseAdapter);

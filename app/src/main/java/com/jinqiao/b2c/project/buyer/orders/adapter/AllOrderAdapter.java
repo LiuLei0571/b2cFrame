@@ -1,6 +1,7 @@
 package com.jinqiao.b2c.project.buyer.orders.adapter;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.BaseAdapter;
 import com.jinqiao.b2c.compent.constants.Configs;
+import com.jinqiao.b2c.compent.helper.DialogHelper;
 import com.jinqiao.b2c.project.buyer.orders.module.BuyerOrderList;
 
 
@@ -136,24 +138,24 @@ public abstract class AllOrderAdapter extends BaseAdapter<BuyerOrderList> {
                 }
             });
             //取消订单
-//            mBtnCancel.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    DialogHelper.BtnTv deleteBtn = new DialogHelper.BtnTv(mTranslatesString.getCommon_makesure(), new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            cancel(orderCell);
-//                        }
-//                    });
-//                    DialogHelper.BtnTv cancelBtn = new DialogHelper.BtnTv(mTranslatesString.getNotice_cancel(), new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//
-//                        }
-//                    });
-//                    DialogHelper.showDialog(context, mTranslatesString.getNotice_noticename(), mTranslatesString.getCommon_sure()+"?", Gravity.CENTER, deleteBtn, cancelBtn);
-//                }
-//            });
+            mBtnCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DialogHelper.BtnTv deleteBtn = new DialogHelper.BtnTv(mTranslatesString.getCommon_makesure(), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            cancel(orderCell);
+                        }
+                    });
+                    DialogHelper.BtnTv cancelBtn = new DialogHelper.BtnTv(mTranslatesString.getNotice_cancel(), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                        }
+                    });
+                    DialogHelper.showDialog(context, mTranslatesString.getNotice_noticename(), mTranslatesString.getCommon_sure()+"?", Gravity.CENTER, deleteBtn, cancelBtn);
+                }
+            });
             //查看物流
             mBtnSeeExp.setOnClickListener(new View.OnClickListener(){
 

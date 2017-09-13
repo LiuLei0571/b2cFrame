@@ -46,6 +46,9 @@
         <activity android:name=".project.buyer.login.activity.LoginActivity"/>
         <activity android:name=".project.buyer.collection.activity.MyCollectionActivity"/>
         <activity android:name=".project.buyer.orders.activity.OrderActivity"/>
+        <activity android:name=".project.buyer.orders.activity.OrderReturnActivity"/>
+        <activity android:name=".project.buyer.orders.activity.OrderLogisticsActivity"/>
+        <activity android:name=".project.buyer.orders.activity.OrderEvaluateActivity"/>
     </application>
 
 </manifest>
