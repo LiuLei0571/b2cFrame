@@ -81,7 +81,41 @@ public class OrderActivity extends TempleActivity {
         mTabBar.setTabMode(TabLayout.MODE_FIXED);
         mTabBar.setTabGravity(TabLayout.GRAVITY_FILL);
         mTabBar.setupWithViewPager(mViewPage);
-        mViewPage.setCurrentItem(type);
+        refreshTabItem(type);
+        mTabBar.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                refreshTabItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
+
+    /**
+     * 刷新TabLayout的customView
+     */
+    private void refreshTabItem(int selectedPosition) {
+        for (int i = 0; i < mPageListString.size(); i++) {
+            TabLayout.Tab tab = mTabBar.getTabAt(i);
+            if (tab != null) {
+                View customView = tab.getCustomView();
+                if (customView == null) {
+                    tab.setCustomView(mAdapter.getTabItemView(i, selectedPosition, mPageListString.get(i)));
+                } else {
+                    mAdapter.refreshView(customView, i, selectedPosition, mPageListString.get(i));
+                }
+            }
+        }
+    }
+
 }
 
