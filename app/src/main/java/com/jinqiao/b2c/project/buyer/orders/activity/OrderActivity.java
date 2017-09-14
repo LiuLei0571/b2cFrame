@@ -66,18 +66,17 @@ public class OrderActivity extends TempleActivity {
         mPageListString.add("退货");
     }
 
-
     @Override
     protected void initParams(Bundle extras) {
         super.initParams(extras);
-        type = extras.getInt("type");
+        type = extras.getInt("type", 1);
     }
 
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
         setTitle("订单");
-        mAdapter=new OrderTabPageAdapter(getSupportsFragmentManager(),this,mPageListString,mFragments);
+        mAdapter = new OrderTabPageAdapter(getSupportsFragmentManager(), this, mPageListString, mFragments);
         mViewPage.setAdapter(mAdapter);
         mTabBar.setTabMode(TabLayout.MODE_FIXED);
         mTabBar.setTabGravity(TabLayout.GRAVITY_FILL);

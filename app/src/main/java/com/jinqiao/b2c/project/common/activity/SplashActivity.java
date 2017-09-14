@@ -60,21 +60,6 @@ public class SplashActivity extends TempleActivity {
     @Override
     public void afterViewBind(Bundle saveInstanceState) {
         super.afterViewBind(saveInstanceState);
-//        AnimationSet set = new AnimationSet(false);
-//        ScaleAnimation scale = new ScaleAnimation(0, 1, 0, 1,
-//                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
-//                0.5f);
-//        scale.setDuration(2000);// 动画时间
-//        scale.setFillAfter(true);// 保持动画状态
-//
-//        // 渐变动画
-//        AlphaAnimation alpha = new AlphaAnimation(0, 1);
-//        alpha.setDuration(2000);// 动画时间
-//        alpha.setFillAfter(true);// 保持动画状态
-//
-//        set.addAnimation(scale);
-//        set.addAnimation(alpha);
-//        mImageSplash.setAnimation(set);
         if (!DeviceHelper.getNetworkState() && mTranslatesString != null && mTranslatesList != null) {
             doMainMethod();
             finish();
@@ -106,6 +91,7 @@ public class SplashActivity extends TempleActivity {
             public void onAfterCall() {
                 super.onAfterCall();
                 doMainMethod();
+                finish();
             }
         });
     }

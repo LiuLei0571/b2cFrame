@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 
 import com.jinqiao.b2c.project.buyer.orders.fragment.OrderTempleRefreshFragment;
 
@@ -44,4 +45,7 @@ public class OrderTabPageAdapter extends FragmentPagerAdapter {
         return mFragmengString.get(position);
     }
 
+    public View getTabItemView(int postion ){
+        return null;
+    }
 }

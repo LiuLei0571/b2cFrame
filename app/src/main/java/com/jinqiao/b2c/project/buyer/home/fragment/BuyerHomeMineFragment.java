@@ -12,7 +12,6 @@ import com.jinqiao.b2c.R;
 import com.jinqiao.b2c.compent.base.BaseFragment;
 import com.jinqiao.b2c.compent.cdi.cmp.FragmentComponent;
 import com.jinqiao.b2c.compent.helper.LoginHelper;
-import com.jinqiao.b2c.compent.helper.UserHelper;
 import com.jinqiao.b2c.compent.ui.widget.SettingLayout;
 import com.jinqiao.b2c.project.buyer.collection.activity.MyCollectionActivity;
 import com.jinqiao.b2c.project.buyer.home.presenter.HomeMinePresenter;
@@ -117,9 +116,9 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
 
     private void doClick(int view) {
         Intent intent = null;
-        if (!UserHelper.isUserLogin()) {
-            LoginHelper.startLogin(this, null, view, null);
-        } else {
+//        if (!UserHelper.isUserLogin()) {
+//            LoginHelper.startLogin(this, null, view, null);
+//        } else {
             switch (view) {
                 case R.id.toolbar_right:
                     break;
@@ -157,8 +156,11 @@ public class BuyerHomeMineFragment extends BaseFragment implements LoginHelper.L
                     intent = new Intent(getBaseActivity(), MyCollectionActivity.class);
                     break;
             }
-            getBaseActivity().startActivity(intent);
+        if (intent != null) {
+            getActivity().startActivity(intent);
+
         }
+//        }
     }
 
     @Override

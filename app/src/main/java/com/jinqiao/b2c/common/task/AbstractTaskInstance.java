@@ -25,6 +25,7 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
     protected int priority = PRIOR_NOMAL;
     protected int status = STATUS_NEW;
 
+    private long submitTime;
 
     public AbstractTaskInstance(final ITaskBackGround<Result> callable, final ITaskCallBack<Result> callBack) {
         super(new Callable<Result>() {
@@ -50,6 +51,9 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
             }
         });
 
+    }
+    public void onSubmit() {
+        submitTime = System.currentTimeMillis();
     }
 
     public void onAfterCall() {

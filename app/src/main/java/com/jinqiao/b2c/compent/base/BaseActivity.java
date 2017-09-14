@@ -78,7 +78,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     }
 
     @Override
-    public void startActivity(Intent intent, @Nullable Bundle options) {
+    public void startActivity(Intent intent, Bundle options) {
         super.startActivity(intent, options);
         overrideOpenAnim();
     }
@@ -163,6 +163,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
         super.startActivityForResult(intent, requestCode, options);
         overrideOpenAnim();
+
     }
 
     @Override

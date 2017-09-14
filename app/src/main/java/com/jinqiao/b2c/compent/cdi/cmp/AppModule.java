@@ -48,10 +48,6 @@ import okhttp3.OkHttpClient;
 public class AppModule {
     private final Context mContext;
 
-//    @Provides
-//    @Singleton
-//    protected
-
     public AppModule(Context context) {
         mContext = context;
     }
@@ -155,7 +151,7 @@ public class AppModule {
     @Singleton
     protected OkHttpClient provideOkHttpClient3(CookiesManager cookiesManager) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .connectTimeout(40, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(300, TimeUnit.SECONDS)
                 .writeTimeout(300, TimeUnit.SECONDS)
                 .cookieJar(cookiesManager);

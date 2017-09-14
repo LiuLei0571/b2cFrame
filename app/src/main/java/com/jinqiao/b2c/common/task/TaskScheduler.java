@@ -87,6 +87,7 @@ public final class TaskScheduler {
     }
 
     private void doSubmitTask(AbstractTaskInstance<?> task) {
+        task.onSubmit();
         //1.默认分组的任务直接提交到线程池
         if (task.groupName() == IGroupedTaskInstance.DEFAULT_GROUP_NAME) {
             submitReadyTask(task);
@@ -125,7 +126,7 @@ public final class TaskScheduler {
     }
 
     public void stopTask(AbstractTaskInstance task) {
-        if (!task.isCancelled()) {
+        if(!task.isCancelled()) {
             task.cancel(true);//手动取消也会会触发一次done()
             task.setStatus(ITaskInstance.STATUS_CANCEL);
         }
@@ -262,3 +263,4 @@ public final class TaskScheduler {
         void onTaskLog(int dualPolicy, String taskName);
     }
 }
+
