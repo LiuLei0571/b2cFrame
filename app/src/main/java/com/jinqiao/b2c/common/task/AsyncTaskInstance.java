@@ -10,7 +10,6 @@ import android.support.annotation.NonNull;
 
 
 public class AsyncTaskInstance<Result> extends AbstractTaskInstance<Result> {
-    private long submitTime;
 
     public AsyncTaskInstance(ITaskBackGround<Result> callable, ITaskCallBack<Result> callBack) {
         super(callable, callBack);
@@ -35,9 +34,6 @@ public class AsyncTaskInstance<Result> extends AbstractTaskInstance<Result> {
         return this;
     }
 
-    public void onSubmit() {
-        submitTime = System.currentTimeMillis();
-    }
 
     /**
      * 优先级

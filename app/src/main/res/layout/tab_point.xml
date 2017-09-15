@@ -9,5 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
+        android:textColor="@color/color_text_major"
         android:textSize="@dimen/size_minor_small"/>
 </LinearLayout>

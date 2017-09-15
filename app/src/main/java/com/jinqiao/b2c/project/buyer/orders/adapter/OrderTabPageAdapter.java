@@ -56,7 +56,7 @@ public class OrderTabPageAdapter extends FragmentPagerAdapter {
             if (!TextUtils.isEmpty(tabItem)) {
                 textView.setText(tabItem);
             }
-            textView.setTextColor(UIHelper.getColor("#333333"));
+            textView.setTextColor(UIHelper.getColor("#21704F"));
         } else {
             if (!TextUtils.isEmpty(tabItem)) {
                 textView.setText(tabItem);
@@ -74,7 +74,7 @@ public class OrderTabPageAdapter extends FragmentPagerAdapter {
             if (!TextUtils.isEmpty(tabItem)) {
                 textView.setText(tabItem);
             }
-            textView.setTextColor(UIHelper.getColor("#333333"));
+            textView.setTextColor(UIHelper.getColor("#21704F"));
         } else {
             if (!TextUtils.isEmpty(tabItem)) {
                 textView.setText(tabItem);

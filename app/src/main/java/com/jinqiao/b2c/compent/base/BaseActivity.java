@@ -21,6 +21,7 @@ import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
 import com.jinqiao.b2c.compent.helper.LoginHelper;
+import com.jinqiao.b2c.compent.helper.TaskHelper;
 import com.jinqiao.b2c.compent.ui.HeadBar;
 
 import butterknife.ButterKnife;
@@ -176,6 +177,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IView, I
             mPresenterConnector.destory();
             mPresenterConnector = null;
         }
+        TaskHelper.cancelGroup(groupName());
+
     }
 
     @Override

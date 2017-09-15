@@ -47,11 +47,17 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
         ThreadHelper.postMain(new Runnable() {
             @Override
             public void run() {
-                callBack.onBeforeCall();
+                try {
+                    callBack.onBeforeCall();
+
+                } catch (Throwable throwable) {
+                    onException(throwable);
+                }
             }
         });
 
     }
+
     public void onSubmit() {
         submitTime = System.currentTimeMillis();
     }
@@ -60,7 +66,8 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
         try {
             callBack.onAfterCall();
 
-        } catch (Exception e) {
+        } catch (Throwable e) {
+            onException(e);
 
         }
 
@@ -138,6 +145,13 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
     }
 
     @Override
+    public int hashCode() {
+        int result = taskName.hashCode();
+        result = 31 * result + groupName.hashCode();
+        return result;
+    }
+
+    @Override
     public String groupName() {
         return groupName;
     }
@@ -173,7 +187,7 @@ public class AbstractTaskInstance<Result> extends FutureTask<Result> implements 
     }
 
     @Override
-    public int compare(IPriorityTask o1, IPriorityTask o2) {
-        return 0;
+    public int compareTo(@NonNull IPriorityTask annother) {
+        return annother.getPriority() - priority;
     }
 }

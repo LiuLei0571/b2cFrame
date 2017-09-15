@@ -18,6 +18,7 @@ import com.jinqiao.b2c.compent.helper.EventHelper;
 import com.jinqiao.b2c.compent.helper.HttpHelper;
 import com.jinqiao.b2c.compent.helper.LoadingHelper;
 import com.jinqiao.b2c.compent.helper.LoginHelper;
+import com.jinqiao.b2c.compent.helper.TaskHelper;
 import com.jinqiao.b2c.compent.helper.TranslateHelper;
 import com.jinqiao.b2c.project.common.manager.bean.MobileStaticTextCode;
 import com.jinqiao.b2c.project.common.manager.bean.OptionList;
@@ -126,6 +127,7 @@ public abstract class BaseFragment extends Fragment implements IFragment, ILoadi
             mView = null;
         }
         EventHelper.unRegister(this);
+        TaskHelper.cancelGroup(groupName());
     }
 
     @Override

@@ -1,7 +1,5 @@
 package com.jinqiao.b2c.common.task;
 
-import java.util.Comparator;
-
 /**
  * 用途：
  * 作者：Created by liulei on 17/5/3.
@@ -9,7 +7,7 @@ import java.util.Comparator;
  */
 
 
-public interface IPriorityTask extends Comparator<IPriorityTask> {
+public interface IPriorityTask extends Comparable<IPriorityTask> {
     int PRIOR_HIGHT = 256;
     int PRIOR_UI = 32;
     /**
