@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/lyt_top"
         android:layout_width="match_parent"
@@ -45,4 +47,15 @@
             android:gravity="center"
             android:text="取消"/>
     </RelativeLayout>
+
+    <com.jinqiao.b2c.compent.ui.bubbleview.BubbleList
+        android:id="@+id/list"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:arrowHeight="7dp"
+        app:arrowLocation="top"
+        app:arrowPosition="18dp"
+        app:arrowWidth="13dp"
+        app:bubbleColor="@color/color_btn_major"
+        app:bubbleRadius="15dp"/>
 </LinearLayout>
