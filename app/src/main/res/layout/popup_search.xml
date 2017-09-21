@@ -7,12 +7,12 @@
 
     <com.jinqiao.b2c.compent.ui.bubbleview.BubbleList
         android:id="@+id/list"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:arrowHeight="7dp"
         app:arrowLocation="top"
-        app:arrowPosition="18dp"
+        app:arrowPosition="14dp"
         app:arrowWidth="13dp"
-        app:bubbleColor="@color/color_btn_major"
-        app:bubbleRadius="15dp"/>
+        app:bubbleColor="@color/color_text_major"
+        app:bubbleRadius="5dp"/>
 </LinearLayout>
