@@ -59,13 +59,14 @@ public class PopupFactory {
         return this;
     }
 
-    public PopupFactory(Context context, String type, List<String> obj) {
+    public PopupFactory(Context context, String type, List<String> obj, View id) {
+        viewId=id;
         View popupLayout = UIHelper.inflaterLayout(context, R.layout.popup_search);
-        mPopopView = new BasePopupWindow(popupLayout, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mAdapter = new SearchAdapter(context);
+        mPopopView = new BasePopupWindow(popupLayout, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mPopopView.setFocusable(true);
         mPopopView.setOutsideTouchable(true);
         mBubbleList = (BubbleList) popupLayout.findViewById(R.id.list);
-        mAdapter = new SearchAdapter(context);
         mAdapter.setData(mData);
         mBubbleList.setAdapter(mAdapter);
         if (!mPopopView.isShowing()) {
@@ -79,8 +80,8 @@ public class PopupFactory {
         });
     }
 
-    public static void buid(Context context, String type, List<String> obj, View id, OnItemClick listener) {
-        new PopupFactory(context, type, obj).setViewId(id).setOnItemClick(listener);
+    public static void buider(Context context, String type, List<String> obj, View id, OnItemClick listener) {
+        new PopupFactory(context, type, obj,id).setOnItemClick(listener);
     }
 
     public void show() {

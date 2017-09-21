@@ -30,7 +30,8 @@
                 android:drawableRight="@drawable/ic_arrow_bottom"
                 android:gravity="center"
                 android:text="宝贝"
-                android:textColor="@color/color_text_normal"/>
+                android:textColor="@color/color_text_normal"
+                android:textSize="14dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -38,7 +39,9 @@
                 android:layout_marginLeft="10dp"
                 android:background="@null"
                 android:hint="iPhone X"
-                android:textColorHint="@color/color_text_small"/>
+                android:textColorHint="@color/color_text_small"
+
+                android:textSize="14dp"/>
         </LinearLayout>
 
         <TextView
