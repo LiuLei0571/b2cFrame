@@ -64,9 +64,9 @@ public class SearchActivity extends TempleActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_category:
-                PopupFactory.buider(this, "showAs", mData, mTvCategory, new PopupFactory.OnItemClick() {
+                PopupFactory.builder(this, "showAs", mData, mTvCategory, new PopupFactory.OnItemClick() {
                     @Override
-                    public void getItem(int postion) {
+                    public void getItem(int position) {
 
                     }
                 });

@@ -11,5 +11,5 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:gravity="center"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 </LinearLayout>
