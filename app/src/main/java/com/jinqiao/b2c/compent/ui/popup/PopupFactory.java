@@ -1,8 +1,11 @@
 package com.jinqiao.b2c.compent.ui.popup;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 
 import com.jinqiao.b2c.R;
@@ -28,6 +31,7 @@ public class PopupFactory {
     private BasePopupWindow mPopopView;
     private OnItemClick mOnItemClick;
     private View viewId;
+    private View popupLayoutView;
 
     public String getType() {
         return type;
@@ -56,21 +60,16 @@ public class PopupFactory {
         return this;
     }
 
-    public PopupFactory(Context context, String type, List<String> mData, View id) {
-        viewId = id;
-        View popupLayout = UIHelper.inflaterLayout(context, R.layout.popup_search);
+    public PopupFactory(Context context, String type, List<String> mData) {
+        popupLayoutView = UIHelper.inflaterLayout(context, R.layout.popup_search);
         mAdapter = new SearchAdapter(context);
-        mPopopView = new BasePopupWindow(popupLayout, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mPopopView = new BasePopupWindow(popupLayoutView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         mPopopView.setFocusable(true);
         mPopopView.setOutsideTouchable(true);
-        mBubbleList = (BubbleList) popupLayout.findViewById(R.id.list);
+        mBubbleList = (BubbleList) popupLayoutView.findViewById(R.id.list);
         mAdapter.setData(mData);
         mBubbleList.setAdapter(mAdapter);
-        if (!mPopopView.isShowing()) {
-            mBubbleList.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-            mPopopView.setWidth(mBubbleList.getMeasuredWidth());
-            mPopopView.showAsDropDown(viewId);
-        }
+
         mBubbleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -79,15 +78,35 @@ public class PopupFactory {
         });
     }
 
-    public static void builder(Context context, String type, List<String> obj, View id, OnItemClick listener) {
-        new PopupFactory(context, type, obj, id).setOnItemClick(listener);
+    public void show() {
+        if (!mPopopView.isShowing()) {
+            if (viewId != null) {
+                mBubbleList.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+                mPopopView.setWidth(mBubbleList.getMeasuredWidth());
+                mPopopView.showAsDropDown(viewId);
+            } else {
+                mPopopView.showAtLocation(popupLayoutView, Gravity.BOTTOM, 0, 0);
+            }
+
+        }
     }
 
-    public void show() {
+    public static void builder(Context context, String type, List<String> obj, View view, OnItemClick listener) {
+        new PopupFactory(context, type, obj).setViewId(view).setOnItemClick(listener).show();
     }
 
     public interface OnItemClick {
         void getItem(int position);
     }
 
+    /**
+     * 内容区域从底部进入
+     *
+     * @param mContext
+     * @return
+     */
+    public Animation getTranAnimation(Context mContext) {
+        Animation trantAnimation = AnimationUtils.loadAnimation(mContext, R.anim.popup_bottom_enter);
+        return trantAnimation;
+    }
 }
