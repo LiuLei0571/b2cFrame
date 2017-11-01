@@ -9,6 +9,7 @@ import com.jinqiao.b2c.project.buyer.goods.GoodsListActivity;
 import com.jinqiao.b2c.project.buyer.goods.ShopHomesActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.BuyerHomeActivity;
 import com.jinqiao.b2c.project.buyer.home.activity.SearchActivity;
+import com.jinqiao.b2c.project.buyer.home.activity.SearchResultActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.LoginActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.ForgetPasswordActivity;
 import com.jinqiao.b2c.project.buyer.login.activity.RegisterActivity;
@@ -86,4 +87,6 @@ public interface ActivityComponent {
     void plus(OrderEvaluateActivity orderEvaluateActivity);
 
     void plus(OrderDetailActivity orderDetailActivity);
+
+    void plus(SearchResultActivity searchResultActivity);
 }

@@ -6,7 +6,7 @@
               android:orientation="vertical">
 
     <include
-        layout="@layout/toobar"/>
+        layout="@layout/toolbar"/>
 
     <com.jinqiao.b2c.compent.ui.widget.EditTextWithDelete
         android:id="@+id/et_username"

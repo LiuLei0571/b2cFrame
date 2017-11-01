@@ -50,6 +50,7 @@
         <activity android:name=".project.buyer.orders.activity.OrderLogisticsActivity"/>
         <activity android:name=".project.buyer.orders.activity.OrderEvaluateActivity"/>
         <activity android:name=".project.buyer.orders.activity.OrderDetailActivity"/>
+        <activity android:name=".project.buyer.home.activity.SearchResultActivity"/>
     </application>
 
 </manifest>

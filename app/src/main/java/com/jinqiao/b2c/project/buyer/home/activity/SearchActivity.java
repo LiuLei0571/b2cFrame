@@ -30,13 +30,14 @@ import butterknife.OnClick;
 public class SearchActivity extends TempleActivity {
     @Bind(R.id.tv_category)
     TextView mTvCategory;
-    @Bind(R.id.tv_close)
+    @Bind(R.id.btn_search)
     TextView mTvClose;
     @Bind(R.id.lyt_top)
     RelativeLayout mLytTop;
     List<String> mData = new ArrayList<>();
     SearchAdapter mAdapter;
     BasePopupWindow mBasePopupWindow;
+
     @Override
     protected int getRootViewId() {
         return R.layout.activity_buyer_serach_home;
@@ -60,18 +61,19 @@ public class SearchActivity extends TempleActivity {
         mData.add("店铺");
     }
 
-    @OnClick({R.id.tv_category, R.id.tv_close})
+    @OnClick({R.id.tv_category, R.id.btn_search})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_category:
                 PopupFactory.builder(this, "showAs", mData, mTvCategory, new PopupFactory.OnItemClick() {
                     @Override
                     public void getItem(int position) {
-
+                        mTvCategory.setText(mData.get(position));
                     }
                 });
                 break;
-            case R.id.tv_close:
+            case R.id.btn_search:
+
                 finish();
                 break;
         }

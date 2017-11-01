@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/toobar"/>
+        layout="@layout/toolbar"/>
 
     <ScrollView
         android:layout_width="match_parent"
